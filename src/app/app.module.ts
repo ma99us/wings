@@ -11,6 +11,8 @@ import { PlacesComponent } from './places/places.component';
 import { HomeComponent } from './home/home.component';
 import {PlacesSearchComponent} from "./places/search/places.search.component";
 import {PlacesDetailsComponent} from "./places/details/places.details.component";
+import {MapAddressLink} from "./components/map-address-link/map-address-link";
+import {PlaceComponent} from "./places/place/place.component";
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import {PlacesDetailsComponent} from "./places/details/places.details.component"
     PlacesComponent,
     HomeComponent,
     PlacesSearchComponent,
-    PlacesDetailsComponent
+    PlacesDetailsComponent,
+    MapAddressLink,
+    PlaceComponent
   ],
   imports: [
     BrowserModule,

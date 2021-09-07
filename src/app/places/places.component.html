@@ -3,7 +3,8 @@
   <h2>Wings Places</h2>
   <places-search [onSearchChange]="onSearchChange"></places-search>
 
-  <places-details [selectedPlace]="selectedPlace" [onSelect]="onSelect" [onSubmit]="onSubmit" [deletePlace]="deletePlace" [submitted]="submitted"></places-details>
+  <places-details [selectedPlace]="selectedPlace" [onSelect]="onSelect" [onSubmit]="onSubmit"
+                  [deletePlace]="deletePlace" [submitted]="submitted"></places-details>
 
   <div class="row">
     <div class="col">
@@ -14,16 +15,15 @@
     </div>
 
   </div>
-  <ul class="places">
-    <li *ngFor="let place of displayPlaces"
-        [class.selected]="place === selectedPlace || (selectedPlace && place.id === selectedPlace.id)"
-        (click)="onSelect(place)">
-      <img
-        height="60"
-        alt="Place Logo"
-        src="{{place.thumbnail || './assets/wings_logo_40.png'}}"
-      />
-      <span class="title">{{place.title}}</span>
-    </li>
-  </ul>
+  <div class="row">
+    <div class="col-12 places-container">
+      <ul class="places">
+        <place-li *ngFor="let place of displayPlaces"
+                  [place]="place"
+                  [selectedPlace]="selectedPlace"
+                  [onSelect]="onSelect">
+        </place-li>
+      </ul>
+    </div>
+  </div>
 </div>

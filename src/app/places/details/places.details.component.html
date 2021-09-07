@@ -73,6 +73,9 @@
             <input id="address" name="address" [(ngModel)]="selectedPlace.address" placeholder="address"
                    #address="ngModel">
           </div>
+          <div class="col-auto">
+            <map-address-link [address]="selectedPlace.address"></map-address-link>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -81,7 +84,7 @@
           <button type="button" class="btn btn-danger" (click)="deletePlace()">Delete</button>
         </div>
         <div class="col-auto">
-          <button type="button" class="btn btn-outline-dark" (click)="onSelect(undefined)">Cancel</button>
+          <button type="button" class="btn btn-secondary" (click)="onSelect(undefined)">Cancel</button>
         </div>
       </div>
     </form>
