@@ -1,0 +1,95 @@
+<div *ngIf="selectedPlace">
+  <div class="places-details-container">
+    <form (ngSubmit)="onSubmit()" #placeForm="ngForm">
+      <h2>{{selectedPlace.title | uppercase}}</h2>
+      <h6><span>id: </span>{{selectedPlace.id}}</h6>
+      <div>
+        <div class="row">
+          <div class="col-auto">
+            <label for="thumbnail">Thumbnail: </label>
+          </div>
+          <div class="col">
+            <img
+              id="thumbnail-img" name="thumbnail-img"
+              height="120"
+              alt="Place Logo"
+              src="{{selectedPlace.thumbnail || './assets/wings_logo_40.png'}}"
+            />
+            <input id="thumbnail" name="thumbnail" [(ngModel)]="selectedPlace.thumbnail" placeholder="thumbnail"
+                   #title="ngModel" readonly disabled>
+          </div>
+        </div>
+        <div class="row" *ngIf="selectedPlace.type">
+          <div class="col-auto">
+            <label for="type">Type: </label>
+          </div>
+          <div class="col">
+            <input id="type" name="type" [(ngModel)]="selectedPlace.type" placeholder="type" #title="ngModel" readonly
+                   disabled>
+          </div>
+        </div>
+        <div class="row" *ngIf="selectedPlace.price">
+          <div class="col-auto">
+            <label for="price">Price: </label>
+          </div>
+          <div class="col">
+            <input id="price" name="price" [(ngModel)]="selectedPlace.price" placeholder="price" #title="ngModel"
+                   readonly
+                   disabled>
+          </div>
+        </div>
+        <div class="row" *ngIf="selectedPlace.rating">
+          <div class="col-auto">
+            <label for="rating">Rating: </label>
+          </div>
+          <div class="col">
+            <input id="rating" name="rating" [(ngModel)]="selectedPlace.rating" placeholder="rating" #title="ngModel"
+                   readonly disabled>
+          </div>
+        </div>
+        <div class="row" *ngIf="selectedPlace.review">
+          <div class="col-auto">
+            <label for="review">Review: </label>
+          </div>
+          <div class="col">
+            <input id="review" name="review" [(ngModel)]="selectedPlace.review" placeholder="review" #title="ngModel"
+                   readonly disabled>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
+            <label for="title">Name: </label>
+          </div>
+          <div class="col">
+            <input id="title" name="title" [(ngModel)]="selectedPlace.title" placeholder="title" #title="ngModel"
+                   required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
+            <label for="address">Address: </label>
+          </div>
+          <div class="col">
+            <input id="address" name="address" [(ngModel)]="selectedPlace.address" placeholder="address"
+                   #address="ngModel">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-success" [disabled]="!placeForm.form.valid">Submit</button>
+          <button type="button" class="btn btn-danger" (click)="deletePlace()">Delete</button>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-outline-dark" (click)="onSelect(undefined)">Cancel</button>
+        </div>
+      </div>
+    </form>
+
+    <div [hidden]="!submitted">
+      <h6>Record updated</h6>
+    </div>
+  </div>
+  <br>
+</div>
+

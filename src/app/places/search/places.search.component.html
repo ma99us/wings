@@ -1,0 +1,13 @@
+<div class="places-search-container">
+  <!--<label for="title">Search: </label>-->
+  <div class="row">
+    <div class="col">
+      <input id="searchByTitle" name="searchByTitle" [(ngModel)]="searchByTitle" (input)="onSearchChangeEvent($event)"
+             placeholder="search by title">
+    </div>
+    <div class="col-auto">
+      <button type="button" class="btn btn-outline-dark" (click)="onSearchChangeEvent(null)">Reset</button>
+    </div>
+  </div>
+</div>
+<br>

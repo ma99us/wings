@@ -1,64 +1,28 @@
 <div class="container">
-  <div class="search-div">
-    <!--<label for="title">Search: </label>-->
-    <input id="searchByTitle" name="searchByTitle" [(ngModel)]="searchByTitle" (input)="onSearchChangeEvent($event)" placeholder="search by title">
-    <button type="button" class="btn btn-outline-dark" (click)="onSearchChange('')">Reset</button>
-  </div>
 
-  <div *ngIf="selectedPlace" class="selected-place">
-    <form (ngSubmit)="onSubmit()" #placeForm="ngForm">
-      <h2>{{selectedPlace.title | uppercase}}</h2>
-      <div><span>id: </span>{{selectedPlace.id}}</div>
-      <div>
-        <p class="form-row">
-          <label for="thumbnail">Thumbnail: </label>
-          <img
-            id="thumbnail" name="thumbnail"
-            height="120"
-            alt="Place Logo"
-            src="{{selectedPlace.thumbnail || './assets/wings_logo_40.png'}}"
-          />
-          <!--<input id="thumbnail" name="thumbnail" [(ngModel)]="selectedPlace.thumbnail" placeholder="thumbnail" #thumbnail="ngModel">-->
-        </p>
-        <div *ngIf="selectedPlace.type"><span>type: </span>{{selectedPlace.type}}</div>
-        <div *ngIf="selectedPlace.price"><span>price: </span>{{selectedPlace.price}}</div>
-        <div *ngIf="selectedPlace.rating"><span>rating: </span>{{selectedPlace.rating}}</div>
-        <div *ngIf="selectedPlace.review"><span>review: </span>{{selectedPlace.review}}</div>
-        <p class="form-row">
-          <label for="title">Name: </label>
-          <input id="title" name="title" [(ngModel)]="selectedPlace.title" placeholder="title" #title="ngModel"
-                 required>
-        </p>
-        <p class="form-row">
-          <label for="address">Address: </label>
-          <input id="address" name="address" [(ngModel)]="selectedPlace.address" placeholder="address"
-                 #address="ngModel">
-        </p>
-      </div>
-      <button type="submit" class="btn btn-success" [disabled]="!placeForm.form.valid">Submit</button>
-      <button type="button" class="btn btn-primary" (click)="deletePlace()">Delete</button>
-      <span class="spacer-20"></span>
-      <button type="button" class="btn btn-outline-dark" (click)="selectedPlace = undefined;">Cancel</button>
-    </form>
+  <h2>Wings Places</h2>
+  <places-search [onSearchChange]="onSearchChange"></places-search>
 
-    <div [hidden]="!submitted">
-      <h6>Record updated</h6>
+  <places-details [selectedPlace]="selectedPlace" [onSelect]="onSelect" [onSubmit]="onSubmit" [deletePlace]="deletePlace" [submitted]="submitted"></places-details>
+
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary" (click)="newPlace()">Add new Place</button>
+    </div>
+    <div class="col-auto" style="margin-top: auto; margin-bottom: auto;">
+      <p>(total found {{displayPlaces.length}})</p>
     </div>
 
   </div>
-
-  <h2>Wings Places</h2>
-  <p>(total found {{displayPlaces.length}})</p>
-  <button class="btn btn-primary" (click)="newPlace()">Add new Place</button>
   <ul class="places">
     <li *ngFor="let place of displayPlaces"
         [class.selected]="place === selectedPlace || (selectedPlace && place.id === selectedPlace.id)"
         (click)="onSelect(place)">
-        <img
-          height="60"
-          alt="Place Logo"
-          src="{{place.thumbnail || './assets/wings_logo_40.png'}}"
-        />
+      <img
+        height="60"
+        alt="Place Logo"
+        src="{{place.thumbnail || './assets/wings_logo_40.png'}}"
+      />
       <span class="title">{{place.title}}</span>
     </li>
   </ul>

@@ -1,0 +1,3049 @@
+[{
+		"position": 1,
+		"title": "St. Louis Bar & Grill",
+		"id": "3441066809179031667",
+		"lsig": "AB86z5U86FL9KLx9thwHTEFIKrcx",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5U86FL9KLx9thwHTEFIKrcx&ludocid=3441066809179031667&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 1012,
+		"price": "$$",
+		"type": "Grill",
+		"address": "Dieppe, NB",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59a44743b7e3ce299fb71984c00ab7733b7a7f47f525fccb92.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.098737299999996,
+			"longitude": -64.75950879999999
+		}
+	}, {
+		"position": 2,
+		"title": "St. Louis Bar & Grill",
+		"id": "1699228846710957038",
+		"lsig": "AB86z5U-yf6rUMvQ9bQdBvc0VqfW",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5U-yf6rUMvQ9bQdBvc0VqfW&ludocid=1699228846710957038&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 780,
+		"price": "$$",
+		"type": "Grill",
+		"address": "1405 Mountain Rd",
+		"review": "\"Some of the best wings I've ever had!\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59d26d0e246ffd650054d216784a5f09ba52ef30be1215db39.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1124004,
+			"longitude": -64.8335536
+		}
+	}, {
+		"position": 3,
+		"title": "Pump House - Brewpub & Restaurant",
+		"id": "15312690208574782226",
+		"lsig": "AB86z5WdR3zAruBOWGNbmo2KGiKx",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WdR3zAruBOWGNbmo2KGiKx&ludocid=15312690208574782226&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 1814,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "5 Orange Ln",
+		"review": "\"Hottest wings I've ever had.\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce596b1e77bd3708c0e67f1c41a0b717ff137113ed9fa7a49c42.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.089788,
+			"longitude": -64.77440299999999
+		}
+	}, {
+		"position": 4,
+		"title": "Big League Burgers & Wings",
+		"id": "6750483482330166257",
+		"lsig": "AB86z5XDXlqTsyy5A1cdEnNLy99o",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XDXlqTsyy5A1cdEnNLy99o&ludocid=6750483482330166257&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 210,
+		"type": "Fast Food",
+		"address": "1855 Mountain Rd",
+		"review": "\"Best burger in town, best wings in town, best fries in town.\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59dde3047a69fb0415c2f15831b686f4cc37333bd5c497ac0b.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1225582,
+			"longitude": -64.8492831
+		}
+	}, {
+		"position": 5,
+		"title": "SPORTS ROCK MONCTON",
+		"id": "8601703471620999700",
+		"lsig": "AB86z5WI8vcK4njPqieia35KjiUA",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WI8vcK4njPqieia35KjiUA&ludocid=8601703471620999700&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 655,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "1855 Mountain Rd",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce590ac390fd5510541fe87a0062579fa76467dc898ee7fc008d.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1224632,
+			"longitude": -64.8496093
+		}
+	}, {
+		"position": 6,
+		"title": "Sports Rock Dieppe",
+		"id": "1010433104724856544",
+		"lsig": "AB86z5WkkOjoaDUmgaJ8paCmxg6Q",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WkkOjoaDUmgaJ8paCmxg6Q&ludocid=1010433104724856544&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 927,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Dieppe, NB In Codiac Plaza",
+		"review": "\"Best wings I've had in a long while!!\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce5988849fac8f40b684036b06974908e2140c9003f2d7b64483.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0949805,
+			"longitude": -64.7568321
+		}
+	}, {
+		"position": 7,
+		"title": "Ed's Sub",
+		"id": "11814337510879084147",
+		"lsig": "AB86z5WXngquizppTcdYiNnNnUsJ",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WXngquizppTcdYiNnNnUsJ&ludocid=11814337510879084147&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 137,
+		"price": "$",
+		"type": "Sandwich",
+		"address": "300 Elmwood Dr In Elmwood Place",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce591946bc3db7ff901ffd4554f1a52ca827a4d395f1e02afbd2.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.112409799999995,
+			"longitude": -64.7747986
+		}
+	}, {
+		"position": 8,
+		"title": "The Old Triangle Irish Alehouse",
+		"id": "9691125883548864146",
+		"lsig": "AB86z5XOsazcg1GiYhCSh1aAV4NO",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XOsazcg1GiYhCSh1aAV4NO&ludocid=9691125883548864146&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 1070,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "751 Main St",
+		"review": "\"Great wings, the sweet potato fries are heavenly.\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce593b45db513f2d900111367e5a8ed1749a5364feeb4a8d9487.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.088699299999995,
+			"longitude": -64.7776131
+		}
+	}, {
+		"position": 9,
+		"title": "Tide & Boar",
+		"id": "4190171961789144054",
+		"lsig": "AB86z5VZLWLo99XHQdr3SVdvEzRa",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VZLWLo99XHQdr3SVdvEzRa&ludocid=4190171961789144054&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 1274,
+		"price": "$$",
+		"type": "Gastropub",
+		"address": "700 Main St",
+		"review": "\"Smoked and then deep fried wings.... Delicious!\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59eb0fa89179d05bbee5d778b4a01b048febf6b51b5305935d.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0887082,
+			"longitude": -64.77585309999999
+		}
+	}, {
+		"position": 10,
+		"title": "Cheers Beverage Room & Catering",
+		"id": "8087751929494768084",
+		"lsig": "AB86z5UsIg6DJgHDMMBeL73uFILC",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UsIg6DJgHDMMBeL73uFILC&ludocid=8087751929494768084&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 463,
+		"price": "$",
+		"type": "Canadian",
+		"address": "63 Brandon St",
+		"review": "\"Prompt service and great wings for a wing night.\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59d16c2d6f2cbce9759d1900b0965b26c691d0ede8ef3b6eb7.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.098464899999996,
+			"longitude": -64.80644219999999
+		}
+	}, {
+		"position": 11,
+		"title": "Boston Pizza",
+		"id": "18366992298941374567",
+		"lsig": "AB86z5UEoTPOSC6LVtXVLRryQ7mX",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UEoTPOSC6LVtXVLRryQ7mX&ludocid=18366992298941374567&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 862,
+		"price": "$$",
+		"type": "Pizza",
+		"address": "1380 Mountain Rd. In Northwest Plaza",
+		"review": "\"I love the wings and they did a nice reno to the bar side!\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59b3fc9619b118493f3e439949e3e3df54d66db03452b7ff54.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1105275,
+			"longitude": -64.8322343
+		}
+	}, {
+		"position": 12,
+		"title": "Montana's",
+		"id": "6371078997497002050",
+		"lsig": "AB86z5XvvvgzJcBc_10EKCdo3YQp",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XvvvgzJcBc_10EKCdo3YQp&ludocid=6371078997497002050&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 1397,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "225 Mapleton Rd",
+		"review": "\"Wings are superior to any where else.\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce591f5064397a6babe0538a872ddb14af8ca6faa010c62483bd.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.114384,
+			"longitude": -64.8252615
+		}
+	}, {
+		"position": 13,
+		"title": "Moxie's Grill & Bar",
+		"id": "972201134997659547",
+		"lsig": "AB86z5VLR5GtWS4JAdh1x1pcuNwS",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VLR5GtWS4JAdh1x1pcuNwS&ludocid=972201134997659547&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 1047,
+		"price": "$$",
+		"type": "Grill",
+		"address": "10 Wyse St",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59918e125324fd0af820b667f1bf7f2010023cfb3296b41f2f.png",
+		"gps_coordinates": {
+			"latitude": 46.1212662,
+			"longitude": -64.828125
+		}
+	}, {
+		"position": 14,
+		"title": "Freddie's Pizza & Donair",
+		"id": "15017713214971533767",
+		"lsig": "AB86z5UEikaxnDwCqTAyERiYkLZt",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UEikaxnDwCqTAyERiYkLZt&ludocid=15017713214971533767&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 328,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "370 Elmwood Dr",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce599e3273be537944973993f80d5cfb332deba8cde40399ffcc.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.115679899999996,
+			"longitude": -64.774323
+		}
+	}, {
+		"position": 15,
+		"title": "Mexi's",
+		"id": "1372934655161740436",
+		"lsig": "AB86z5XYZsU2wDvf74xDxdYpxH31",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XYZsU2wDvf74xDxdYpxH31&ludocid=1372934655161740436&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 698,
+		"price": "$$",
+		"type": "Mexican",
+		"address": "683 Main St",
+		"review": "\"Good wings and good service\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce594cd4ea74c2eb44cedb5e382e15343e541c926664a59ba378.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.08889,
+			"longitude": -64.776174
+		}
+	}, {
+		"position": 16,
+		"title": "Zio's",
+		"id": "13745766618966674861",
+		"lsig": "AB86z5WjA3uZHtX0fE8SaYG46RzQ",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WjA3uZHtX0fE8SaYG46RzQ&ludocid=13745766618966674861&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 461,
+		"price": "$",
+		"type": "Pizza",
+		"address": "214 Church St",
+		"review": "\"... pizza works vegg or Hawaiian 9# garlic fingers and a dozen wings!!\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59575d8a0176cd1ed528262f17aaeb70014d517d9a94eb4086.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0951229,
+			"longitude": -64.7806001
+		}
+	}, {
+		"position": 17,
+		"title": "Jean's",
+		"id": "12539955392288076828",
+		"lsig": "AB86z5WlXWdrmHNOfjOFXiOxB2Dm",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WlXWdrmHNOfjOFXiOxB2Dm&ludocid=12539955392288076828&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 1078,
+		"price": "$",
+		"type": "Restaurant",
+		"address": "1999 Mountain Rd",
+		"review": "\"They have the best chicken wings and a great Ceaser salad.\"",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59326ee685a1eaaabe44d8bc78a151b7364e7deaffd6d8fc2b.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.123868599999994,
+			"longitude": -64.8557594
+		}
+	}, {
+		"position": 18,
+		"title": "House Of Lam Restaurant",
+		"id": "8974373584629619666",
+		"lsig": "AB86z5X9SOJoIHVETCpdVYs6s5W8",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X9SOJoIHVETCpdVYs6s5W8&ludocid=8974373584629619666&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 366,
+		"price": "$$",
+		"type": "Asian",
+		"address": "951 Mountain Rd",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59e2834d7d259c77e7078fbaf9087eb536e7985887b81a6518.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1027582,
+			"longitude": -64.81499579999999
+		}
+	}, {
+		"position": 19,
+		"title": "Pizza Twins",
+		"id": "14943251582483183759",
+		"lsig": "AB86z5Xumlt8Ic7DFy3KQlvNy1uA",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Xumlt8Ic7DFy3KQlvNy1uA&ludocid=14943251582483183759&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 112,
+		"price": "$",
+		"type": "Pizza",
+		"address": "62 Morton Ave",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce590c50908531be1eb596ff4c4a7b5fd0b8563a93f31425da57.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.111865699999996,
+			"longitude": -64.7782052
+		}
+	}, {
+		"position": 20,
+		"title": "Cedars 2 for 1 Pizza",
+		"id": "1126385983261951505",
+		"lsig": "AB86z5WU6lHAStB4st1o23PiG9rO",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WU6lHAStB4st1o23PiG9rO&ludocid=1126385983261951505&num=100&q=best+wings&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 235,
+		"price": "$",
+		"type": "Pizza",
+		"address": "405 St. George St",
+		"thumbnail": "https://serpapi.com/searches/612507bb3e86acedd8214dac/images/865ce37d4b1fce59ac46af25deab89f118dfc0a556c2574bfd0398936f38c245.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0897484,
+			"longitude": -64.7904467
+		}
+	}, {
+		"position": 1,
+		"title": "Jean's",
+		"id": "12539955392288076828",
+		"lsig": "AB86z5WlXWdrmHNOfjOFXiOxB2Dm",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WlXWdrmHNOfjOFXiOxB2Dm&ludocid=12539955392288076828&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 1078,
+		"price": "$",
+		"type": "Restaurant",
+		"address": "1999 Mountain Rd",
+		"review": "\"They have the best chicken wings and a great Ceaser salad.\"",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b409ff4c911de9f970579fb8099a14e523fc23db6d3224080.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.123868599999994,
+			"longitude": -64.8557594
+		}
+	}, {
+		"position": 2,
+		"title": "House Of Lam Restaurant",
+		"id": "8974373584629619666",
+		"lsig": "AB86z5X9SOJoIHVETCpdVYs6s5W8",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X9SOJoIHVETCpdVYs6s5W8&ludocid=8974373584629619666&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 366,
+		"price": "$$",
+		"type": "Asian",
+		"address": "951 Mountain Rd",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00bda4e92bab39c7a776ddaef5b3169df3484aaabf36498e201.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1027582,
+			"longitude": -64.81499579999999
+		}
+	}, {
+		"position": 3,
+		"title": "Pizza Twins",
+		"id": "14943251582483183759",
+		"lsig": "AB86z5Xumlt8Ic7DFy3KQlvNy1uA",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Xumlt8Ic7DFy3KQlvNy1uA&ludocid=14943251582483183759&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 112,
+		"price": "$",
+		"type": "Pizza",
+		"address": "62 Morton Ave",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b3fc0b7b0bec5b0728cd2ce27bbac8c00edf90c8869eae743.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.111865699999996,
+			"longitude": -64.7782052
+		}
+	}, {
+		"position": 4,
+		"title": "Mai Asian Restaurant, Dieppe",
+		"id": "13129050821900704104",
+		"lsig": "AB86z5VjLa6OsDwhH9QrNdBaQ_L0",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VjLa6OsDwhH9QrNdBaQ_L0&ludocid=13129050821900704104&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 97,
+		"price": "$$",
+		"type": "Asian Fusion",
+		"address": "Dieppe, NB",
+		"hours": "Temporarily closed",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b7665eee73b8f8001f8822c59f967fdb7c4890d3223e1626b.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0927207,
+			"longitude": -64.757527
+		}
+	}, {
+		"position": 5,
+		"title": "East Side Mario's",
+		"id": "16975083437678106632",
+		"lsig": "AB86z5VQaDVdXI6lgR5EBey3Pqcs",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VQaDVdXI6lgR5EBey3Pqcs&ludocid=16975083437678106632&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 781,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "99 Trinity Dr",
+		"review": "\"Wings were fantastic.\"",
+		"thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMACKLUW-iz3kfKIa31ScL8PWwwyuQXxiH_77mt=w90-h90-n-k-no",
+		"gps_coordinates": {
+			"latitude": 46.1162542,
+			"longitude": -64.8323971
+		}
+	}, {
+		"position": 6,
+		"title": "Maple Leaf Queen's Buffet",
+		"id": "11650333295102858798",
+		"lsig": "AB86z5X5wtke58qaOI5OAV-sMjPz",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X5wtke58qaOI5OAV-sMjPz&ludocid=11650333295102858798&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 1056,
+		"price": "$$",
+		"type": "Buffet",
+		"address": "939 Mountain Rd",
+		"description": "Menu highlight: wings",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b54d9a93a48a6f5ebf2999afc6b1efc55a1dcbafc789b38a6.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1026945,
+			"longitude": -64.8141078
+		}
+	}, {
+		"position": 7,
+		"title": "Mama's Restaurant",
+		"id": "10829337979677380560",
+		"lsig": "AB86z5Usc3uVu9BnslFV66Nc_i2o",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Usc3uVu9BnslFV66Nc_i2o&ludocid=10829337979677380560&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 398,
+		"price": "$",
+		"type": "Pizza",
+		"address": "806 Main St",
+		"description": "Their website mentions chicken wings",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b016d9fb1e32c8217f04d6ebf896fe779855114eff8da4550.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.088236099999996,
+			"longitude": -64.7781103
+		}
+	}, {
+		"position": 8,
+		"title": "Igloo Beverage Room",
+		"id": "3127237555724829369",
+		"lsig": "AB86z5WVLXlPWouJl2kGF-R1evwe",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WVLXlPWouJl2kGF-R1evwe&ludocid=3127237555724829369&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 503,
+		"price": "$$",
+		"type": "Pub",
+		"address": "300 Elmwood Dr. In Elmwood Place",
+		"review": "\"Food was awesome it was wing night bery good wings\"",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00bc2a6a03b0188437b66f4272f63c8bd1b27fd4ce56a257c40.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1122222,
+			"longitude": -64.77499999999999
+		}
+	}, {
+		"position": 9,
+		"title": "Morton Pub",
+		"id": "17768170630085937583",
+		"lsig": "AB86z5XNqUtYxTcso03u1QVMWku6",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XNqUtYxTcso03u1QVMWku6&ludocid=17768170630085937583&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 252,
+		"price": "$$",
+		"type": "Pub",
+		"address": "15 Morton Ave",
+		"review": "\"Amazing wings Thursday night Special !\"",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b2e07fae6520afa7c6a3bdf1f4bbb6ba2d423c715882bf2dc.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1131749,
+			"longitude": -64.7765144
+		}
+	}, {
+		"position": 10,
+		"title": "Greco Dieppe",
+		"id": "14591490640219047698",
+		"lsig": "AB86z5XLm9V4U8B-vfTI9mRgPsFt",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XLm9V4U8B-vfTI9mRgPsFt&ludocid=14591490640219047698&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 3.7,
+		"reviews": 115,
+		"price": "$",
+		"type": "Pizza",
+		"address": "Dieppe, NB",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b3fcc875085e91d5fb8656bebcf27206db9290626cbde9acd.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.094029,
+			"longitude": -64.7476135
+		}
+	}, {
+		"position": 11,
+		"title": "Vinh's Wok",
+		"id": "10155553513037043124",
+		"lsig": "AB86z5VEZqJwFQtSOZ63XmFK81iN",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VEZqJwFQtSOZ63XmFK81iN&ludocid=10155553513037043124&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 193,
+		"price": "$$",
+		"type": "Vietnamese",
+		"address": "26 Plaza Blvd",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00bbdf2874829a045e1a5545af66dcbac04e56927f8f98aeaeb.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1133854,
+			"longitude": -64.8270409
+		}
+	}, {
+		"position": 12,
+		"title": "Patricio's Pizza N Wing & Caribbean Food",
+		"id": "16809856694600730947",
+		"lsig": "AB86z5UfVV7duiGKu6aU3npwOMUV",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UfVV7duiGKu6aU3npwOMUV&ludocid=16809856694600730947&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 53,
+		"price": "$$",
+		"type": "Pizza",
+		"address": "23 Killam Dr",
+		"hours": "Closed. Opens 11 a.m. Wed.",
+		"review": "\"Great value at under $20 for a pizza.\"",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b77940924b8f139fc074ddbbede258efd51bf38c5cfff5c78.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.100280000000005,
+			"longitude": -64.812669
+		}
+	}, {
+		"position": 13,
+		"title": "Classic Burger",
+		"id": "15235552969695647861",
+		"lsig": "AB86z5WD27Kxyv-bSdgrNsoxjfYt",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WD27Kxyv-bSdgrNsoxjfYt&ludocid=15235552969695647861&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 802,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "280 Main St",
+		"review": "\"Original receipt wings were awesome!\"",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b84c563211ff769e8c1cadc3084796baf8d5785c43bbf47e6.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.091619099999996,
+			"longitude": -64.7673399
+		}
+	}, {
+		"position": 14,
+		"title": "Mai Asian Restaurant",
+		"id": "215990686572218136",
+		"lsig": "AB86z5VFde2KiezPasapzZaI5DV7",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VFde2KiezPasapzZaI5DV7&ludocid=215990686572218136&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 157,
+		"price": "$$",
+		"type": "Asian",
+		"address": "4-1909 Mountain Rd",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b36b47a6cdaf1275948e4d10c678fe4e363ccb10bddadea10.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.123016299999996,
+			"longitude": -64.85161099999999
+		}
+	}, {
+		"position": 15,
+		"title": "Rossano's Italian Grill",
+		"id": "10738119966225060512",
+		"lsig": "AB86z5WVTL7Otzjj2Aap5J8oBY4b",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WVTL7Otzjj2Aap5J8oBY4b&ludocid=10738119966225060512&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 709,
+		"price": "$$",
+		"type": "Italian",
+		"address": "Dieppe, NB. In Global pet dieppe",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b64a45d965a3c6e57aba6486fd89e124794b7289672f584e1.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0936782,
+			"longitude": -64.76114609999999
+		}
+	}, {
+		"position": 16,
+		"title": "Kelseys",
+		"id": "4119806434651325598",
+		"lsig": "AB86z5WJkjIQrygD5EzwHsowxiLK",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WJkjIQrygD5EzwHsowxiLK&ludocid=4119806434651325598&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 745,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "141 Trinity Dr",
+		"review": "\"Best wings this side of Ontario!\"",
+		"thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOCFaRZH1l73_Q7MyTZj7Yh5C92FamFlgIB8-0Y=w90-h90-n-k-no",
+		"gps_coordinates": {
+			"latitude": 46.1152741,
+			"longitude": -64.8334371
+		}
+	}, {
+		"position": 17,
+		"title": "Dixie Lee",
+		"id": "3368425469670961560",
+		"lsig": "AB86z5X_V_f-VgXsh3mObgHQ4bxs",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X_V_f-VgXsh3mObgHQ4bxs&ludocid=3368425469670961560&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 340,
+		"price": "$",
+		"type": "Fast Food",
+		"address": "1180 Mountain Rd",
+		"review": "\"The Best Chicken in town\"",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b1a9c203825b10e7082d73eba8c428687b8afbf804d6547ed.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1070709,
+			"longitude": -64.825287
+		}
+	}, {
+		"position": 18,
+		"title": "Five Bridges Bar & Grill",
+		"id": "14970289726216889525",
+		"lsig": "AB86z5WZ0T2xJ26k62Q5DWZcYzRu",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WZ0T2xJ26k62Q5DWZcYzRu&ludocid=14970289726216889525&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 675,
+		"price": "$$",
+		"type": "Grill",
+		"address": "Riverview, NB",
+		"review": "\"Good wings and shrimp night\"",
+		"thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNXq9Fnp1IOujacsfnzsgAfg6oPVEgX9oBkgCmg=w90-h90-n-k-no",
+		"gps_coordinates": {
+			"latitude": 46.0653564,
+			"longitude": -64.7940194
+		}
+	}, {
+		"position": 19,
+		"title": "ASA Sushi Restaurant",
+		"id": "7934798567924914606",
+		"lsig": "AB86z5Xuvk-r6rPKrn2PxSqiBlho",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Xuvk-r6rPKrn2PxSqiBlho&ludocid=7934798567924914606&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 244,
+		"price": "$$",
+		"type": "Sushi",
+		"address": "1224 Mountain Rd",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00b240cf45bcfcb0d2a796c728cddf330ab74062333eb420798.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1080145,
+			"longitude": -64.8269588
+		}
+	}, {
+		"position": 20,
+		"title": "TRIIIO Restaurant & Lounge",
+		"id": "4863140310400168963",
+		"lsig": "AB86z5WqrQtUtwvAcaxg_CVnCg8S",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WqrQtUtwvAcaxg_CVnCg8S&ludocid=4863140310400168963&num=100&q=best+wings&start=20&tbm=lcl",
+		"rating": 3.9,
+		"reviews": 43,
+		"type": "Restaurant",
+		"address": "750 Main St. In the Hotel Beausajour",
+		"thumbnail": "https://serpapi.com/searches/61250be2af6304c23d8cd5ff/images/9213812a6982a00be70151073297bb55f1c8a4966f953a9cb5e5fbc08dc041c6.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0885685,
+			"longitude": -64.77665309999999
+		}
+	}, {
+		"position": 1,
+		"title": "Hot Rice Restaurant",
+		"id": "3878602787738284467",
+		"lsig": "AB86z5X4ueFqrYCtIWrh_SQZ71-0",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X4ueFqrYCtIWrh_SQZ71-0&ludocid=3878602787738284467&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 66,
+		"price": "$",
+		"type": "Chinese",
+		"address": "???, 331 Elmwood Dr. In Elmwood Plaza",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804ffec9bdd4e0ce2f25e495e3bfe469208e6c64d6a6b4ab987.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1150021,
+			"longitude": -64.772431
+		}
+	}, {
+		"position": 2,
+		"title": "ASA Sushi Restaurant",
+		"id": "7934798567924914606",
+		"lsig": "AB86z5Xuvk-r6rPKrn2PxSqiBlho",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Xuvk-r6rPKrn2PxSqiBlho&ludocid=7934798567924914606&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 244,
+		"price": "$$",
+		"type": "Sushi",
+		"address": "1224 Mountain Rd",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804e179d5686fcc4bd14d61a643c1a49f2baaa5d578e829cc88.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1080145,
+			"longitude": -64.8269588
+		}
+	}, {
+		"position": 3,
+		"title": "Blue Olive",
+		"id": "5170275067151738460",
+		"lsig": "AB86z5VHXsLe4h87rXgLCQ6TkPnG",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VHXsLe4h87rXgLCQ6TkPnG&ludocid=5170275067151738460&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 297,
+		"price": "$$",
+		"type": "Mediterranean",
+		"address": "Dieppe, NB. In Codiac Plaza",
+		"review": "\"Burgers are ok but not the chicken wings.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804458d1fe3bdb455f75efa4ded2ffed17591b2debf7ceba78f.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.094823,
+			"longitude": -64.756717
+		}
+	}, {
+		"position": 4,
+		"title": "TRIIIO Restaurant & Lounge",
+		"id": "4863140310400168963",
+		"lsig": "AB86z5WqrQtUtwvAcaxg_CVnCg8S",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WqrQtUtwvAcaxg_CVnCg8S&ludocid=4863140310400168963&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 3.9,
+		"reviews": 43,
+		"type": "Restaurant",
+		"address": "750 Main St. In the Hotel Beausajour",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804b609928217a7006bb3f9e388494382ccf1910598e8c289be.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0885685,
+			"longitude": -64.77665309999999
+		}
+	}, {
+		"position": 5,
+		"title": "Wize Guyz Pub",
+		"id": "4210932923560507271",
+		"lsig": "AB86z5U9I4BrWEfrxrj7YU8o-yWv",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5U9I4BrWEfrxrj7YU8o-yWv&ludocid=4210932923560507271&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 182,
+		"price": "$",
+		"type": "Pub",
+		"address": "176 Robinson St",
+		"review": "\"Cheap beers/drinks, slots and good company.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff52368045535a28ad1cc80db182b6e0de61b01830000a5a5054e2802.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0877864,
+			"longitude": -64.7795725
+		}
+	}, {
+		"position": 6,
+		"title": "Red Satay",
+		"id": "5578658684422229543",
+		"lsig": "AB86z5X9lGMXBV6v6TUfXQun8YSY",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X9lGMXBV6v6TUfXQun8YSY&ludocid=5578658684422229543&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 284,
+		"price": "$$",
+		"type": "Vietnamese",
+		"address": "207 St. George St",
+		"review": "\"Awesome best chicken curry ive had in a long time\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804b572dfdcfe9916bd87300b07ce665f38153d21b4cda64353.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.091598999999995,
+			"longitude": -64.7816915
+		}
+	}, {
+		"position": 7,
+		"title": "Papa John's Pizza",
+		"id": "974080342645025312",
+		"lsig": "AB86z5VGg4EHxOx9jqCvXTE8keh3",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VGg4EHxOx9jqCvXTE8keh3&ludocid=974080342645025312&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 248,
+		"type": "Pizza",
+		"address": "639 Mountain Rd",
+		"review": "\"Pizza and wings have been great every time we ordered them.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff52368046947ee5fb8da26541792ed97a5f6f4ae468a78c8c02cca38.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.098901,
+			"longitude": -64.8010565
+		}
+	}, {
+		"position": 8,
+		"title": "Famous Peppers Dieppe",
+		"id": "13353164774877877770",
+		"lsig": "AB86z5UTlEjeCl2HxxMrxfvTLqhI",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UTlEjeCl2HxxMrxfvTLqhI&ludocid=13353164774877877770&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 276,
+		"price": "$$",
+		"type": "Pizza",
+		"address": "Dieppe, NB",
+		"hours": "Closed. Opens 3 p.m.",
+		"review": "\"Pizza was great but the wings were really not that good.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804d2d07d17c32fae09b7119c2daf4e38c450b3c89cb4c69f2c.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0971018,
+			"longitude": -64.7547052
+		}
+	}, {
+		"position": 9,
+		"title": "Katch Seafood And Pizza Girls",
+		"id": "14270932583675670086",
+		"lsig": "AB86z5WZez3fKg8XH8yCSpQc_b41",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WZez3fKg8XH8yCSpQc_b41&ludocid=14270932583675670086&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 77,
+		"type": "Fish & Chips",
+		"address": "827 Main St",
+		"review": "\"Good experience with the guy. Ordered a small veggie pizza and it ...\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804aa9feb854ed732585689993650c70e4c6afdc89e82266aec.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.088382499999994,
+			"longitude": -64.7794267
+		}
+	}, {
+		"position": 10,
+		"title": "Vien Dong Restaurant",
+		"id": "6732580760094627673",
+		"lsig": "AB86z5Wl-XjLOXufaspkjxCIUZ2J",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Wl-XjLOXufaspkjxCIUZ2J&ludocid=6732580760094627673&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 167,
+		"price": "$$",
+		"type": "Vietnamese",
+		"address": "880 Main St",
+		"hours": "Closed. Opens 11:30 a.m. Wed.",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804c16ebf72ed25b85caa864c0bf7ec3cdf27fc35bdfad2da9a.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0879057,
+			"longitude": -64.7796245
+		}
+	}, {
+		"position": 11,
+		"title": "Keglers",
+		"id": "3085850437324548574",
+		"lsig": "AB86z5W3ZlwMqkNG5QHbSfi-lJev",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5W3ZlwMqkNG5QHbSfi-lJev&ludocid=3085850437324548574&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 85,
+		"price": "$",
+		"type": "Bar",
+		"address": "936 Mountain Rd",
+		"review": "\"Great place cheap drinks good chicken wings!\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804644007dc91489a598903daa8a4e69f43c094fcfda99944f4.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.101026999999995,
+			"longitude": -64.8143219
+		}
+	}, {
+		"position": 12,
+		"title": "Mary Brown's Chicken",
+		"id": "15421645578156662342",
+		"lsig": "AB86z5VY7RRvVix-7D6MIUgl8yU4",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VY7RRvVix-7D6MIUgl8yU4&ludocid=15421645578156662342&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 395,
+		"price": "$$",
+		"type": "Chicken Wings",
+		"address": "1909 Mountain Rd #5",
+		"review": "\"3 PCE wing small fries for 5$\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff52368047ed621fd039fc83153de1162158a324e0c17366dd519a598.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.123016,
+			"longitude": -64.8515046
+		}
+	}, {
+		"position": 13,
+		"title": "Chris Rock",
+		"id": "12605925039124183509",
+		"lsig": "AB86z5XA4xgdkuRV5nHpkps8UOrW",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XA4xgdkuRV5nHpkps8UOrW&ludocid=12605925039124183509&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 204,
+		"price": "$",
+		"type": "Restaurant",
+		"address": "48 Albert St",
+		"review": "\"As usual, best wings in town and great service...be back soon!!\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff52368047dd638e2b892052e1a1c7836da69b120018b3aa40f973c7a.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.083759199999996,
+			"longitude": -64.7820888
+		}
+	}, {
+		"position": 14,
+		"title": "Fox & Hound Neighbourhood Pub",
+		"id": "8770094336913304741",
+		"lsig": "AB86z5UVPz1mMspLwTPogF-57Mud",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UVPz1mMspLwTPogF-57Mud&ludocid=8770094336913304741&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 350,
+		"price": "$",
+		"type": "Restaurant",
+		"address": "Riverview, NB",
+		"review": "\"Best wings in town Thursday wing night\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804e8f5a3df08682bc1f11787bc86e93667279cd6f4d9901dac.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.058405799999996,
+			"longitude": -64.8177322
+		}
+	}, {
+		"position": 15,
+		"title": "New York Subs",
+		"id": "17692130651843646763",
+		"lsig": "AB86z5WLXKj5Su4fQhV-VG9Qtl3P",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WLXKj5Su4fQhV-VG9Qtl3P&ludocid=17692130651843646763&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 57,
+		"price": "$",
+		"type": "Sandwich",
+		"address": "290 High St",
+		"review": "\"Best subs and wraps around.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804ffd7a7761798ae462e22014494235010348886f3ac65fe71.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.093346399999994,
+			"longitude": -64.7927326
+		}
+	}, {
+		"position": 16,
+		"title": "Gusto Italian Bar & Grill",
+		"id": "4334223140129413382",
+		"lsig": "AB86z5Xljc57v8-qTJipV8wKw7-_",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Xljc57v8-qTJipV8wKw7-_&ludocid=4334223140129413382&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 14,
+		"type": "Bar",
+		"address": "130 Westmorland St",
+		"review": "\"A great place to take a date, or your lovely wife, but not both.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804703b6b95f4701bbb5f556dd7d7e75e96690342dd573e0a90.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0879049,
+			"longitude": -64.7784477
+		}
+	}, {
+		"position": 17,
+		"title": "St. James' Gate",
+		"id": "8298892243271278103",
+		"lsig": "AB86z5VD5JKQ7p0kKY_Rf7dnY8WT",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VD5JKQ7p0kKY_Rf7dnY8WT&ludocid=8298892243271278103&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 648,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "14 Church St",
+		"review": "\"The best things on the menu are their wings, oysters, and charcuterie board.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff52368045538f0a4f4ef0548d8c3afbeeacd0e28ad9a00af7d083ee7.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.088757699999995,
+			"longitude": -64.77826759999999
+		}
+	}, {
+		"position": 18,
+		"title": "Jungle Jim's Eatery",
+		"id": "4593601145180799493",
+		"lsig": "AB86z5WDGGkOhQrlFjrMU2JmJeOv",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WDGGkOhQrlFjrMU2JmJeOv&ludocid=4593601145180799493&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 504,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "1134 Mountain Rd",
+		"review": "\"Could put 5 star but missing the breaded wings...\"",
+		"thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPP7wLtqYMMRAdqTQN2I8B8ALKQdFMkpxxEMjQf=w90-h90-n-k-no",
+		"gps_coordinates": {
+			"latitude": 46.1060891,
+			"longitude": -64.823267
+		}
+	}, {
+		"position": 19,
+		"title": "La Vida Cafe & Resto-Bar",
+		"id": "16687140898605166378",
+		"lsig": "AB86z5XvFutiMIfGmrybCMshlZ00",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XvFutiMIfGmrybCMshlZ00&ludocid=16687140898605166378&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 78,
+		"type": "Restaurant",
+		"address": "1127 Main St",
+		"thumbnail": "https://serpapi.com/searches/61250c34a4bb38fcde2b875c/images/e5a4301ff5236804e5fa3f419cecd6c0e31f4ff8a4841949dd2804dfc1ad3e3a.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0863255,
+			"longitude": -64.7861021
+		}
+	}, {
+		"position": 20,
+		"title": "Freddie's Pizza & Donair",
+		"id": "11940401231021964278",
+		"lsig": "AB86z5UYMWUnwkBzSroSP0UNaKsl",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UYMWUnwkBzSroSP0UNaKsl&ludocid=11940401231021964278&num=100&q=best+wings&start=40&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 109,
+		"price": "$",
+		"type": "Pizza",
+		"address": "Riverview, NB",
+		"thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOPCNODkFQwbKO6zNi55w7Ok-JDXxTeuHAoQX8c=w90-h90-n-k-no",
+		"gps_coordinates": {
+			"latitude": 46.0626866,
+			"longitude": -64.8083256
+		}
+	}, {
+		"position": 1,
+		"title": "La Vida Cafe & Resto-Bar",
+		"id": "16687140898605166378",
+		"lsig": "AB86z5XvFutiMIfGmrybCMshlZ00",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XvFutiMIfGmrybCMshlZ00&ludocid=16687140898605166378&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 78,
+		"type": "Restaurant",
+		"address": "1127 Main St",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4998040fb90e94c9a8d70a2660189d9f8d1ca1e0a84931b4f0e.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0863255,
+			"longitude": -64.7861021
+		}
+	}, {
+		"position": 2,
+		"title": "Freddie's Pizza & Donair",
+		"id": "11940401231021964278",
+		"lsig": "AB86z5UYMWUnwkBzSroSP0UNaKsl",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UYMWUnwkBzSroSP0UNaKsl&ludocid=11940401231021964278&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 109,
+		"price": "$",
+		"type": "Pizza",
+		"address": "Riverview, NB",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4993b96a3c6a16039c6a0427bd4c2a0bce96faf8b4e9a9b912e.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0626866,
+			"longitude": -64.8083256
+		}
+	}, {
+		"position": 3,
+		"title": "Papa John's Pizza",
+		"id": "6206502347316814948",
+		"lsig": "AB86z5Vi3rRFM-GRKCHeskpIOeK5",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Vi3rRFM-GRKCHeskpIOeK5&ludocid=6206502347316814948&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 131,
+		"type": "Pizza",
+		"address": "Riverview, NB",
+		"review": "\"Also love their wings.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4996a71276730a8c106603f8f5052eddad5e4da1ab2a54c3bdf.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0522801,
+			"longitude": -64.79399699999999
+		}
+	}, {
+		"position": 4,
+		"title": "KFC",
+		"id": "6363974585816147410",
+		"lsig": "AB86z5U74gKkBVA-7KPfogaSXBxQ",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5U74gKkBVA-7KPfogaSXBxQ&ludocid=6363974585816147410&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 2.9,
+		"reviews": 128,
+		"price": "$",
+		"type": "Fast Food",
+		"address": "Dieppe, NB. In Codiac Plaza",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4991f04849e9a3d24b6e813080b110a275dea58ad7507a843a0.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0949805,
+			"longitude": -64.7568321
+		}
+	}, {
+		"position": 5,
+		"title": "Wendy's",
+		"id": "13006350749890171179",
+		"lsig": "AB86z5UOMxPM939Wy88IXpxlqDgH",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UOMxPM939Wy88IXpxlqDgH&ludocid=13006350749890171179&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 902,
+		"price": "$",
+		"type": "Fast Food",
+		"address": "1100 Mountain Rd",
+		"description": "Fast-food burger chain serving sides such as chili & baked potatoes.",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4990ff41f29a9432c214c5cf55d0d016a63b2fa24e97b33d7d8.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.105097,
+			"longitude": -64.8212252
+		}
+	}, {
+		"position": 6,
+		"title": "Won Wong",
+		"id": "7950229029685917991",
+		"lsig": "AB86z5UG-rGOBer3jmtDhkm2wyr7",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UG-rGOBer3jmtDhkm2wyr7&ludocid=7950229029685917991&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 147,
+		"price": "$$",
+		"type": "Chinese",
+		"address": "Dieppe, NB",
+		"hours": "Closed. Opens 4 p.m.",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c49951784f9c54e990df4c9c9312ab7a63afb09f0dc5d06da3ea.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.096551399999996,
+			"longitude": -64.74237839999999
+		}
+	}, {
+		"position": 7,
+		"title": "Egg Roll King",
+		"id": "10092515475876806050",
+		"lsig": "AB86z5V4BwnZ5NmdzHo56c2GYWDX",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5V4BwnZ5NmdzHo56c2GYWDX&ludocid=10092515475876806050&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 68,
+		"type": "Chinese",
+		"address": "Riverview, NB",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4990fd88f9acde18a04cdab0701e85898a627de81adda3c721d.png",
+		"gps_coordinates": {
+			"latitude": 46.0627627,
+			"longitude": -64.8083221
+		}
+	}, {
+		"position": 8,
+		"title": "Kim Long Restaurant",
+		"id": "4936063394948250854",
+		"lsig": "AB86z5UF4xebSOb29ahD2pRuJDPZ",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UF4xebSOb29ahD2pRuJDPZ&ludocid=4936063394948250854&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 163,
+		"price": "$$",
+		"type": "Vietnamese",
+		"address": "1978 Mountain Rd",
+		"review": "\"Rice is clumpy, chicken wings are hard as a rock, and taste of leftovers.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c499e71e1fe9ee3423d5ae71561fce1a6ca96f620d1b40a0f3bf.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.122827099999995,
+			"longitude": -64.8547246
+		}
+	}, {
+		"position": 9,
+		"title": "The Doghouse Pub",
+		"id": "9199357995658854978",
+		"lsig": "AB86z5VxazQgfXXDkX3szlUTOIzW",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VxazQgfXXDkX3szlUTOIzW&ludocid=9199357995658854978&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 3.8,
+		"reviews": 87,
+		"price": "$",
+		"type": "Bar",
+		"address": "269 Chemin McLaughlin Rd",
+		"review": "\"Great spot to watch the game and shoot some pool.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c499cdf57a8e8fdf5fc89df0255ff37767bbcbc1178ec983c8ac.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1137774,
+			"longitude": -64.7813735
+		}
+	}, {
+		"position": 10,
+		"title": "Greco Pizza",
+		"id": "16459064829114841743",
+		"lsig": "AB86z5Xsm5NrcPGPYGw7OQh5U5-A",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Xsm5NrcPGPYGw7OQh5U5-A&ludocid=16459064829114841743&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 3.6,
+		"reviews": 102,
+		"price": "$",
+		"type": "Pizza",
+		"address": "Riverview, NB",
+		"thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO_S3I6SRr3UZayvdVHjbhtSjQbplz3KHuuDg5n=w90-h90-n-k-no",
+		"gps_coordinates": {
+			"latitude": 46.0671317,
+			"longitude": -64.7970615
+		}
+	}, {
+		"position": 11,
+		"title": "KFC",
+		"id": "4216715201358277651",
+		"lsig": "AB86z5X-kVRNzu4ssXH6hlMXER7k",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X-kVRNzu4ssXH6hlMXER7k&ludocid=4216715201358277651&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 3.5,
+		"reviews": 26,
+		"price": "$",
+		"type": "Fast Food",
+		"address": "Dieppe, NB. In Champlain Place",
+		"review": "\"the best chicken and good deals\"",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4994e23e01c00219b9434eb6fc5616196f8265c589f382b893b.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0957352,
+			"longitude": -64.7600509
+		}
+	}, {
+		"position": 12,
+		"title": "KFC",
+		"id": "3739905400958681480",
+		"lsig": "AB86z5XKgIoF6d1ZHGWCFFQyiHc2",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XKgIoF6d1ZHGWCFFQyiHc2&ludocid=3739905400958681480&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 3.4,
+		"reviews": 484,
+		"price": "$",
+		"type": "Fast Food",
+		"address": "945 Mountain Rd",
+		"review": "\"Best chicken burgers.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4992f40ad0e03775f0cefde67a54ee84a65a50e0356fb66c4ea.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1024265,
+			"longitude": -64.8145724
+		}
+	}, {
+		"position": 13,
+		"title": "Thanh's Palace",
+		"id": "6530430576450955650",
+		"lsig": "AB86z5VOErCD2Kl9jlydoEPF0vIY",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VOErCD2Kl9jlydoEPF0vIY&ludocid=6530430576450955650&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 72,
+		"price": "$$",
+		"type": "Vietnamese",
+		"address": "Dieppe, NB",
+		"description": "Menu highlight: best",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c499699e04eef2ce1ec7bc4f1349017e275df4d8c75bc142597f.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.102273000000004,
+			"longitude": -64.713639
+		}
+	}, {
+		"position": 14,
+		"title": "Baci Italia",
+		"id": "1021191126463939674",
+		"lsig": "AB86z5Ue2sahSIHVZNVx_wr3f4gI",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Ue2sahSIHVZNVx_wr3f4gI&ludocid=1021191126463939674&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 612,
+		"price": "$$",
+		"type": "Italian",
+		"address": "204 Church St",
+		"hours": "Closed. Opens 3:30 p.m. Wed.",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4993826dbfb815db148deffcb8d3affba49d5a1061790330df9.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0948615,
+			"longitude": -64.7807132
+		}
+	}, {
+		"position": 15,
+		"title": "Swiss Chalet",
+		"id": "3822790850313548920",
+		"lsig": "AB86z5V5GYWCg4WdHIqZ_HokLIqk",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5V5GYWCg4WdHIqZ_HokLIqk&ludocid=3822790850313548920&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 730,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Dieppe, NB",
+		"review": "\"Best chicken I have tried so far.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4992983281cfbf7bb169af4f0933feb038877e111b01d65772c.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0939403,
+			"longitude": -64.75436909999999
+		}
+	}, {
+		"position": 16,
+		"title": "Nita's Bar & Grill",
+		"id": "4709086423964027242",
+		"lsig": "AB86z5W_tnzqSp24KFqJasgJp6v-",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5W_tnzqSp24KFqJasgJp6v-&ludocid=4709086423964027242&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 135,
+		"price": "$",
+		"type": "Grill",
+		"address": "1999 Mountain Rd",
+		"review": "\"Great wings and service!\"",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c49902d9df2e19d953181d13e85ea1857a5fd4174fb505a9c89d.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.123830999999996,
+			"longitude": -64.85547439999999
+		}
+	}, {
+		"position": 17,
+		"title": "SUN SUN Take-Out & Restaurant",
+		"id": "10734350663867077029",
+		"lsig": "AB86z5V0LTJ5cVW5N3JOqFUj8Qvg",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5V0LTJ5cVW5N3JOqFUj8Qvg&ludocid=10734350663867077029&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 244,
+		"price": "$",
+		"type": "Chinese",
+		"address": "979 Mountain Rd",
+		"hours": "Closed. Opens 3 p.m.",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c4998bf8d4875c55c84155bd36e47faa27b142f0874e35cea144.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.103078499999995,
+			"longitude": -64.8160583
+		}
+	}, {
+		"position": 18,
+		"title": "A&W Canada",
+		"id": "8504342540515511516",
+		"lsig": "AB86z5UyKCeViuihPQNybZZTJPs1",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UyKCeViuihPQNybZZTJPs1&ludocid=8504342540515511516&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 650,
+		"price": "$",
+		"type": "Hamburger",
+		"address": "20 Plaza Blvd",
+		"description": "Fast-food outlet serving up namesake root beer & floats, plus burgers, chicken & fries.",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c499f074cb4c43f245dfbd9d5dfa16b6b15d948ddd47ffa95e89.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.113426999999994,
+			"longitude": -64.826605
+		}
+	}, {
+		"position": 19,
+		"title": "Pizza Delight",
+		"id": "5986328057408255917",
+		"lsig": "AB86z5Xct47EwJN7u-wemtKkSW8V",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Xct47EwJN7u-wemtKkSW8V&ludocid=5986328057408255917&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 375,
+		"price": "$$",
+		"type": "Pizza",
+		"address": "1313 Mountain Rd",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c499458c66381c10f8e9b4c1402481e984e0bd11308dc696aa25.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.110210099999996,
+			"longitude": -64.8299099
+		}
+	}, {
+		"position": 20,
+		"title": "Hynes Restaurant",
+		"id": "2954322618919589725",
+		"lsig": "AB86z5U8SGkVrMrUOJjXdbIMZJ4q",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5U8SGkVrMrUOJjXdbIMZJ4q&ludocid=2954322618919589725&num=100&q=best+wings&start=60&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 1204,
+		"price": "$",
+		"type": "Restaurant",
+		"address": "495 Mountain Rd",
+		"description": "Traditional comfort food & all-day breakfast in a homey diner dating from the 1960s.",
+		"thumbnail": "https://serpapi.com/searches/61250c5dc573d5ec84e3ad0b/images/9f7a9e0b62a9c49963f52cd08cc39b9492048e000eac6ac215c775b35e8ec291.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0978346,
+			"longitude": -64.7961171
+		}
+	}, {
+		"position": 1,
+		"title": "Domino's Pizza",
+		"id": "12756255028292241901",
+		"lsig": "AB86z5V4S7On_Bo-Lm6ZyjGTIa9y",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5V4S7On_Bo-Lm6ZyjGTIa9y&ludocid=12756255028292241901&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 404,
+		"price": "$",
+		"type": "Pizza Delivery",
+		"address": "835 Mountain Rd",
+		"review": "\"Great pitza and wings.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d2751556541aafe5cc1959774870e6c213e200e4213d6e3a0486d909.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.100710799999995,
+			"longitude": -64.8091304
+		}
+	}, {
+		"position": 2,
+		"title": "Bravo Pizza",
+		"id": "13165472455599744587",
+		"lsig": "AB86z5WzOdW5q48YtmtUrNOTiIHM",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WzOdW5q48YtmtUrNOTiIHM&ludocid=13165472455599744587&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 126,
+		"price": "$$",
+		"type": "Pizza",
+		"address": "Riverview, NB",
+		"hours": "Closed. Opens 3 p.m.",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d27515568304ece2152fafeea11af55cc65c0867fdb6bde03d49a40b.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0632269,
+			"longitude": -64.80999419999999
+		}
+	}, {
+		"position": 3,
+		"title": "Freddie's Pizza & Donair",
+		"id": "4856548860580916827",
+		"lsig": "AB86z5Uf1f5M5ZG_C4s8vOXGurTs",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Uf1f5M5ZG_C4s8vOXGurTs&ludocid=4856548860580916827&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 294,
+		"type": "Pizza",
+		"address": "2T9, 1425 Mountain Rd",
+		"review": "\"Wings hot and crispy.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d275155645c54701db2cb9d489b1900a94a320c84e38dbe6ed11f49b.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1123237,
+			"longitude": -64.83362029999999
+		}
+	}, {
+		"position": 4,
+		"title": "Hub City Pub",
+		"id": "17105872528137123241",
+		"lsig": "AB86z5VKjoBjc0OHXEzXhFwQTJ3Q",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VKjoBjc0OHXEzXhFwQTJ3Q&ludocid=17105872528137123241&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 3.7,
+		"reviews": 42,
+		"type": "Restaurant",
+		"address": "21 Casino Dr. In Casino New Brunswick",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d2751556d241877f8a3b47e79ac9b266f2daf605cd9bc528c59b8bc4.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1276855,
+			"longitude": -64.8795852
+		}
+	}, {
+		"position": 5,
+		"title": "Arby's",
+		"id": "528786586177160361",
+		"lsig": "AB86z5XZT7M-TQHLL2z-ouqiJ5Ko",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XZT7M-TQHLL2z-ouqiJ5Ko&ludocid=528786586177160361&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 768,
+		"price": "$",
+		"type": "Fast Food",
+		"address": "1029 Mountain Rd",
+		"description": "Fast-food chain, known for its roast beef, serving up hot & cold sandwiches, fries & shakes.",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d27515564bb48ca6b18e5a1e007bd7196ae72ef959ff63b48d5a1b89.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.10409000000001,
+			"longitude": -64.8178339
+		}
+	}, {
+		"position": 6,
+		"title": "A&W Canada",
+		"id": "15017485282129823093",
+		"lsig": "AB86z5Upfak2y3HTC1PQ28xdoK92",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Upfak2y3HTC1PQ28xdoK92&ludocid=15017485282129823093&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 114,
+		"price": "$",
+		"type": "Hamburger",
+		"address": "Dieppe, NB. In Champlain Place",
+		"description": "Fast-food outlet serving up namesake root beer & floats, plus burgers, chicken & fries.",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d275155630ecc3a959361e53bfdecf66a4281e0ee300ee02b9014590.png",
+		"gps_coordinates": {
+			"latitude": 46.095701,
+			"longitude": -64.76101799999999
+		}
+	}, {
+		"position": 7,
+		"title": "Papa John's Pizza",
+		"id": "15672982957229096867",
+		"lsig": "AB86z5VfulQEqUZFTcwsAv5_S004",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VfulQEqUZFTcwsAv5_S004&ludocid=15672982957229096867&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 126,
+		"type": "Pizza",
+		"address": "Dieppe, NB",
+		"review": "\"Delicious pizza, cheesesticks and wings!\"",
+		"thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMlogh1lgJniMJSNaDDsWkFqFdbyz8GT-8sJgEL=w90-h90-n-k-no",
+		"gps_coordinates": {
+			"latitude": 46.097484099999996,
+			"longitude": -64.7025898
+		}
+	}, {
+		"position": 8,
+		"title": "Jessy's Pizza Moncton",
+		"id": "5085045837525342156",
+		"lsig": "AB86z5UDo3AdgNZBYxWYpt_jD6WJ",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UDo3AdgNZBYxWYpt_jD6WJ&ludocid=5085045837525342156&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 234,
+		"price": "$",
+		"type": "Pizza",
+		"address": "Dieppe, NB",
+		"hours": "Closed. Opens 3 p.m.",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d275155682bf8095bc761c2498eee1d59882f881d9b2f6b8ad0872ce.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0954491,
+			"longitude": -64.750389
+		}
+	}, {
+		"position": 9,
+		"title": "Swiss Chalet",
+		"id": "641164203877455735",
+		"lsig": "AB86z5XCEx3Cuc-bcAIeXjoYolaF",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XCEx3Cuc-bcAIeXjoYolaF&ludocid=641164203877455735&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 805,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "1933 Mountain Rd",
+		"review": "\"Wings are a little over priced.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d2751556bc4eb969d51ffcabd9a4f3e71b9c9e1d0adc61c747afa32e.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1230906,
+			"longitude": -64.85257159999999
+		}
+	}, {
+		"position": 10,
+		"title": "A&W Canada",
+		"id": "9421258986787049828",
+		"lsig": "AB86z5Xq9KlqkAo2cRaAVjtB7pRp",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Xq9KlqkAo2cRaAVjtB7pRp&ludocid=9421258986787049828&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 757,
+		"price": "$",
+		"type": "Hamburger",
+		"address": "Dieppe, NB",
+		"description": "Fast-food outlet serving up namesake root beer & floats, plus burgers, chicken & fries.",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d2751556e0b09540746e01d1b191b629fca7616edb48fabad1b1b1fe.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.092856,
+			"longitude": -64.7608779
+		}
+	}, {
+		"position": 11,
+		"title": "An's Restaurant",
+		"id": "13742704197418241909",
+		"lsig": "AB86z5Uxj_UvR_lVKCibsr7ECqrO",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Uxj_UvR_lVKCibsr7ECqrO&ludocid=13742704197418241909&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 183,
+		"price": "$$",
+		"type": "French",
+		"address": "834 Mountain Rd",
+		"review": "\"Great food and good service!! i had lunch here .reasonable price and ...\"",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d2751556747c7667253bd655a334398b2a127869fb9231e3f7c4758c.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.100130199999995,
+			"longitude": -64.8093647
+		}
+	}, {
+		"position": 12,
+		"title": "Deluxe French Fries",
+		"id": "13328156976614985981",
+		"lsig": "AB86z5V6OMyA37C_yPB5MVxb3vRS",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5V6OMyA37C_yPB5MVxb3vRS&ludocid=13328156976614985981&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 403,
+		"price": "$",
+		"type": "Fast Food",
+		"address": "Dieppe, NB",
+		"review": "\"Their platters are the best.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d27515566e12c414a24c6aea5257c48a2b2d9e666f12b62a500579a0.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.096055500000006,
+			"longitude": -64.7562995
+		}
+	}, {
+		"position": 13,
+		"title": "Pizza Delight",
+		"id": "17968058379734210303",
+		"lsig": "AB86z5VpX8zNpTiz-IhkCEg3uYWs",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VpX8zNpTiz-IhkCEg3uYWs&ludocid=17968058379734210303&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 3.8,
+		"reviews": 118,
+		"price": "$$",
+		"type": "Pizza",
+		"address": "Dieppe, NB. In Champlain Place",
+		"review": "\"The pizza and wings were good.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d27515560250f12e56395b2755d18204ca2a2f155e5b1c95fe1872ac.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0959765,
+			"longitude": -64.7611304
+		}
+	}, {
+		"position": 14,
+		"title": "Papa John's Pizza",
+		"id": "34130504048905615",
+		"lsig": "AB86z5WrWuxFaPdOctLhABMVwFzF",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WrWuxFaPdOctLhABMVwFzF&ludocid=34130504048905615&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 135,
+		"type": "Pizza",
+		"address": "Store #10723, 1-1909 Mountain Rd",
+		"description": "Take-out/delivery chain offering classic & specialty pizzas, wings & breadsticks, plus desserts.",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d2751556d3e5000c6cbb518f5107ccae7968462b7c01dd3ce11a1b2c.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1230785,
+			"longitude": -64.8519755
+		}
+	}, {
+		"position": 15,
+		"title": "Rossano's Italian Grill",
+		"id": "11086713249938858107",
+		"lsig": "AB86z5UojFPeaMbYfH5iuArpvC0t",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UojFPeaMbYfH5iuArpvC0t&ludocid=11086713249938858107&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 511,
+		"price": "$$",
+		"type": "Italian",
+		"address": "30 Mapleton Rd",
+		"review": "\"BBQ Chicken nachos best ever!\"",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d2751556a165daa5744d3495330d92f0b355e235bbe6e35fe73606fd.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1069658,
+			"longitude": -64.8229549
+		}
+	}, {
+		"position": 16,
+		"title": "Greco Pizza",
+		"id": "17489780225206562804",
+		"lsig": "AB86z5WyJf4bn9u6kNFU2AYRQ5eI",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WyJf4bn9u6kNFU2AYRQ5eI&ludocid=17489780225206562804&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 3.9,
+		"reviews": 226,
+		"price": "$",
+		"type": "Pizza",
+		"address": "120 Killam Dr",
+		"review": "\"Order 15 wings last night.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d2751556d1334f76bd1c5444b30e2bd3aa51f8cae2bad9074adfe92e.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0979222,
+			"longitude": -64.8170296
+		}
+	}, {
+		"position": 17,
+		"title": "Fusion Express",
+		"id": "4966966836687787786",
+		"lsig": "AB86z5U3TMLFHj3PFF0B9QfdB46h",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5U3TMLFHj3PFF0B9QfdB46h&ludocid=4966966836687787786&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 5.0,
+		"reviews": 1,
+		"type": "Restaurant",
+		"address": "888 Main St",
+		"review": "\"Fresh and very good! Great service as well and fast!\"",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d27515565d29ae68f1254ef4ecdbf4acc3b5ceb6e544658a6a06be27.png",
+		"gps_coordinates": {
+			"latitude": 46.087868199999996,
+			"longitude": -64.7799297
+		}
+	}, {
+		"position": 18,
+		"title": "Coasters",
+		"id": "15367013135142115528",
+		"lsig": "AB86z5VAlMgdEyrUQ5GtCFxq_s5e",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VAlMgdEyrUQ5GtCFxq_s5e&ludocid=15367013135142115528&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 9,
+		"type": "Bar",
+		"address": "Dieppe, NB. In Codiac Plaza",
+		"review": "\"Awesome place to go hang out with friends and enjoy good Pub ...\"",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d27515561ac64907df9f006d8d2a40feec2dba147b426df26e7bef3e.png",
+		"gps_coordinates": {
+			"latitude": 46.0947496,
+			"longitude": -64.7566581
+		}
+	}, {
+		"position": 19,
+		"title": "Harvey's",
+		"id": "8939998431099104922",
+		"lsig": "AB86z5UunvKMSJu_T6yhX9o7bDQX",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UunvKMSJu_T6yhX9o7bDQX&ludocid=8939998431099104922&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 332,
+		"price": "$",
+		"type": "Restaurant",
+		"address": "1521 Mountain Rd",
+		"description": "Menu highlight: best",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d2751556058139b534f56e1e6c3f45b340985949275c1dbfabf7e8c5.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1150786,
+			"longitude": -64.8371059
+		}
+	}, {
+		"position": 20,
+		"title": "Salty Sea Dog Pub",
+		"id": "3005856654748643588",
+		"lsig": "AB86z5UossQkkFbq-tYYYUURhf5a",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UossQkkFbq-tYYYUURhf5a&ludocid=3005856654748643588&num=100&q=best+wings&start=80&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 49,
+		"price": "$",
+		"type": "Pub",
+		"address": "1715 Main St",
+		"thumbnail": "https://serpapi.com/searches/61250c7ba1b423cb8fd8f513/images/4c40a1f6d2751556ec42d3dbcc8adb737b4548e57b4f8ab3ce814a63bcc9a174.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0787361,
+			"longitude": -64.7973027
+		}
+	}, {
+		"position": 1,
+		"title": "Greco Pizza",
+		"id": "5737583017840431412",
+		"lsig": "AB86z5VYENnr5c-f7t-x67sTDWob",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VYENnr5c-f7t-x67sTDWob&ludocid=5737583017840431412&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 3.7,
+		"reviews": 148,
+		"price": "$",
+		"type": "Pizza",
+		"address": "448 Elmwood Dr",
+		"thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOiF29jyauKbg2r0MpQgj4_PaHS8WPHNxss9_ZV=w90-h90-n-k-no",
+		"gps_coordinates": {
+			"latitude": 46.117329399999996,
+			"longitude": -64.77255660000002
+		}
+	}, {
+		"position": 2,
+		"title": "Gusto Italian Grill & Bar",
+		"id": "7018427589842420029",
+		"lsig": "AB86z5UyEg86yu-hKvS8iqO1mCfo",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UyEg86yu-hKvS8iqO1mCfo&ludocid=7018427589842420029&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 1244,
+		"price": "$$",
+		"type": "Italian",
+		"address": "130 Westmorland St",
+		"hours": "Closed. Opens 4 p.m.",
+		"description": "Choice Italian fare in casual, brick-lined surrounds with an open kitchen & stylish, rustic accents.",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0951cde096485a2e1730b96876333c44f551e5995088dbe64.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.087953500000005,
+			"longitude": -64.7784266
+		}
+	}, {
+		"position": 3,
+		"title": "Skipper Jack's Maritime Restaurant",
+		"id": "6407660365661251653",
+		"lsig": "AB86z5UfHV3hrM62862YCiFoboug",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UfHV3hrM62862YCiFoboug&ludocid=6407660365661251653&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 978,
+		"price": "$$",
+		"type": "Seafood",
+		"address": "211 Mapleton Rd",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a032fdd21c360ab55220c2ce846266e548dd808148cf5befc5.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1133935,
+			"longitude": -64.8247102
+		}
+	}, {
+		"position": 4,
+		"title": "Pizza Delight",
+		"id": "7201460404565347601",
+		"lsig": "AB86z5XPbTGtd8Xzm4QP6CeZ9pF9",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XPbTGtd8Xzm4QP6CeZ9pF9&ludocid=7201460404565347601&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 3.8,
+		"reviews": 102,
+		"price": "$$",
+		"type": "Pizza",
+		"address": "331 Elmwood Dr",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a04e8b2bbc968ee6c0832b723330b3a20df7ca3c3b1fb3801b.png",
+		"gps_coordinates": {
+			"latitude": 46.1150004,
+			"longitude": -64.7724108
+		}
+	}, {
+		"position": 5,
+		"title": "Hungries Diner",
+		"id": "602348771409152172",
+		"lsig": "AB86z5WNTbD-YVzmEMvcdtpYxvdm",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WNTbD-YVzmEMvcdtpYxvdm&ludocid=602348771409152172&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 92,
+		"type": "Restaurant",
+		"address": "395 Baig Blvd",
+		"hours": "Temporarily closed",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a026cc717c7488ddd32132e91d6673e47fe9e3d28a0fc30dd0.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.073959300000006,
+			"longitude": -64.8333358
+		}
+	}, {
+		"position": 6,
+		"title": "Rotisserie St-Hubert",
+		"id": "8183493802411232078",
+		"lsig": "AB86z5V6fYnkbVfHhEayK0_yE-5L",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5V6fYnkbVfHhEayK0_yE-5L&ludocid=8183493802411232078&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 980,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "235 Carson Rd",
+		"review": "\"PS get the chicken wings...best ever!\"",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0bd83d82950bfecade466dca21c9650ce8bc069f27e50fed1.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.11464,
+			"longitude": -64.8226273
+		}
+	}, {
+		"position": 7,
+		"title": "Cedar's Pizza",
+		"id": "15336001106514184996",
+		"lsig": "AB86z5V6w6OyXhTQTE6pPj9S3W5u",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5V6w6OyXhTQTE6pPj9S3W5u&ludocid=15336001106514184996&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 14,
+		"type": "Pizza",
+		"address": "405 St. George St",
+		"review": "\"Best donairs in moncton...... sauce on the side is key.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0eb697591cb96ec7839635b7a55cde886fb600d4bb616e8e1.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0897485,
+			"longitude": -64.7904467
+		}
+	}, {
+		"position": 8,
+		"title": "ORIENS MODERN ASIAN CUISINE",
+		"id": "7922083517110915283",
+		"lsig": "AB86z5UWIUtPGM6HMwFuAToGDK1X",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UWIUtPGM6HMwFuAToGDK1X&ludocid=7922083517110915283&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.7,
+		"reviews": 160,
+		"price": "$$",
+		"type": "Asian",
+		"address": "1590 Mountain Rd",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0bf0a0d923c5215add648fd05db65d420a467a1fb1d7b9e50.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1162886,
+			"longitude": -64.8399371
+		}
+	}, {
+		"position": 9,
+		"title": "Milestones",
+		"id": "2022027350403341249",
+		"lsig": "AB86z5VnnZq5eKO2Y93G3go9JGYl",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VnnZq5eKO2Y93G3go9JGYl&ludocid=2022027350403341249&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 240,
+		"type": "Restaurant",
+		"address": "239 Carson Rd",
+		"review": "\"The burgers are the best and seasoned fries.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0819d1c4fef02be3cfcad541103974f29f4a1c850d305fd50.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1154022,
+			"longitude": -64.822937
+		}
+	}, {
+		"position": 10,
+		"title": "COSMO Dance Night Club",
+		"id": "4873616981135165109",
+		"lsig": "AB86z5UEMcHQEDYYZQbxFXMqBGHD",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UEMcHQEDYYZQbxFXMqBGHD&ludocid=4873616981135165109&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 3.6,
+		"reviews": 112,
+		"price": "$$",
+		"type": "Lounge",
+		"address": "837 Main St",
+		"hours": "Closed. Opens 4 p.m.",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0743f1648d05e5125bdf6f524d315f65e67322e6a36411a29.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.088184399999996,
+			"longitude": -64.7797174
+		}
+	}, {
+		"position": 11,
+		"title": "Domino's Pizza",
+		"id": "11250858149103736366",
+		"lsig": "AB86z5VbtRdkCQ5Wg2J8erxZCL-r",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VbtRdkCQ5Wg2J8erxZCL-r&ludocid=11250858149103736366&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 187,
+		"price": "$",
+		"type": "Pizza Delivery",
+		"address": "112 Morton Ave",
+		"description": "Delivery/carryout chain offering a wide range of pizzas & a variety of other dishes & sides.",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a02f108d54e049ec0c3799b4c8b07816af2e7aa2d9be91d0c1.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1105124,
+			"longitude": -64.77963559999999
+		}
+	}, {
+		"position": 12,
+		"title": "Mama's Express",
+		"id": "16172314063351210268",
+		"lsig": "AB86z5WFUvsFmRlQGyabF9NQsnqs",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WFUvsFmRlQGyabF9NQsnqs&ludocid=16172314063351210268&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 32,
+		"type": "Pizza Takeout",
+		"address": "1576 Mountain Rd. In Racetrac",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0e65f679bee092fb0b8d837499a86a6efa5d3432b19a560d1.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1157215,
+			"longitude": -64.8395225
+		}
+	}, {
+		"position": 13,
+		"title": "McBuns Pizza, Subs, Donairs & More",
+		"id": "8250364587535553768",
+		"lsig": "AB86z5XHIUDkqHcwmd-_VKzAA8ow",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XHIUDkqHcwmd-_VKzAA8ow&ludocid=8250364587535553768&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 205,
+		"price": "$",
+		"type": "Pizza Takeout",
+		"address": "122 Shediac Rd",
+		"review": "\"Best Donair sub and steak sub around\"",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a087a1428e86797517b87631c29883ee1c353da8891d922a6d.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1031324,
+			"longitude": -64.7620781
+		}
+	}, {
+		"position": 14,
+		"title": "Rice Bowl Take-Out",
+		"id": "12225868250234000478",
+		"lsig": "AB86z5XulV3e9JI7JDcFATJn0UbW",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XulV3e9JI7JDcFATJn0UbW&ludocid=12225868250234000478&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 3.8,
+		"reviews": 108,
+		"price": "$",
+		"type": "Chinese",
+		"address": "775 Mountain Rd",
+		"hours": "Closed. Opens 11 a.m. Wed.",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a071f6faedf389f00c78b9b7c78d48c9e0ac12c8d938d82b62.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0999237,
+			"longitude": -64.8063386
+		}
+	}, {
+		"position": 15,
+		"title": "Maverick's Steakhouse & Grill",
+		"id": "6159294025828258945",
+		"lsig": "AB86z5VV_M74Jy1BSaBKcSvvqqjO",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VV_M74Jy1BSaBKcSvvqqjO&ludocid=6159294025828258945&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 236,
+		"price": "$$$",
+		"type": "Delivery Restaurant",
+		"address": "Closed. Opens 5 p.m.",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0659772bcd568b51a176baf2d9067f2578950e6a6842dbe94.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.104549999999996,
+			"longitude": -64.706897
+		}
+	}, {
+		"position": 16,
+		"title": "Thaizone Dieppe",
+		"id": "2196423428258537743",
+		"lsig": "AB86z5UfeXPxEjfmZAmC55oy_6Zb",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UfeXPxEjfmZAmC55oy_6Zb&ludocid=2196423428258537743&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 3.5,
+		"reviews": 145,
+		"price": "$$",
+		"type": "Thai",
+		"address": "Dieppe, NB",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a03067d56866cd98332886dae927ed1185a9d806b2fe12b281.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1203173,
+			"longitude": -64.82789749999999
+		}
+	}, {
+		"position": 17,
+		"title": "Classic Burger Express",
+		"id": "9203661047161176549",
+		"lsig": "AB86z5XJSivKO-q-CyA2KzXZzWrE",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XJSivKO-q-CyA2KzXZzWrE&ludocid=9203661047161176549&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 3.8,
+		"reviews": 59,
+		"type": "Hamburger",
+		"address": "30 Wyse St",
+		"review": "\"Wings weren't the best and the burger was plain and bland tasting I found.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0c8f5272d461bc6a6356a5a4330a9c4f68071480011f92ca2.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.117901599999996,
+			"longitude": -64.8396399
+		}
+	}, {
+		"position": 18,
+		"title": "Norm's Pizza Moncton, NB",
+		"id": "11167735969183552233",
+		"lsig": "AB86z5WZgKKxfvM8xRG5wuFhX_Fb",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WZgKKxfvM8xRG5wuFhX_Fb&ludocid=11167735969183552233&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 80,
+		"type": "Pizza",
+		"address": "1633 Mountain Rd",
+		"review": "\"The best donairs in town!\"",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a01dc0e19d5405aafc72a48a8f4279b527e2e515273007b307.png",
+		"gps_coordinates": {
+			"latitude": 46.098641699999995,
+			"longitude": -64.7997309
+		}
+	}, {
+		"position": 19,
+		"title": "Lexi's Lounge , Moncton",
+		"id": "4934379581508913377",
+		"lsig": "AB86z5WHfjmeAYBgAAVDJGCVs8km",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WHfjmeAYBgAAVDJGCVs8km&ludocid=4934379581508913377&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 53,
+		"type": "Bar",
+		"address": "2 Reade St",
+		"review": "\"Bow down.......Best wings in town\"",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0706c7648d0e8ab042d7097878b5ef3d53fb5eec588d30b39.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0898055,
+			"longitude": -64.7888737
+		}
+	}, {
+		"position": 20,
+		"title": "Notre Dame de Parkton",
+		"id": "6120513226742032189",
+		"lsig": "AB86z5WAi4s1lOTtTXfmMl_JiC0b",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WAi4s1lOTtTXfmMl_JiC0b&ludocid=6120513226742032189&num=100&q=best+wings&start=100&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 109,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "376 St. George St",
+		"hours": "Closed. Opens 11 a.m. Wed.",
+		"review": "\"ribs 'n wings on select evenings.\"",
+		"thumbnail": "https://serpapi.com/searches/61250c95a4be1090463b57d3/images/462b9e1a7c8d59a0b4c80fdca87507050519e6f6009591ab1b5bd67b09752807.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.089806,
+			"longitude": -64.78887
+		}
+	}, {
+		"position": 1,
+		"title": "Notre Dame de Parkton",
+		"id": "6120513226742032189",
+		"lsig": "AB86z5WAi4s1lOTtTXfmMl_JiC0b",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WAi4s1lOTtTXfmMl_JiC0b&ludocid=6120513226742032189&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 109,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "376 St. George St",
+		"hours": "Closed. Opens 11 a.m. Wed.",
+		"review": "\"ribs 'n wings on select evenings.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c7e9cfd1777a00a9aecebe55d61cdce4aeb4d4dbaaffef4f64.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0898055,
+			"longitude": -64.7888737
+		}
+	}, {
+		"position": 2,
+		"title": "Slapshots Family Sports Restaurant & Grill",
+		"id": "5470063663334126046",
+		"lsig": "AB86z5XpXpb21Vg5gPVpmkNJc-UU",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XpXpb21Vg5gPVpmkNJc-UU&ludocid=5470063663334126046&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 3.7,
+		"reviews": 3,
+		"type": "Restaurant",
+		"address": "55 Russ Howard Dr",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c76484349cd2f2c45a725d315d6f893e6040f4d392fadc38fe.png",
+		"gps_coordinates": {
+			"latitude": 46.0952748,
+			"longitude": -64.8175653
+		}
+	}, {
+		"position": 3,
+		"title": "Vito's",
+		"id": "8063506267414343335",
+		"lsig": "AB86z5WV75msG3odZx1uClFWOIhp",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WV75msG3odZx1uClFWOIhp&ludocid=8063506267414343335&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 575,
+		"price": "$$",
+		"type": "Mediterranean",
+		"address": "726 Mountain Rd",
+		"hours": "Closed. Opens 11:30 a.m. Wed.",
+		"description": "Takeout: Now Ends 9 p.m.",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c7b709842b23a507d2632e8729f568f8977316146a7a2df841.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0990293,
+			"longitude": -64.8041767
+		}
+	}, {
+		"position": 4,
+		"title": "KRISPYS FRIED CHICKEN",
+		"id": "10560535508858013402",
+		"lsig": "AB86z5UEhQSofbNPuinzTc_3U4PT",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UEhQSofbNPuinzTc_3U4PT&ludocid=10560535508858013402&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.7,
+		"reviews": 7,
+		"type": "Fast Food",
+		"address": "23 Killam Dr",
+		"hours": "Closed. Opens 11 a.m. Wed.",
+		"review": "\"This the best fried chicken ?? in Moncton.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c70b9bb27d73647898269307ed60267721bc89f6f4b2041edc.png",
+		"gps_coordinates": {
+			"latitude": 46.1003884,
+			"longitude": -64.8127298
+		}
+	}, {
+		"position": 5,
+		"title": "Gahan House Hub City",
+		"id": "15611677246119662366",
+		"lsig": "AB86z5UZTx1NGe0LLvRUVDlndM6v",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UZTx1NGe0LLvRUVDlndM6v&ludocid=15611677246119662366&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 313,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "55 Queen St",
+		"hours": "Closed. Opens 4 p.m.",
+		"review": "\"Wow just wow the wings is a must\"",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c792ac5a1c738b94d6478497a0a02e05f205ab6d80931b3009.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.090662699999996,
+			"longitude": -64.7746843
+		}
+	}, {
+		"position": 6,
+		"title": "Stoney's Burger Pit",
+		"id": "642338555093435926",
+		"lsig": "AB86z5WW4yoefKBYQSjZUF20F6xR",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WW4yoefKBYQSjZUF20F6xR&ludocid=642338555093435926&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 3.0,
+		"reviews": 3,
+		"type": "American",
+		"address": "1999 Mountain Rd",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c76a1942d3c8322278752a0d94f18b057a7f6367314f2809ca.png",
+		"gps_coordinates": {
+			"latitude": 46.1238374,
+			"longitude": -64.8556018
+		}
+	}, {
+		"position": 7,
+		"title": "Red Satay Dieppe",
+		"id": "1200357059359809434",
+		"lsig": "AB86z5UQyT1xUJzGsz9MxX0FjfGz",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UQyT1xUJzGsz9MxX0FjfGz&ludocid=1200357059359809434&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 325,
+		"price": "$$",
+		"type": "Vietnamese",
+		"address": "Dieppe, NB",
+		"review": "\"Beat wings I have had anywhere.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c777191c97382e8b1cea3c067e979fba8fdc7fa9e7568c9618.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.09436290000001,
+			"longitude": -64.6933214
+		}
+	}, {
+		"position": 8,
+		"title": "Jack's",
+		"id": "9124593319248577368",
+		"lsig": "AB86z5Uzil449SgG2NyZVFOL-iPk",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Uzil449SgG2NyZVFOL-iPk&ludocid=9124593319248577368&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 3.9,
+		"reviews": 8,
+		"type": "Restaurant",
+		"address": "360 Elmwood Dr. In Starbucks",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c79930b5d23afc7c3e2e095a63e67d35bf73e650c3ed12166e.png",
+		"gps_coordinates": {
+			"latitude": 46.1154967,
+			"longitude": -64.7733758
+		}
+	}, {
+		"position": 9,
+		"title": "K & B Take-Out",
+		"id": "12167172940497209994",
+		"lsig": "AB86z5XAyWHk2nkaYvh7rMDVFeQH",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XAyWHk2nkaYvh7rMDVFeQH&ludocid=12167172940497209994&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 91,
+		"price": "$",
+		"type": "Restaurant",
+		"address": "Salisbury, NB",
+		"review": "\"Best chicken anywhere.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c7931266b48a06ab49d3c16f715e17b6c6e85ecd18cd25dd95.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.027251899999996,
+			"longitude": -65.0407986
+		}
+	}, {
+		"position": 10,
+		"title": "Pizza Mill",
+		"id": "6664389744816548483",
+		"lsig": "AB86z5XnkK-WAqzoVOE2AZRNyQcG",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XnkK-WAqzoVOE2AZRNyQcG&ludocid=6664389744816548483&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.8,
+		"reviews": 213,
+		"price": "$",
+		"type": "Pizza",
+		"address": "Salisbury, NB",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c7ace67d426f14bcd9baeb735dae4b99a9d5c73e7de7367306.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0261394,
+			"longitude": -65.0432429
+		}
+	}, {
+		"position": 11,
+		"title": "Grady's Pub",
+		"id": "13278508293611646522",
+		"lsig": "AB86z5XXGQNi8mzei5sHMyAd9nbT",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XXGQNi8mzei5sHMyAd9nbT&ludocid=13278508293611646522&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 57,
+		"price": "$",
+		"type": "Pub",
+		"address": "Salisbury, NB",
+		"thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPQlpUjPq7-VyT6HPeOZZ20rkVjegAILDse06-c=w90-h90-n-k-no",
+		"gps_coordinates": {
+			"latitude": 46.0273744,
+			"longitude": -65.0404044
+		}
+	}, {
+		"position": 12,
+		"title": "Crowne Plaza Moncton Downtown, an IHG Hotel",
+		"id": "17150053752681536710",
+		"lsig": "AB86z5WSWrsknqY1Jf1XEgDEnBkO",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WSWrsknqY1Jf1XEgDEnBkO&ludocid=17150053752681536710&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 995,
+		"type": "Hotel",
+		"address": "1005 Main St",
+		"description": "Relaxed hotel with a bar, a restaurant & an indoor pool, plus 11 meeting rooms & free Wi-Fi.",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c7d2c171020331cb941b7975a6e7b92b35f2b76fb0daeb15da.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0870428,
+			"longitude": -64.7838416
+		}
+	}, {
+		"position": 13,
+		"title": "Atlantic Superstore",
+		"id": "11183185444429212757",
+		"lsig": "AB86z5WfAgpzGBcwASQ2Xk5Aev44",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WfAgpzGBcwASQ2Xk5Aev44&ludocid=11183185444429212757&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 1618,
+		"type": "Grocery store",
+		"address": "165 Main St",
+		"review": "\"Best hamburger around\"",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c75f5fe83578c9dcfae7998beced50a3fe4bc32bcc3d4af3ff.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.094031,
+			"longitude": -64.768669
+		}
+	}, {
+		"position": 14,
+		"title": "Sobeys Vaughan Harvey",
+		"id": "15056661449011133354",
+		"lsig": "AB86z5Wx-oCFOmGdhTJYvQIGd4o1",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Wx-oCFOmGdhTJYvQIGd4o1&ludocid=15056661449011133354&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 1064,
+		"type": "Grocery store",
+		"address": "55 Vaughan Harvey Blvd",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c7b1168e2bef5c26efd000dbfbbdccb96042676f500c3f019a.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.084483999999996,
+			"longitude": -64.78785599999999
+		}
+	}, {
+		"position": 15,
+		"title": "Rinzler's Meat Market",
+		"id": "5969054251130186575",
+		"lsig": "AB86z5XAgFrhWulotjJ2ZESX5Ag7",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XAgFrhWulotjJ2ZESX5Ag7&ludocid=5969054251130186575&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 187,
+		"type": "Butcher shop",
+		"address": "808 Mountain Rd",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c725b0a446ad2e71321b1376f9da5da2664edfea19da6473ed.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0998339,
+			"longitude": -64.8077867
+		}
+	}, {
+		"position": 16,
+		"title": "Dooly's Billiard Room",
+		"id": "8868366840120318788",
+		"lsig": "AB86z5V58YvAL3EpLTsPdbbMcWd7",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5V58YvAL3EpLTsPdbbMcWd7&ludocid=8868366840120318788&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 178,
+		"price": "$$",
+		"type": "Pool hall",
+		"address": "1315 Mountain Rd",
+		"review": "\"Some of the best wings going\"",
+		"thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNI6bWztdfUp_gBRvh5BW6kF06Yk9w77yCEjBaA=w90-h90-n-k-no",
+		"gps_coordinates": {
+			"latitude": 46.1102582,
+			"longitude": -64.8299032
+		}
+	}, {
+		"position": 17,
+		"title": "Sandbar",
+		"id": "15130905878049839003",
+		"lsig": "AB86z5WugLuFCj-DkEkh8uwA4vCg",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WugLuFCj-DkEkh8uwA4vCg&ludocid=15130905878049839003&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 351,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Shediac, NB",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c7376b443ae5924556e118e9d4324851c18085f3de47178bc6.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.2408065,
+			"longitude": -64.5303038
+		}
+	}, {
+		"position": 18,
+		"title": "Chumley's Eatery",
+		"id": "5767613983197026982",
+		"lsig": "AB86z5W5SeO6YvCowtWz5fHn3NVa",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5W5SeO6YvCowtWz5fHn3NVa&ludocid=5767613983197026982&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 139,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Petitcodiac, NB",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c790968335718ecc50ef23500e0f7ddf319faa496e2a544421.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.9321285,
+			"longitude": -65.17278689999999
+		}
+	}, {
+		"position": 19,
+		"title": "Kuro sushi",
+		"id": "860699061406722257",
+		"lsig": "AB86z5WGDBI9VBNHYWshNLcGer7u",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WGDBI9VBNHYWshNLcGer7u&ludocid=860699061406722257&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.8,
+		"reviews": 112,
+		"type": "Authentic Japanese",
+		"address": "Shediac, NB",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c7525c929ee5786d7cd6578c0a8f925665613ef59b02d27bc7.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.219569,
+			"longitude": -64.5433491
+		}
+	}, {
+		"position": 20,
+		"title": "Sobeys Champlain",
+		"id": "10235367686619384073",
+		"lsig": "AB86z5VQq_00RTUiipQONEzM4CJT",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VQq_00RTUiipQONEzM4CJT&ludocid=10235367686619384073&num=100&q=best+wings&start=120&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 521,
+		"type": "Grocery store",
+		"address": "Dieppe, NB. In Champlain Place",
+		"thumbnail": "https://serpapi.com/searches/61250cbba4be1090463b57d8/images/615f45bc227d87c7a4d26e5894d47e543fe2c2c60ad7802d9fdf3436796d6386.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.095456,
+			"longitude": -64.762867
+		}
+	}, {
+		"position": 1,
+		"title": "The Fisherman",
+		"id": "3575102469583036582",
+		"lsig": "AB86z5Um4WsjLqzzqx2QkHMBXTIs",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Um4WsjLqzzqx2QkHMBXTIs&ludocid=3575102469583036582&num=100&q=best+wings&start=140&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 217,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Shediac, NB",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250cd6d036a79780a998b0/images/53fe95902aff98d9a20a372ea9434076ed591c0043934a6f6b00686b69c0f9d8.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.225653199999996,
+			"longitude": -64.5083851
+		}
+	}, {
+		"position": 2,
+		"title": "Atlantic Superstore",
+		"id": "14225091766364501611",
+		"lsig": "AB86z5WvITKV6ytECewquacaWHkv",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WvITKV6ytECewquacaWHkv&ludocid=14225091766364501611&num=100&q=best+wings&start=140&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 879,
+		"type": "Grocery store",
+		"address": "Riverview, NB",
+		"thumbnail": "https://serpapi.com/searches/61250cd6d036a79780a998b0/images/53fe95902aff98d9287d9e985bacdd6fdd66fd37dceb89da80cdfdc7b591033b.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.06498,
+			"longitude": -64.800747
+		}
+	}, {
+		"position": 3,
+		"title": "Jack's Pizza",
+		"id": "10350436262640976802",
+		"lsig": "AB86z5UDGOzHLdBa4sdgq87VGpMg",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UDGOzHLdBa4sdgq87VGpMg&ludocid=10350436262640976802&num=100&q=best+wings&start=140&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 121,
+		"price": "$",
+		"type": "Pizza",
+		"address": "Sackville, NB. In East Main Plaza",
+		"review": "\"The wings were small but good tasting considering.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cd6d036a79780a998b0/images/53fe95902aff98d938500c3b24da267a1e72bd9a948397d0fa3ebf1fc129db1b.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.902846,
+			"longitude": -64.373926
+		}
+	}, {
+		"position": 4,
+		"title": "Walmart Supercentre",
+		"id": "5615551001685572685",
+		"lsig": "AB86z5X6FeoW0tqnSgrAqs8Do-gb",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X6FeoW0tqnSgrAqs8Do-gb&ludocid=5615551001685572685&num=100&q=best+wings&start=140&tbm=lcl",
+		"rating": 3.9,
+		"reviews": 1522,
+		"price": "$",
+		"type": "Department store",
+		"address": "Dieppe, NB. In Champlain Place",
+		"thumbnail": "https://serpapi.com/searches/61250cd6d036a79780a998b0/images/53fe95902aff98d945aac0cc8d8c95c48cb7c660d5268d67ae90e9eb8755bdf1.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.0966078,
+			"longitude": -64.7601798
+		}
+	}, {
+		"position": 5,
+		"title": "Sobeys Dieppe",
+		"id": "2793826343915668930",
+		"lsig": "AB86z5VraCwu3qKp2-C7S0dTGaDp",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VraCwu3qKp2-C7S0dTGaDp&ludocid=2793826343915668930&num=100&q=best+wings&start=140&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 475,
+		"type": "Grocery store",
+		"address": "Dieppe, NB",
+		"thumbnail": "https://serpapi.com/searches/61250cd6d036a79780a998b0/images/53fe95902aff98d97a7efca7e968df54978fd1802b287621ab1b3645b696e2ac.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.098380999999996,
+			"longitude": -64.75831699999999
+		}
+	}, {
+		"position": 6,
+		"title": "Goya's Pizza",
+		"id": "7366661518855536329",
+		"lsig": "AB86z5Wz1LPyCVC85iRfIUpRwi0-",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Wz1LPyCVC85iRfIUpRwi0-&ludocid=7366661518855536329&num=100&q=best+wings&start=140&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 114,
+		"price": "$",
+		"type": "Pizza",
+		"address": "Sackville, NB",
+		"thumbnail": "https://serpapi.com/searches/61250cd6d036a79780a998b0/images/53fe95902aff98d90a765ae9fd38af8eb0fc92102012463c17baa9b2d45ba733.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.8974287,
+			"longitude": -64.36871769999999
+		}
+	}, {
+		"position": 7,
+		"title": "The Painted Pony bar and Grill",
+		"id": "10248177223623290291",
+		"lsig": "AB86z5VsoAD6PRMX3PNHiij1Mo3N",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VsoAD6PRMX3PNHiij1Mo3N&ludocid=10248177223623290291&num=100&q=best+wings&start=140&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 199,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Sackville, NB",
+		"review": "\"Wing night Wings excellent.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cd6d036a79780a998b0/images/53fe95902aff98d9c4b696847ccd1dafe201d892b1c050508bda261fc358ba78.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.897766,
+			"longitude": -64.366483
+		}
+	}, {
+		"position": 19,
+		"title": "Chez Camille Take Out",
+		"id": "5161718897749948316",
+		"lsig": "AB86z5UZrgLbiQosGbrDNyncfi3h",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UZrgLbiQosGbrDNyncfi3h&ludocid=5161718897749948316&num=100&q=best+wings&start=140&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 293,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Cap-Pele, NB",
+		"thumbnail": "https://serpapi.com/searches/61250cd6d036a79780a998b0/images/53fe95902aff98d9f88f7743baa0ac80b26878b3e193c4d1b7e05236014d9938.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.2183297,
+			"longitude": -64.30439439999999
+		}
+	}, {
+		"position": 20,
+		"title": "Pirate De La Mer",
+		"id": "4506376213214884161",
+		"lsig": "AB86z5UAcdXhpfQeN8toAeFZKI9G",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UAcdXhpfQeN8toAeFZKI9G&ludocid=4506376213214884161&num=100&q=best+wings&start=140&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 325,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Bouctouche, NB",
+		"thumbnail": "https://serpapi.com/searches/61250cd6d036a79780a998b0/images/53fe95902aff98d93f74bab254cf17f0b5619825bcb118dbb99ccaafebb53d03.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.4642306,
+			"longitude": -64.73678269999999
+		}
+	}, {
+		"position": 1,
+		"title": "Biggie D's",
+		"id": "2465707534804038293",
+		"lsig": "AB86z5XNYbnnWeZpjl1RWZDnIvl3",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XNYbnnWeZpjl1RWZDnIvl3&ludocid=2465707534804038293&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 5.0,
+		"reviews": 1,
+		"type": "Restaurant",
+		"address": "35 Elmwood Dr",
+		"hours": "Closed. Opens 2 p.m.",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145f3f7ddfe51f8cad972cc85761d6061d5128a188493c422c3.png",
+		"gps_coordinates": {
+			"latitude": 46.1037514,
+			"longitude": -64.7734155
+		}
+	}, {
+		"position": 2,
+		"title": "Alto Restaurant & SuShi",
+		"id": "786081582548312911",
+		"lsig": "AB86z5WyJOIBG5I5ez0oJtPpo0DS",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WyJOIBG5I5ez0oJtPpo0DS&ludocid=786081582548312911&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.7,
+		"reviews": 86,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Riverview, NB",
+		"hours": "Open now",
+		"review": "\"We got chicken wings as an appetizer with honey garlic sauce.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145a8b013462560da2c4c7bc73a2b16f3c496d5908f6516e786.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.052867,
+			"longitude": -64.7911379
+		}
+	}, {
+		"position": 3,
+		"title": "Bambino's Pizzeria & Fine Food",
+		"id": "16963902709140906558",
+		"lsig": "AB86z5U4BlDa-8OC-2l2csDR_eEx",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5U4BlDa-8OC-2l2csDR_eEx&ludocid=16963902709140906558&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 284,
+		"price": "$",
+		"type": "Pizza",
+		"address": "Amherst, NS",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145360ce42a642019d3b450dcba04183dac526ce23798837de5.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.8318138,
+			"longitude": -64.2113647
+		}
+	}, {
+		"position": 4,
+		"title": "Greco Pizza Donair",
+		"id": "14920090945121675929",
+		"lsig": "AB86z5VyynGLg5ZqwkRMX6m-aTzj",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VyynGLg5ZqwkRMX6m-aTzj&ludocid=14920090945121675929&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 132,
+		"price": "$",
+		"type": "Pizza",
+		"address": "Amherst, NS",
+		"review": "\"Good food and baked wings.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145a6eb7a7f33367416a1cf2e884b9a57ea83f71e5d054a4286.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.8286987,
+			"longitude": -64.2090463
+		}
+	}, {
+		"position": 5,
+		"title": "our backyard bbq",
+		"id": "10523377692363843511",
+		"lsig": "AB86z5UXNhrE_-dvF036zpgxq9W_",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UXNhrE_-dvF036zpgxq9W_&ludocid=10523377692363843511&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.8,
+		"reviews": 144,
+		"type": "Barbecue",
+		"address": "Amherst, NS. In Amherst Town Square",
+		"review": "\"All home made sauces on the delicious smoked full wings, pork and briskets.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad314539484cdaaf8b33e2a7828dc216349d40b443597b9d2861a5.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.8143768,
+			"longitude": -64.2053749
+		}
+	}, {
+		"position": 6,
+		"title": "Duncan's Pub",
+		"id": "15897147196340609082",
+		"lsig": "AB86z5UGYpv1N2tAlRfEnb3Qy4rf",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UGYpv1N2tAlRfEnb3Qy4rf&ludocid=15897147196340609082&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 300,
+		"price": "$$",
+		"type": "Pub",
+		"address": "Amherst, NS",
+		"review": "\"Great place, awesome wings, nachos and beer!\"",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145042fe053c4ed6074af90f61731670b46168f0d37dc40a1a5.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.832896,
+			"longitude": -64.212992
+		}
+	}, {
+		"position": 7,
+		"title": "Tipsy Tails Restaurant",
+		"id": "7981971308360977409",
+		"lsig": "AB86z5VdAZ2OHefErvxyqjucKK4Z",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VdAZ2OHefErvxyqjucKK4Z&ludocid=7981971308360977409&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 536,
+		"price": "$$",
+		"type": "Seafood",
+		"address": "Alma, NB",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145630b84390b54704b9f7377472a75698d7e8edfce0eafaafa.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.600557599999995,
+			"longitude": -64.9457907
+		}
+	}, {
+		"position": 8,
+		"title": "A&W Canada",
+		"id": "2898686625545609561",
+		"lsig": "AB86z5X_iBgZ6DVfQBG7TsVyGbYI",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X_iBgZ6DVfQBG7TsVyGbYI&ludocid=2898686625545609561&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 328,
+		"price": "$",
+		"type": "Hamburger",
+		"address": "2600 Mountain Rd. In Petro-Canada Gas Station & Petro-Pass Truck Stop",
+		"hours": "Open now",
+		"description": "Fast-food outlet serving up namesake root beer & floats, plus burgers, chicken & fries.",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145924e79d098570b0715464c6e752353345568d5f77a6544cb.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.130368999999995,
+			"longitude": -64.881782
+		}
+	}, {
+		"position": 9,
+		"title": "STORM'S BAR",
+		"id": "14753020057264200791",
+		"lsig": "AB86z5XuLQYxEWLGRf0dEn8rvA-v",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XuLQYxEWLGRf0dEn8rvA-v&ludocid=14753020057264200791&num=100&q=best+wings&start=160&tbm=lcl",
+		"type": "Pub",
+		"address": "Mapleton Rd. In Mapleton Shopping Area",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad314572b1866ad4ecaf862dcc5088edbac551fa7d23d5381daeb6.png",
+		"gps_coordinates": {
+			"latitude": 46.109203199999996,
+			"longitude": -64.8238951
+		}
+	}, {
+		"position": 10,
+		"title": "JJ Mac's Takeout",
+		"id": "823103741484344601",
+		"lsig": "AB86z5WEruZoWhgkODAaGIQCVKOw",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WEruZoWhgkODAaGIQCVKOw&ludocid=823103741484344601&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 50,
+		"type": "Restaurant",
+		"address": "Lakeville, NB",
+		"hours": "Closed. Opens 11 a.m. Thu.",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad31451120a61f7597b9fa6953f2d788953c4191a15517c36fba0d.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.1593683,
+			"longitude": -64.6797445
+		}
+	}, {
+		"position": 11,
+		"title": "St. Louis Bar & Grill",
+		"id": "16839248577954657492",
+		"lsig": "AB86z5WQ5uWnIZJZECAWjBal4sS2",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WQ5uWnIZJZECAWjBal4sS2&ludocid=16839248577954657492&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 3.9,
+		"reviews": 524,
+		"price": "$$",
+		"type": "Grill",
+		"address": "Lower Sackville, NS. In Downsview Plaza",
+		"review": "\"Some of the best wings I've had in HRM.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad314548616ebe1ed5261f597452709810b159461014770eba377a.jpeg",
+		"gps_coordinates": {
+			"latitude": 44.7742096,
+			"longitude": -63.694446299999996
+		}
+	}, {
+		"position": 12,
+		"title": "Hunter's Ale House",
+		"id": "3166261916588900030",
+		"lsig": "AB86z5VkzZQap0_mgvT5Kdhfeoxj",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VkzZQap0_mgvT5Kdhfeoxj&ludocid=3166261916588900030&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 1123,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Charlottetown, PE",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad314583d2ae491d26c992bfb2c3a3f1097dab84f190e3ce885203.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.237441999999994,
+			"longitude": -63.126075699999994
+		}
+	}, {
+		"position": 13,
+		"title": "PJ's Wings an Things",
+		"id": "4821628567974841242",
+		"lsig": "AB86z5UrY8afdCa5XmdWaxFgJDSJ",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UrY8afdCa5XmdWaxFgJDSJ&ludocid=4821628567974841242&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.6,
+		"reviews": 53,
+		"type": "Restaurant",
+		"address": "Fredericton, NB. In York County Cider",
+		"review": "\"Some of the best wings in town (especially the flats!).\"",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145dc1f8a093b8e2b3d2a4179e4d71382579165bb9536a9b82d.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.9825463,
+			"longitude": -66.66288449999999
+		}
+	}, {
+		"position": 14,
+		"title": "Lock Stock and Barrels",
+		"id": "3223819237717821919",
+		"lsig": "AB86z5XuDzzFhO4SZi8U6_HpkGMJ",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XuDzzFhO4SZi8U6_HpkGMJ&ludocid=3223819237717821919&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 258,
+		"price": "$$",
+		"type": "Grill",
+		"address": "Saint John, NB. In Lansdowne Plaza",
+		"description": "Menu highlight: wings",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145c4fc1f7e90d6901fbb60c00db8c4d3d416f894f533f9d150.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.2780139,
+			"longitude": -66.07788889999999
+		}
+	}, {
+		"position": 15,
+		"title": "Lion's Head Tavern | Halifax Pub",
+		"id": "13950534963273971466",
+		"lsig": "AB86z5VVtn4x7sdgi9pu3kddfeQQ",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VVtn4x7sdgi9pu3kddfeQQ&ludocid=13950534963273971466&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 1187,
+		"price": "$$",
+		"type": "Chicken Wings",
+		"address": "Halifax, NS",
+		"description": "Casual, wood-lined venue doling out classic pub fare & offering an outdoor patio area.",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad31452d0f9649f80d83bb67536e4bc739e5bf9cb9c91b4b0e3db6.jpeg",
+		"gps_coordinates": {
+			"latitude": 44.6596336,
+			"longitude": -63.601715
+		}
+	}, {
+		"position": 16,
+		"title": "Rocky's Sports Bar",
+		"id": "1514305416297624027",
+		"lsig": "AB86z5VxbnwPYjYVpOp13fl60g7M",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5VxbnwPYjYVpOp13fl60g7M&ludocid=1514305416297624027&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 460,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Saint John, NB. In Market Square",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad314557809ebad33cc9e85bc2bf7c2b2661130b36d4500e4a1502.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.273219999999995,
+			"longitude": -66.0632704
+		}
+	}, {
+		"position": 17,
+		"title": "Eli's Pizzeria",
+		"id": "5945901116284542840",
+		"lsig": "AB86z5X4Mi75OPWNZUFJg0-So3wj",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X4Mi75OPWNZUFJg0-So3wj&ludocid=5945901116284542840&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 100,
+		"price": "$",
+		"type": "Chicken Wings",
+		"address": "Dartmouth, NS",
+		"review": "\"Simply the best wings.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145f8e52bd8750fa26b4d4e1de89adfab1ab0d08466a7e806d7.jpeg",
+		"gps_coordinates": {
+			"latitude": 44.6847226,
+			"longitude": -63.50229479999999
+		}
+	}, {
+		"position": 18,
+		"title": "Gisele Take-out",
+		"id": "17505307834033020513",
+		"lsig": "AB86z5WAvdY409AhU1fsL9SPlTv0",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WAvdY409AhU1fsL9SPlTv0&ludocid=17505307834033020513&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 92,
+		"type": "Takeout Restaurant",
+		"address": "Grande-Digue, NB",
+		"hours": "Closed. Opens 11:30 a.m. Thu.",
+		"review": "\"LOVE their chicken wings..a lot better than D**** L**.\"",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad31452429ecefe957fecfad5421f6b65a2d591f7cf96c4c404cb2.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.3068135,
+			"longitude": -64.5980617
+		}
+	}, {
+		"position": 19,
+		"title": "St. Louis Bar & Grill",
+		"id": "10175901340846538354",
+		"lsig": "AB86z5XKpdkuiFxvcFvWcsT8XiS6",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XKpdkuiFxvcFvWcsT8XiS6&ludocid=10175901340846538354&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 633,
+		"price": "$$",
+		"type": "Grill",
+		"address": "Dartmouth, NS. In Penhorn Plaza",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad314588c480b7c8ccdb141edad58e15c2b74aee1fb217c337327a.jpeg",
+		"gps_coordinates": {
+			"latitude": 44.671421099999996,
+			"longitude": -63.53857749999999
+		}
+	}, {
+		"position": 20,
+		"title": "Yogi's Food & Bar",
+		"id": "17492799324502239733",
+		"lsig": "AB86z5X8JkDTa_05IldBHsw4tMlA",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5X8JkDTa_05IldBHsw4tMlA&ludocid=17492799324502239733&num=100&q=best+wings&start=160&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 54,
+		"price": "$$",
+		"type": "Grill",
+		"address": "Charlottetown, PE",
+		"description": "Their website mentions chicken wings",
+		"thumbnail": "https://serpapi.com/searches/61250cfefdca3e7c4d97b8e0/images/eef1b4041cad3145f11b6183c6c43e7b593d49d2fcc23210985494d6fc9c8018.jpeg",
+		"gps_coordinates": {
+			"latitude": 46.260833299999994,
+			"longitude": -63.169722199999995
+		}
+	}, {
+		"position": 1,
+		"title": "Dave Doolittle's Tap Room & Grill",
+		"id": "5260943691494164182",
+		"lsig": "AB86z5WSv4NlzUePx4r35sCrXxBP",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WSv4NlzUePx4r35sCrXxBP&ludocid=5260943691494164182&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 376,
+		"price": "$",
+		"type": "Restaurant",
+		"address": "Dartmouth, NS. In Tacoma Plaza",
+		"review": "\"Some of the best wings on Thursday night in Dartmouth.\"",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e2c915c31519b0c0cc2d1c61285c49b78c7908fd59d41e9c3d.jpeg",
+		"gps_coordinates": {
+			"latitude": 44.6801854,
+			"longitude": -63.535775199999996
+		}
+	}, {
+		"position": 2,
+		"title": "Belly Up BBQ & Grill",
+		"id": "13723599080628536026",
+		"lsig": "AB86z5Vra3fCMB4I7yxHmfSd6M1I",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Vra3fCMB4I7yxHmfSd6M1I&ludocid=13723599080628536026&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 421,
+		"price": "$$",
+		"type": "Grill",
+		"address": "Truro, NS",
+		"review": "\"Best smoked wings ever\"",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e207f6253a5f06d137f3d88cd7e38c1cb9fcdb3b52adbc4ca1.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.3691482,
+			"longitude": -63.303550699999995
+		}
+	}, {
+		"position": 3,
+		"title": "St. Louis Bar & Grill Fredericton",
+		"id": "15826391051449006120",
+		"lsig": "AB86z5WSVRHyA-TxbaKQ-sZSfnG3",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WSVRHyA-TxbaKQ-sZSfnG3&ludocid=15826391051449006120&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 342,
+		"price": "$$",
+		"type": "Grill",
+		"address": "Fredericton, NB",
+		"review": "\"Best wings I've had in Fredericton!!\"",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e239b61a4de751c9433d37a03e9745f35e67c7c66f3e582ba2.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.9629097,
+			"longitude": -66.6468213
+		}
+	}, {
+		"position": 4,
+		"title": "Mary Brown's Chicken & Taters",
+		"id": "10887160626605688351",
+		"lsig": "AB86z5Vzg4oSvyDZPyE0ArupB3gr",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Vzg4oSvyDZPyE0ArupB3gr&ludocid=10887160626605688351&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 201,
+		"price": "$$",
+		"type": "Chicken Wings",
+		"address": "Saint John, NB",
+		"review": "\"Best chicken and taters\"",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e2ac05af8b5e2afb10d0aa53e8eca63c642fa9160f7d3934b9.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.3094008,
+			"longitude": -66.0156362
+		}
+	}, {
+		"position": 5,
+		"title": "Mama's Brew Pub",
+		"id": "11161283856491693824",
+		"lsig": "AB86z5XOP71sZxgH8pR1A_HdGlWZ",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XOP71sZxgH8pR1A_HdGlWZ&ludocid=11161283856491693824&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.5,
+		"reviews": 727,
+		"price": "$$",
+		"type": "Pub",
+		"address": "Fredericton, NB",
+		"review": "\"Best wings in the Fredericton area.\"",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e2fa7ec12f80c8246f03c5a5397a82004ab2f0baba0e8a5077.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.991811,
+			"longitude": -66.649687
+		}
+	}, {
+		"position": 6,
+		"title": "Snooty Fox",
+		"id": "16925786517263851494",
+		"lsig": "AB86z5XQyVP6_rnNA1Zuqd1c0B-6",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5XQyVP6_rnNA1Zuqd1c0B-6&ludocid=16925786517263851494&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 1327,
+		"price": "$$",
+		"type": "Pub",
+		"address": "Fredericton, NB",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e21785b6daea1c50fbfb3db84898238f65c015f9025cf846e8.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.96073200000001,
+			"longitude": -66.6388161
+		}
+	}, {
+		"position": 7,
+		"title": "Churchill's Pub & Steakhouse",
+		"id": "6975757807770690145",
+		"lsig": "AB86z5Uu4DgQA0JrTOqLZZossxw2",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5Uu4DgQA0JrTOqLZZossxw2&ludocid=6975757807770690145&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 375,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Saint John, NB",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e278a08498321b4a75d4e1b93fc5d5d633739a22548156ebdb.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.272174799999995,
+			"longitude": -66.0617218
+		}
+	}, {
+		"position": 8,
+		"title": "The Hilltop Maritime Tavern",
+		"id": "2242187899608489446",
+		"lsig": "AB86z5WQFQ_d03ILaqncVee_Cx17",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WQFQ_d03ILaqncVee_Cx17&ludocid=2242187899608489446&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 881,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Fredericton, NB",
+		"description": "\"Why hold a grudge when you can hold some chicken wings?\"",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e273ff422dba504e71e953144ac526a58d575cbe6a498cdd71.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.9412972,
+			"longitude": -66.6686849
+		}
+	}, {
+		"position": 9,
+		"title": "Montana's",
+		"id": "8832959424063932656",
+		"lsig": "AB86z5W-CMQTXxsabJG15aiBj_ZO",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5W-CMQTXxsabJG15aiBj_ZO&ludocid=8832959424063932656&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.0,
+		"reviews": 473,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Saint John, NB. In East Point Shopping",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e2165559967d8e3105f532fd6d7a76753b8ff14f39df3b55a4.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.3040727,
+			"longitude": -66.0239125
+		}
+	}, {
+		"position": 10,
+		"title": "Old Port Pub & Grill",
+		"id": "6807632613841710738",
+		"lsig": "AB86z5UL9ioWxCi2iMLuFZ0u7qw1",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UL9ioWxCi2iMLuFZ0u7qw1&ludocid=6807632613841710738&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.4,
+		"reviews": 469,
+		"price": "$$",
+		"type": "Pub",
+		"address": "Dartmouth, NS",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e2903257cb947afca4a85baf4832354bf156994453540d6d5b.jpeg",
+		"gps_coordinates": {
+			"latitude": 44.7039265,
+			"longitude": -63.612092600000004
+		}
+	}, {
+		"position": 11,
+		"title": "Griffins Pub & Eatery",
+		"id": "9763626385360295581",
+		"lsig": "AB86z5WTrjDI8d66yvI4Naj0gUXy",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WTrjDI8d66yvI4Naj0gUXy&ludocid=9763626385360295581&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.1,
+		"reviews": 437,
+		"price": "$$",
+		"type": "Restaurant",
+		"address": "Oromocto, NB",
+		"hours": "Closed. Opens 4 p.m.",
+		"review": "\"Best wings in Oromocto.\"",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e2092df6cd11a8df6a1617448e1384a46cb757458cbf11e7a9.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.8413772,
+			"longitude": -66.46774289999999
+		}
+	}, {
+		"position": 12,
+		"title": "Kim's Yori (Fry) Time",
+		"id": "11825170500259869399",
+		"lsig": "AB86z5WkybcEj54OuSXlaoihEbNP",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5WkybcEj54OuSXlaoihEbNP&ludocid=11825170500259869399&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.9,
+		"reviews": 170,
+		"price": "$$",
+		"type": "Korean",
+		"address": "Quispamsis, NB",
+		"hours": "Closed. Opens 4 p.m. Thu.",
+		"review": "\"Had an order of their chicken wings tonight, they were very tasty.\"",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e24a1ca2cd4270359b7cf3b4295d418466d0a636d567d25f36.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.4041344,
+			"longitude": -65.97068949999999
+		}
+	}, {
+		"position": 13,
+		"title": "Mary Brown's Chicken & Taters",
+		"id": "17190344522937608135",
+		"lsig": "AB86z5UGgzV_-DFAv5berYPqIYUI",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5UGgzV_-DFAv5berYPqIYUI&ludocid=17190344522937608135&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 306,
+		"price": "$$",
+		"type": "Chicken Wings",
+		"address": "Fredericton, NB",
+		"review": "\"The fingers are the best in town.\"",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e25abfc3f70d2c480765d057ce2128648d68ca89fb4c08138d.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.9411935,
+			"longitude": -66.6576564
+		}
+	}, {
+		"position": 14,
+		"title": "Billy's Seafood Company",
+		"id": "6247253135711065226",
+		"lsig": "AB86z5U9JsEqWQ4BLG-yFS0yGgKY",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5U9JsEqWQ4BLG-yFS0yGgKY&ludocid=6247253135711065226&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.3,
+		"reviews": 510,
+		"price": "$$",
+		"type": "Seafood",
+		"address": "Saint John, NB. In the Saint John City Market",
+		"description": "Menu highlight: best wings",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e241c24515702355541d5a07f44d814807313b19ccd7b377c7.jpeg",
+		"gps_coordinates": {
+			"latitude": 45.2739793,
+			"longitude": -66.0592337
+		}
+	}, {
+		"position": 15,
+		"title": "Mary Brown's Chicken & Taters",
+		"id": "10714922715275434299",
+		"lsig": "AB86z5V54pXGiQtaa3pyg12q_qFO",
+		"place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google&gl=ca&google_domain=google.ca&hl=en&location=Moncton%2C+New+Brunswick%2C+Canada&lsig=AB86z5V54pXGiQtaa3pyg12q_qFO&ludocid=10714922715275434299&num=100&q=best+wings&start=180&tbm=lcl",
+		"rating": 4.2,
+		"reviews": 467,
+		"price": "$$",
+		"type": "Chicken Wings",
+		"address": "Halifax, NS",
+		"review": "\"Always get the honey garlic wings.\"",
+		"thumbnail": "https://serpapi.com/searches/61250d1a2d5b121a103d6dc0/images/bd92efd2bdd7a0e23907dcaef8d8957c39f192361e0641aac0b068b08d427b5c.jpeg",
+		"gps_coordinates": {
+			"latitude": 44.659413099999995,
+			"longitude": -63.63275969999999
+		}
+	}
+]
