@@ -1,0 +1,51 @@
+<div *ngIf="selectedEvent">
+  <div class="events-details-container">
+    <form (ngSubmit)="onSubmit()" #eventForm="ngForm">
+      <h2>{{selectedEvent.title | uppercase}}</h2>
+      <h6><span>id: </span>{{selectedEvent.id}}</h6>
+      <div>
+        <div class="row">
+          <div class="col-auto">
+            <label for="date">Date: </label>
+          </div>
+          <div class="col datepicker">
+            <input type="date" id="date" name="date" [(ngModel)]="selectedEvent.date" value="YYYY-MM-DD" placeholder="date" #title="ngModel"
+                   required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
+            <label for="title">Name: </label>
+          </div>
+          <div class="col">
+            <input id="title" name="title" [(ngModel)]="selectedEvent.title" placeholder="title" #title="ngModel"
+                   required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
+            <label for="title">Place: </label>
+          </div>
+          <div class="col">
+            <input id="place_id" name="place_id" [(ngModel)]="selectedEvent.place_id" placeholder="place_id" #title="ngModel" readonly disabled>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-success" [disabled]="!eventForm.form.valid">Submit</button>
+          <button type="button" class="btn btn-danger" (click)="deleteEvent()">Delete</button>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-secondary" (click)="onSelect(undefined)">Cancel</button>
+        </div>
+      </div>
+    </form>
+
+    <div [hidden]="!submitted">
+      <h6>Record updated</h6>
+    </div>
+  </div>
+  <br>
+</div>
+

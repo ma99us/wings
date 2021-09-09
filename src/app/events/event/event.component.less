@@ -1,0 +1,40 @@
+li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: 0.2em 0.5em;
+  height: 5em;
+  border-radius: 4px;
+
+  &:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+    left: .1em;
+  }
+
+  &.selected {
+    background-color: black;
+    color: white;
+  }
+
+  &.selected:hover {
+    background-color: #505050;
+    color: white;
+  }
+
+  &.selected:active {
+    background-color: black;
+    color: white;
+  }
+
+  .title {
+    display: inline-block;
+    font-weight: bolder;
+  }
+
+  img {
+    margin: .3em;
+  }
+}
