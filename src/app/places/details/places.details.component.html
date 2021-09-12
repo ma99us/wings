@@ -1,5 +1,5 @@
-<div *ngIf="selectedPlace">
-  <div class="places-details-container">
+<div class="container">
+  <div *ngIf="selectedPlace" class="places-details-container">
     <form (ngSubmit)="onSubmit()" #placeForm="ngForm">
       <h2>{{selectedPlace.title | uppercase}}</h2>
       <h6><span>id: </span>{{selectedPlace.id}}</h6>
@@ -84,7 +84,7 @@
           <button type="button" class="btn btn-danger" (click)="deletePlace()">Delete</button>
         </div>
         <div class="col-auto">
-          <button type="button" class="btn btn-secondary" (click)="onSelect(undefined)">Cancel</button>
+          <button type="button" class="btn btn-secondary" (click)="goBack()">Go Back</button>
         </div>
       </div>
     </form>
@@ -93,6 +93,5 @@
       <h6>Record updated</h6>
     </div>
   </div>
-  <br>
+  <not-found *ngIf="selectedPlace === null"></not-found>
 </div>
-

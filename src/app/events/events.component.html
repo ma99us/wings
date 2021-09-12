@@ -2,27 +2,25 @@
 
   <h2>Wings Events</h2>
 
-  <events-details [selectedEvent]="selectedEvent" [onSelect]="onSelect" [onSubmit]="onSubmit"
-                  [deleteEvent]="deleteEvent" [submitted]="submitted"></events-details>
-
   <div class="row">
     <div class="col">
       <button class="btn btn-primary" (click)="newEvent()">Add new Event</button>
     </div>
     <div class="col-auto" style="margin-top: auto; margin-bottom: auto;">
-      <p>(total {{displayEvents.length}})</p>
+      <p *ngIf="displayEvents" >(total {{displayEvents.length}})</p>
     </div>
 
   </div>
   <div class="row">
-    <div class="col-12 events-container">
-      <ul class="events">
+    <div class="col-12">
+      <ul *ngIf="displayEvents" class="events">
         <event-li *ngFor="let event of displayEvents"
                   [event]="event"
-                  [selectedEvent]="selectedEvent"
+                  [selectedEvent]="undefined"
                   [onSelect]="onSelect">
         </event-li>
       </ul>
+      <not-found *ngIf="displayEvents && displayEvents.length === 0"></not-found>
     </div>
   </div>
 </div>

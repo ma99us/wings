@@ -10,6 +10,10 @@ export class EventsService {
   constructor(private mikeDb: MikeDbService) {
   }
 
+  getEventById(id: number) {
+    return this.mikeDb.get("events/" + id);
+  }
+
   getEvents() {
     return this.mikeDb.get("events");
   }

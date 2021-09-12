@@ -18,6 +18,7 @@ import {PlaceComponent} from "./places/place/place.component";
 import {EventsComponent} from './events/events.component';
 import {EventsDetailsComponent} from "./events/details/events.details.component";
 import {EventComponent} from "./events/event/event.component";
+import {NotFoundComponent} from "./components/not-found/not-found-component";
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {EventComponent} from "./events/event/event.component";
     MapAddressLink,
     EventsComponent,
     EventsDetailsComponent,
-    EventComponent
+    EventComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

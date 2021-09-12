@@ -1,5 +1,5 @@
-<div *ngIf="selectedEvent">
-  <div class="events-details-container">
+<div class="container">
+  <div *ngIf="selectedEvent" class="events-details-container">
     <form (ngSubmit)="onSubmit()" #eventForm="ngForm">
       <h2>{{selectedEvent.title | uppercase}}</h2>
       <h6><span>id: </span>{{selectedEvent.id}}</h6>
@@ -9,7 +9,8 @@
             <label for="date">Date: </label>
           </div>
           <div class="col datepicker">
-            <input type="date" id="date" name="date" [(ngModel)]="selectedEvent.date" value="YYYY-MM-DD" placeholder="date" #title="ngModel"
+            <input type="date" id="date" name="date" [(ngModel)]="selectedEvent.date" value="YYYY-MM-DD"
+                   placeholder="date" #title="ngModel"
                    required>
           </div>
         </div>
@@ -27,7 +28,8 @@
             <label for="title">Place: </label>
           </div>
           <div class="col">
-            <input id="place_id" name="place_id" [(ngModel)]="selectedEvent.place_id" placeholder="place_id" #title="ngModel" readonly disabled>
+            <input id="place_id" name="place_id" [(ngModel)]="selectedEvent.place_id" placeholder="place_id"
+                   #title="ngModel" readonly disabled>
           </div>
         </div>
       </div>
@@ -37,7 +39,7 @@
           <button type="button" class="btn btn-danger" (click)="deleteEvent()">Delete</button>
         </div>
         <div class="col-auto">
-          <button type="button" class="btn btn-secondary" (click)="onSelect(undefined)">Cancel</button>
+          <button type="button" class="btn btn-secondary" (click)="goBack()">Go Back</button>
         </div>
       </div>
     </form>
@@ -46,6 +48,6 @@
       <h6>Record updated</h6>
     </div>
   </div>
-  <br>
+  <not-found *ngIf="selectedEvent === null"></not-found>
 </div>
 

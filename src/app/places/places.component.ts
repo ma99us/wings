@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 import {Place} from "./place";
 import {PlacesService} from "./places.service";
 import {ConfirmDialogService} from "../components/confirmation-dialog/confirmation-dialog.service";
@@ -10,12 +11,10 @@ import {ConfirmDialogService} from "../components/confirmation-dialog/confirmati
 })
 export class PlacesComponent implements OnInit {
 
-  selectedPlace?: Place;
-  places: Place[] = [];
-  displayPlaces: Place[] = [];
-  submitted = false;
+  places!: Place[] | null;
+  displayPlaces!: Place[] | null;
 
-  constructor(private placesService: PlacesService, private confirmation: ConfirmDialogService) {
+  constructor(private route: ActivatedRoute, private router: Router, private placesService: PlacesService, private confirmation: ConfirmDialogService) {
   }
 
   ngOnInit(): void {
@@ -27,53 +26,25 @@ export class PlacesComponent implements OnInit {
       .subscribe((data: any) => {
         this.places = data;
         this.onSearchChange();
+      }, err => {
+        this.places = null;
+        this.onSearchChange();
       });
   }
 
   onSelect = (place?: Place): void => {
-    this.selectedPlace = place;
-    this.submitted = false;
+    const url: string = "/places/" + (place ? place.id : '');
+    this.router.navigateByUrl(url);
   };
 
   onSearchChange = (title: string = ''): void => {
-    this.displayPlaces = this.places.filter((place: Place) => {
+    this.displayPlaces = this.places ? this.places.filter((place: Place) => {
       return place.title && place.title.toLowerCase().includes(title.toLowerCase());
-    });
-  };
-
-  onSubmit = () : void => {
-    if (!this.selectedPlace) {
-      return;
-    }
-    this.placesService.addUpdatePlace(this.selectedPlace)
-      .subscribe((data: any) => {
-        this.selectedPlace = data;
-        this.submitted = true;
-        this.getAllPlaces();
-      });
+    }) : [];
   };
 
   newPlace() {
-    this.selectedPlace = new Place();
-    this.submitted = false;
+    const url: string = "/places/0";
+    this.router.navigateByUrl(url);
   }
-
-  deletePlace = (): void => {
-    if (!this.selectedPlace || !this.selectedPlace.id) {
-      this.selectedPlace = undefined;
-      return;
-    }
-
-    this.confirmation.openConfirmation("Are you sure?", "Do you want to delete \"" + this.selectedPlace.title + "\"?")
-      .then(result => {
-        if (result && this.selectedPlace && this.selectedPlace.id) {
-          this.placesService.deletePlace(this.selectedPlace)
-            .subscribe((data: any) => {
-              this.selectedPlace = undefined;
-              this.submitted = true;
-              this.getAllPlaces();
-            });
-        }
-      });
-  };
 }

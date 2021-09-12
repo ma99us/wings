@@ -3,27 +3,25 @@
   <h2>Wings Places</h2>
   <places-search [onSearchChange]="onSearchChange"></places-search>
 
-  <places-details [selectedPlace]="selectedPlace" [onSelect]="onSelect" [onSubmit]="onSubmit"
-                  [deletePlace]="deletePlace" [submitted]="submitted"></places-details>
-
   <div class="row">
     <div class="col">
       <button class="btn btn-primary" (click)="newPlace()">Add new Place</button>
     </div>
     <div class="col-auto" style="margin-top: auto; margin-bottom: auto;">
-      <p>(total found {{displayPlaces.length}})</p>
+      <p *ngIf="displayPlaces">(total found {{displayPlaces.length}})</p>
     </div>
 
   </div>
   <div class="row">
-    <div class="col-12 places-container">
-      <ul class="places">
+    <div class="col-12">
+      <ul *ngIf="displayPlaces" class="places">
         <place-li *ngFor="let place of displayPlaces"
                   [place]="place"
-                  [selectedPlace]="selectedPlace"
+                  [selectedPlace]="undefined"
                   [onSelect]="onSelect">
         </place-li>
       </ul>
+      <not-found *ngIf="displayPlaces && displayPlaces.length === 0"></not-found>
     </div>
   </div>
 </div>

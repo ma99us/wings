@@ -10,6 +10,10 @@ export class PlacesService {
   constructor(private mikeDb: MikeDbService) {
   }
 
+  getPlaceById(id: number) {
+    return this.mikeDb.get("places/" + id);
+  }
+
   getPlaces() {
     return this.mikeDb.get("places");
   }
