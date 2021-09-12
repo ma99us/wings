@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DatePipe } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {DatePipe} from '@angular/common';
 import {Event} from "./event";
 import {ConfirmDialogService} from "../components/confirmation-dialog/confirmation-dialog.service";
 import {EventsService} from "./events.service";

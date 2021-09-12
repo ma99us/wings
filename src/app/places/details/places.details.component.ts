@@ -38,7 +38,7 @@ export class PlacesDetailsComponent implements OnInit {
     this.router.navigateByUrl(url);
   }
 
-  onSubmit() : void {
+  onSubmit(): void {
     if (!this.selectedPlace) {
       return;
     }
