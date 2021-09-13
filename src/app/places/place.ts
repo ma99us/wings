@@ -1,6 +1,6 @@
 export class Place {
   id: number | null = null;
-  title: string | null = null;
+  title?: string;
   rating?: number;
   price?: string;
   type?: string;

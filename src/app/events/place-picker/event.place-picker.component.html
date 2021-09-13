@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <h4 class="modal-title">Pick a Wing Place</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Closed')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <places-search [onSearchChange]="onSearchChange"></places-search>
+
+  <ul *ngIf="displayPlaces" class="places places-container">
+    <li *ngFor="let place of displayPlaces" [class.selected]="isSelected(place)" (click)="onSelect(place)">
+      <span class="title">{{place.title}}</span>
+    </li>
+  </ul>
+  <loading *ngIf="displayPlaces === undefined"></loading>
+  <not-found [small]="true" *ngIf="displayPlaces && displayPlaces.length === 0"></not-found>
+</div>
+<div class="modal-footer">
+  <p *ngIf="displayPlaces">(total {{displayPlaces.length}})</p>
+</div>

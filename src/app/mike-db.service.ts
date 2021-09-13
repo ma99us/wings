@@ -93,18 +93,26 @@ export class MikeDbService {
    * @param key
    * @param firstResult (optional) index of the first element in resulting collection to retrieve
    * @param maxResults (optional) number of elements from resulting collection to retrieve
+   * @param fields  (optional) string of comma separated list of field names to populate in response
    * @param dbName
    * @returns {*} 200 if record retrieved or status code 204 when no such record
    */
-  get(key: string, firstResult = 0, maxResults = -1, dbName: string | null = null): Observable<Object> {
+  get(key: string, firstResult = 0, maxResults = -1, fields: string | null = null, dbName: string | null = null): Observable<Object> {
     const url = this.getHostApiUrl(dbName);
     if (!url) {
       throw "mike-db is not initialized";
     }
 
+    let params = new HttpParams();
+    params = params.set('firstResult', firstResult);
+    params = params.set('maxResults', maxResults);
+    if (fields != null) {
+      params = params.set('fields', fields);
+    }
+
     return this.http.get<Object>(url + key, {
       headers: this.prepareHeaders(null),
-      params: {firstResult: firstResult, maxResults: maxResults}
+      params: params
     })
     // .then(response => {
     //   return validateResponse(response);

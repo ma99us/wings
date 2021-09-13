@@ -20,6 +20,7 @@
                   [onSelect]="onSelect">
         </event-li>
       </ul>
+      <loading *ngIf="displayEvents === undefined"></loading>
       <not-found *ngIf="displayEvents && displayEvents.length === 0"></not-found>
     </div>
   </div>

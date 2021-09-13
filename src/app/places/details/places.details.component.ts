@@ -55,7 +55,7 @@ export class PlacesDetailsComponent implements OnInit {
       return;
     }
 
-    this.confirmation.openConfirmation("Are you sure?", "Do you want to delete \"" + this.selectedPlace.title + "\"?")
+    this.confirmation.openConfirmation("Are you sure?", "Do you want to delete \"" + this.selectedPlace.title + "\" Place?")
       .then(result => {
         if (result && this.selectedPlace && this.selectedPlace.id) {
           this.placesService.deletePlace(this.selectedPlace)

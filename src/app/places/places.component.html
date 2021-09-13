@@ -21,6 +21,7 @@
                   [onSelect]="onSelect">
         </place-li>
       </ul>
+      <loading *ngIf="displayPlaces === undefined"></loading>
       <not-found *ngIf="displayPlaces && displayPlaces.length === 0"></not-found>
     </div>
   </div>

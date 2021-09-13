@@ -3,13 +3,13 @@ import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core'
 @Component({
   selector: 'not-found',
   template: `<h5>
-    <span>OOPS! Nothing here.</span>
+    <span *ngIf="!small">OOPS! Nothing here.</span>
     <img
       height="100"
       alt="404"
       src="./assets/how-about-no.gif"
     />
-    <span>...probably Carlo broke something!</span>
+    <span *ngIf="!small">...probably Carlo broke something!</span>
   </h5>`,
   styles: [`img {
     vertical-align: middle;
@@ -24,6 +24,8 @@ import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core'
   `]
 })
 export class NotFoundComponent implements OnInit {
+
+  @Input() small: boolean = false;
 
   constructor() {
   }

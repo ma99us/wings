@@ -14,8 +14,12 @@ export class PlacesService {
     return this.mikeDb.get("places/" + id);
   }
 
-  getPlaces() {
-    return this.mikeDb.get("places");
+  getPlacesNames(firstResult = 0, maxResults = -1) {
+    return this.mikeDb.get("places", firstResult, maxResults, "title");
+  }
+
+  getPlaces(firstResult = 0, maxResults = -1, fields: string | null = null) {
+    return this.mikeDb.get("places", firstResult, maxResults, fields);
   }
 
   addUpdatePlace(place: Place){

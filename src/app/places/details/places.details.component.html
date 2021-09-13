@@ -1,8 +1,15 @@
 <div class="container">
   <div *ngIf="selectedPlace" class="places-details-container">
     <form (ngSubmit)="onSubmit()" #placeForm="ngForm">
-      <h2>{{selectedPlace.title | uppercase}}</h2>
-      <h6><span>id: </span>{{selectedPlace.id}}</h6>
+      <div class="row">
+        <div class="col">
+          <h2>{{selectedPlace.title | uppercase}}</h2>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-secondary" (click)="goBack()">Go Back</button>
+        </div>
+      </div>
+      <h6 [style.visibility]="selectedPlace.id ? 'visible' : 'hidden'"><span>id: </span>{{selectedPlace.id}}</h6>
       <div>
         <div class="row">
           <div class="col-auto">
@@ -84,7 +91,6 @@
           <button type="button" class="btn btn-danger" (click)="deletePlace()">Delete</button>
         </div>
         <div class="col-auto">
-          <button type="button" class="btn btn-secondary" (click)="goBack()">Go Back</button>
         </div>
       </div>
     </form>

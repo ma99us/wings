@@ -1,5 +1,5 @@
 <li [class.selected]="isSelected" (click)="onSelect(event)">
   <div style="margin-top: auto; margin-bottom: auto; height: 100%; vertical-align: middle">
-    <span class="title">{{event.date | date : 'longDate'}} <span *ngIf="event.title"> - {{event.title}}</span></span>
+    <span class="title">{{event.date | date : 'longDate'}} <span *ngIf="event.title"> @ {{event.title}}</span></span>
   </div>
 </li>
