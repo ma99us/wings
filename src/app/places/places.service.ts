@@ -3,7 +3,6 @@ import {MikeDbService} from "../services/mike-db.service";
 import {Place} from "./place";
 import {Observable} from "rxjs/internal/Observable";
 import {map} from "rxjs/operators";
-import {Event} from "../events/event";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +12,7 @@ export class PlacesService {
   constructor(private mikeDb: MikeDbService) {
   }
 
-  getPlaceById(id: number): Observable<Place> {
+  getPlaceById(id: number | string): Observable<Place> {
     return this.mikeDb.get<Place>("places/" + id)
       .pipe(
         map(data => new Place(data))
@@ -21,10 +20,7 @@ export class PlacesService {
   }
 
   getPlacesNames(firstResult = 0, maxResults = -1): Observable<Place[]> {
-    return this.mikeDb.get<Place[]>("places", firstResult, maxResults, "title")
-      .pipe(
-        map(data => data.map(place => new Place(place)))
-      );
+    return this.getPlaces(firstResult, maxResults, "title");
   }
 
   getPlaces(firstResult = 0, maxResults = -1, fields: string | null = null): Observable<Place[]> {

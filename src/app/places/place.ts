@@ -1,5 +1,5 @@
 export class Place {
-  id: number | null = null;
+  id: number | string | null = null;
   title?: string;
   rating?: number;
   reviews?: number;

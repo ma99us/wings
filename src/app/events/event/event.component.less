@@ -29,10 +29,25 @@ li {
     color: white;
   }
 
-  &.today{
+  &.today {
     background-color: #b6c3eb;
     color: orangered;
     font-weight: bold;
+  }
+
+  img {
+    margin: .3em;
+  }
+}
+
+div {
+  &.row {
+    height: 100%;
+  }
+
+  div {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .title {
@@ -45,20 +60,21 @@ li {
     }
   }
 
-  img {
-    margin: .3em;
+  .note {
+    .today {
+      color: orangered;
+      font-weight: bold;
+    }
+
+    .comingup {
+      color: orange;
+      font-weight: bolder;
+    }
   }
 }
 
-.note{
-
-  &.today{
-    color: orangered;
-    font-weight: bold;
-  }
-
-  &.comingup{
-    color: orange;
-    font-weight: bolder;
-  }
+span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }

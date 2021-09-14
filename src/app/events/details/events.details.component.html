@@ -3,10 +3,10 @@
     <form (ngSubmit)="onSubmit()" #eventForm="ngForm">
       <div class="row">
         <div class="col">
-          <h2>{{selectedEvent.title | uppercase}}</h2>
+          <h2> @ {{selectedEvent.title | uppercase}}</h2>
         </div>
         <div class="col-auto">
-          <button type="button" class="btn btn-secondary" (click)="goBack()">Go Back</button>
+          <button type="button" class="btn btn-secondary" (click)="goBack()">Close</button>
         </div>
       </div>
       <h6 [style.visibility]="selectedEvent.id ? 'visible' : 'hidden'"><span>id: </span>{{selectedEvent.id}}</h6>
@@ -38,7 +38,7 @@
             <input id="place" name="place" [ngModel]="eventPlaceName" placeholder="place" readonly (click)="pickPlacePopup()">
           </div>
           <div class="col-auto">
-            <!--<button type="button" class="btn btn-secondary" (click)="pickPlacePopup()">Pick a Wing Place</button>-->
+            <button *ngIf="selectedEvent.place_id" type="button" class="btn btn-primary" (click)="onEventPlaceClick()">Details...</button>
           </div>
         </div>
       </div>

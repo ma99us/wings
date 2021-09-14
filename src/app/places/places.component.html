@@ -25,7 +25,9 @@
         <place-li *ngFor="let place of displayPlaces"
                   [place]="place"
                   [selectedPlace]="undefined"
-                  [onSelect]="onSelect">
+                  [onSelect]="onSelect"
+                  [placeEvents]="getEventsForPlace(place)"
+                  [onPlaceEventClick]="onPlaceEventClick">
         </place-li>
       </ul>
       <loading *ngIf="displayPlaces === undefined"></loading>

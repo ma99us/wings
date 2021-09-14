@@ -31,7 +31,6 @@ export class EventPlacePickerComponent implements OnInit {
         this.onSearchChange();
       }, err => {
         this.places = null;
-        this.onSearchChange();
       });
   }
 

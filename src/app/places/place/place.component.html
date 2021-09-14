@@ -1,8 +1,24 @@
-<li [class.selected]="isSelected" (click)="onSelect(place)">
-  <img
-    height="60"
-    alt="Place Logo"
-    src="{{place.thumbnail || './assets/wings_logo_40.png'}}"
-  />
-  <span class="title">{{place.title}}</span>
+<li [class.selected]="isSelected">
+  <div class="row"  (click)="onSelect(place)">
+    <div class="col-auto thumbnail">
+      <img
+        height="60"
+        alt="Place Logo"
+        src="{{place.thumbnail || './assets/wings_logo_40.png'}}"
+      />
+    </div>
+    <div class="col title">
+      <span>{{place.title}}</span>
+    </div>
+    <div class="col-auto events">
+      <span *ngFor="let event of placeEvents" class="place-event"
+        (click)="onPlaceEventClick(event)">
+        <img
+          height="40"
+          alt="Place Event"
+          src="./assets/event.png"
+        />
+      </span>
+    </div>
+  </div>
 </li>

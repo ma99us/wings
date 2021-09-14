@@ -1,8 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Place} from "./place";
+import {Event} from "../events/event"
 import {PlacesService} from "./places.service";
 import {ConfirmDialogService} from "../components/confirmation-dialog/confirmation-dialog.service";
+import {EventsService} from "../events/events.service";
+import {finalize} from "rxjs/operators";
+import {Subscription} from "rxjs/internal/Subscription";
 
 @Component({
   selector: 'app-places',
@@ -12,26 +16,50 @@ import {ConfirmDialogService} from "../components/confirmation-dialog/confirmati
 export class PlacesComponent implements OnInit {
 
   places!: Place[] | null;
+  eventsPlaces!: Event[] | null;
   displayPlaces!: Place[] | null;
   searchText: string = '';
   sortBy: number = PlacesSortBy.Unsorted;
 
-  constructor(private route: ActivatedRoute, private router: Router, private placesService: PlacesService, private confirmation: ConfirmDialogService) {
+  constructor(private route: ActivatedRoute, private router: Router, private placesService: PlacesService, private eventsService: EventsService, private confirmation: ConfirmDialogService) {
   }
 
-  ngOnInit(): void {
-    this.getAllPlaces();
+  async ngOnInit(): Promise<any> {
+    await this.getAllPlaces();
+    await this.getAllEventsPlaces();
+    this.onSearchChange();
   }
 
-  getAllPlaces(): void {
-    this.placesService.getPlaces()
-      .subscribe((data: Place[]) => {
-        this.places = data;
-        this.onSearchChange();
-      }, err => {
-        this.places = null;
-        this.onSearchChange();
-      });
+  getAllPlaces(): Promise<Place[]> {
+    return new Promise<Place[]>((resolve, reject) => {
+      this.placesService.getPlaces()
+        .subscribe((data: Place[]) => {
+          this.places = data;
+          resolve(data);
+        }, err => {
+          this.places = null;
+          reject(null);
+        });
+    });
+  }
+
+  getAllEventsPlaces(): Promise<Event[]>  {
+    return new Promise<Event[]>((resolve, reject) => {
+      this.eventsService.getEventsPlaces()
+        .subscribe((data: Event[]) => {
+          this.eventsPlaces = data;
+          resolve(data);
+        }, err => {
+          this.eventsPlaces = null;
+          reject(null);
+        });
+    });
+  }
+
+  getEventsForPlace(place: Place): Event[] | null {
+    return (this.eventsPlaces && place) ? this.eventsPlaces.filter(event => {
+      return event.place_id === place.id
+    }) : null;
   }
 
   onSelect = (place?: Place): void => {
@@ -91,6 +119,11 @@ export class PlacesComponent implements OnInit {
     }
 
     this.onSearchChange(this.searchText);
+  };
+
+  onPlaceEventClick = (event: Event): void => {
+    const url: string = "/events/" + event.id;
+    this.router.navigateByUrl(url);
   };
 }
 

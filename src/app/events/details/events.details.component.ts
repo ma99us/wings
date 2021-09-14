@@ -27,13 +27,16 @@ export class EventsDetailsComponent implements OnInit {
       const id = params['id'];
       if (id == 0) {
         this.makeNewEvent();
+        if (this.selectedEvent) {
+          this.selectedEvent.place_id = this.route.snapshot.queryParamMap.get('place_id');
+        }
+        this.getEventPlace();
       } else if (id) {
         this.eventsService.getEventById(id).subscribe((data: Event) => {
           this.selectedEvent = data;
           this.getEventPlace();
         }, err => {
           this.selectedEvent = null;
-          this.getEventPlace();
         });
       }
     });
@@ -112,5 +115,13 @@ export class EventsDetailsComponent implements OnInit {
         this.getEventPlace();
       }
     });
+  }
+
+  onEventPlaceClick(){
+    if(!this.selectedEvent || !this.selectedEvent.place_id){
+      return;
+    }
+    const url: string = "/places/" + this.selectedEvent.place_id;
+    this.router.navigateByUrl(url);
   }
 }

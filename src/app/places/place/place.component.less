@@ -29,8 +29,39 @@ li {
     color: white;
   }
 
-  .title {
-    font-weight: bolder;
+  div {
+    .thumbnail {
+      padding-left: 15px;
+      padding-right: 5px;
+    }
+
+    .title {
+      margin-top: auto;
+      margin-bottom: auto;
+      padding-left: 5px;
+      padding-right: 5px;
+      vertical-align: middle;
+      font-weight: bolder;
+    }
+
+    .events {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  span {
+    &.place-event {
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+
+      &:hover {
+        background-color: #505050;
+        color: white;
+      }
+    }
   }
 
   img {

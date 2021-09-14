@@ -6,7 +6,7 @@
           <h2>{{selectedPlace.title | uppercase}}</h2>
         </div>
         <div class="col-auto">
-          <button type="button" class="btn btn-secondary" (click)="goBack()">Go Back</button>
+          <button type="button" class="btn btn-secondary" (click)="goBack()">Close</button>
         </div>
       </div>
       <h6 [style.visibility]="selectedPlace.id ? 'visible' : 'hidden'"><span>id: </span>{{selectedPlace.id}}</h6>
@@ -100,4 +100,28 @@
     </div>
   </div>
   <not-found *ngIf="selectedPlace === null"></not-found>
+
+  <div class="place-events">
+    <div class="row">
+      <div class="col-auto">
+        <h3 *ngIf="placeEvents && placeEvents.length > 0">Events</h3>
+        <h3 *ngIf="!placeEvents || placeEvents.length === 0">No Events yet :-(</h3>
+      </div>
+      <div class="col" style="text-align: right">
+        <button type="button" class="btn btn-primary" (click)="newEvent()">Create New Event</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <ul *ngIf="placeEvents" class="events">
+          <event-li *ngFor="let event of placeEvents"
+                    [event]="event"
+                    [selectedEvent]="undefined"
+                    [onSelect]="onSelectEvent">
+          </event-li>
+        </ul>
+        <loading *ngIf="placeEvents === undefined"></loading>
+      </div>
+    </div>
+  </div>
 </div>

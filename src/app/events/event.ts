@@ -1,7 +1,7 @@
 export class Event {
   id: number | null = null;
   title?: string;
-  place_id: number | null = null;
+  place_id: number | string | null = null;
   date?: string;
   portion?: string;
   price?: number;

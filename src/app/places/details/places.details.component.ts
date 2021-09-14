@@ -3,6 +3,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Place} from "../place";
 import {ConfirmDialogService} from "../../components/confirmation-dialog/confirmation-dialog.service";
 import {PlacesService} from "../places.service";
+import {Event} from"../../events/event"
+import {EventsService} from "../../events/events.service";
 
 @Component({
   selector: 'places-details',
@@ -13,8 +15,9 @@ export class PlacesDetailsComponent implements OnInit {
 
   selectedPlace!: Place | null;
   submitted = false;
+  placeEvents?: Event[] | null;
 
-  constructor(private route: ActivatedRoute, private router: Router, private placesService: PlacesService, private confirmation: ConfirmDialogService) {
+  constructor(private route: ActivatedRoute, private router: Router, private placesService: PlacesService, private eventsService: EventsService, private confirmation: ConfirmDialogService) {
   }
 
   ngOnInit(): void {
@@ -25,6 +28,7 @@ export class PlacesDetailsComponent implements OnInit {
       } else if (id) {
         this.placesService.getPlaceById(id).subscribe((data: Place) => {
           this.selectedPlace = data;
+          this.getPlaceEvents();
         }, err => {
           this.selectedPlace = null;
         });
@@ -65,5 +69,30 @@ export class PlacesDetailsComponent implements OnInit {
             });
         }
       });
+  }
+
+  getPlaceEvents(): void  {
+    this.eventsService.getEvents(0, -1, "title,place_id,date")
+      .subscribe((data: Event[]) => {
+        this.placeEvents = data.filter(event => this.selectedPlace && event.place_id === this.selectedPlace.id);
+      }, err => {
+        this.placeEvents = null;
+      });
+  }
+
+  onSelectEvent = (event?: Event): void => {
+    if (!event) {
+      return;
+    }
+    const url: string = "/events/" + event.id;
+    this.router.navigateByUrl(url);
+  };
+
+  newEvent() {
+    if (!this.selectedPlace) {
+      return;
+    }
+    const url: string = "/events/0?place_id=" + this.selectedPlace.id;
+    this.router.navigateByUrl(url);
   }
 }

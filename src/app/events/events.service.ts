@@ -2,8 +2,7 @@ import {Injectable} from '@angular/core';
 import {MikeDbService} from "../services/mike-db.service";
 import {Event} from "./event";
 import {Observable} from "rxjs/internal/Observable";
-import {map, switchMap} from "rxjs/operators";
-import {from} from "rxjs/internal/observable/from";
+import {map} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +19,12 @@ export class EventsService {
       );
   }
 
-  getEvents(): Observable<Event[]> {
-    return this.mikeDb.get<Event[]>("events")
+  getEventsPlaces(firstResult = 0, maxResults = -1): Observable<Event[]> {
+    return this.getEvents(firstResult, maxResults, "date,place_id");
+  }
+
+  getEvents(firstResult = 0, maxResults = -1, fields: string | null = null): Observable<Event[]> {
+    return this.mikeDb.get<Event[]>("events", firstResult, maxResults, fields)
       .pipe(
         map(data => data.map(event => new Event(event)).sort((first: Event, second: Event) => {
           return (!first.date || !second.date) ? 0 : -first.date.localeCompare(second.date);  // sort by date, newer - first
