@@ -29,12 +29,36 @@ li {
     color: white;
   }
 
+  &.today{
+    background-color: #b6c3eb;
+    color: orangered;
+    font-weight: bold;
+  }
+
   .title {
     display: inline-block;
     font-weight: bolder;
+
+    .unplaced {
+      font-weight: normal;
+      font-style: italic;
+    }
   }
 
   img {
     margin: .3em;
+  }
+}
+
+.note{
+
+  &.today{
+    color: orangered;
+    font-weight: bold;
+  }
+
+  &.comingup{
+    color: orange;
+    font-weight: bolder;
   }
 }

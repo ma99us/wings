@@ -26,7 +26,7 @@ export class EventPlacePickerComponent implements OnInit {
 
   getAllPlaces(): void {
     this.placesService.getPlacesNames()
-      .subscribe((data: any) => {
+      .subscribe((data: Place[]) => {
         this.places = data;
         this.onSearchChange();
       }, err => {

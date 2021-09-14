@@ -28,7 +28,7 @@ export class EventsDetailsComponent implements OnInit {
       if (id == 0) {
         this.makeNewEvent();
       } else if (id) {
-        this.eventsService.getEventById(id).subscribe((data: any) => {
+        this.eventsService.getEventById(id).subscribe((data: Event) => {
           this.selectedEvent = data;
           this.getEventPlace();
         }, err => {
@@ -52,7 +52,7 @@ export class EventsDetailsComponent implements OnInit {
 
   getEventPlace() {
     if (this.selectedEvent && this.selectedEvent.place_id) {
-      this.placesService.getPlaceById(this.selectedEvent.place_id).subscribe((data: any) => {
+      this.placesService.getPlaceById(this.selectedEvent.place_id).subscribe((data: Place) => {
         this.eventPlace = data;
         if (this.selectedEvent && this.eventPlace) {
           this.selectedEvent.title = this.eventPlace.title;
@@ -80,7 +80,7 @@ export class EventsDetailsComponent implements OnInit {
       return;
     }
     this.eventsService.addUpdateEvent(this.selectedEvent)
-      .subscribe((data: any) => {
+      .subscribe((data: Event) => {
         this.selectedEvent = data;
         this.submitted = true;
         // this.goBack();
@@ -96,7 +96,7 @@ export class EventsDetailsComponent implements OnInit {
       .then(result => {
         if (result && this.selectedEvent && this.selectedEvent.id) {
           this.eventsService.deleteEvent(this.selectedEvent)
-            .subscribe((data: any) => {
+            .subscribe((data: Event) => {
               this.submitted = true;
               this.goBack();
             });
@@ -108,7 +108,7 @@ export class EventsDetailsComponent implements OnInit {
     const modalRef = this.modalService.open(EventPlacePickerComponent);
     modalRef.componentInstance.selectedEvent = this.selectedEvent;
     modalRef.result.then(result => {
-      if (result && this.selectedEvent && this.selectedEvent.id) {
+      if (result && this.selectedEvent) {
         this.getEventPlace();
       }
     });

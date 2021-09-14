@@ -23,7 +23,7 @@ export class PlacesDetailsComponent implements OnInit {
       if (id == 0) {
         this.selectedPlace = new Place();
       } else if (id) {
-        this.placesService.getPlaceById(id).subscribe((data: any) => {
+        this.placesService.getPlaceById(id).subscribe((data: Place) => {
           this.selectedPlace = data;
         }, err => {
           this.selectedPlace = null;
@@ -43,7 +43,7 @@ export class PlacesDetailsComponent implements OnInit {
       return;
     }
     this.placesService.addUpdatePlace(this.selectedPlace)
-      .subscribe((data: any) => {
+      .subscribe((data: Place) => {
         this.selectedPlace = data;
         this.submitted = true;
         // this.goBack();
@@ -59,7 +59,7 @@ export class PlacesDetailsComponent implements OnInit {
       .then(result => {
         if (result && this.selectedPlace && this.selectedPlace.id) {
           this.placesService.deletePlace(this.selectedPlace)
-            .subscribe((data: any) => {
+            .subscribe((data: Place) => {
               this.submitted = true;
               this.goBack();
             });

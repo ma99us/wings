@@ -12,6 +12,7 @@ import {HomeComponent} from './home/home.component';
 // app common components
 import {NotFoundComponent} from "./components/not-found/not-found-component";
 import {LoadingComponent} from "./components/loading-buffering/loading-component";
+import {ListSorterComponent} from "./components/list-sorter/list-sorter-component";
 
 // app views components
 import {PlacesComponent} from './places/places.component';
@@ -38,7 +39,8 @@ import {EventPlacePickerComponent} from "./events/place-picker/event.place-picke
     EventComponent,
     EventPlacePickerComponent,
     NotFoundComponent,
-    LoadingComponent
+    LoadingComponent,
+    ListSorterComponent
   ],
   imports: [
     BrowserModule,

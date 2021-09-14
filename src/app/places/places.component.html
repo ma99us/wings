@@ -8,6 +8,13 @@
       <button class="btn btn-primary" (click)="newPlace()">Add new Place</button>
     </div>
     <div class="col-auto" style="margin-top: auto; margin-bottom: auto;">
+      <list-sorter *ngIf="displayPlaces && displayPlaces.length"
+                   [fieldsNames]="['Name', 'Rating']"
+                   [sortChanged]="onSortChanged">
+        Sort by:
+      </list-sorter>
+    </div>
+    <div class="col-auto" style="margin-top: auto; margin-bottom: auto;">
       <p *ngIf="displayPlaces">(total found {{displayPlaces.length}})</p>
     </div>
 

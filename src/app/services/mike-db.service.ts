@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from "rxjs/internal/Observable";
-import {HOST_API_KEY, HOST_DB_NAME, HOST_LOCATION} from "./app-config";
+import {HOST_API_KEY, HOST_DB_NAME, HOST_LOCATION} from "../app-config";
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +45,7 @@ export class MikeDbService {
    * @param value
    * @returns {any}
    */
-  private prepareHeaders(value: any): any {
+  private prepareHeaders<Type>(value: Type): any {
     const headers = {
       'API_KEY': HOST_API_KEY,    // always send api key with every request header
       'Content-Type': 'application/json;charset=utf-8'
@@ -97,7 +97,7 @@ export class MikeDbService {
    * @param dbName
    * @returns {*} 200 if record retrieved or status code 204 when no such record
    */
-  get(key: string, firstResult = 0, maxResults = -1, fields: string | null = null, dbName: string | null = null): Observable<Object> {
+  get<Type>(key: string, firstResult = 0, maxResults = -1, fields: string | null = null, dbName: string | null = null): Observable<Type> {
     const url = this.getHostApiUrl(dbName);
     if (!url) {
       throw "mike-db is not initialized";
@@ -110,7 +110,7 @@ export class MikeDbService {
       params = params.set('fields', fields);
     }
 
-    return this.http.get<Object>(url + key, {
+    return this.http.get<Type>(url + key, {
       headers: this.prepareHeaders(null),
       params: params
     })
@@ -122,7 +122,7 @@ export class MikeDbService {
   /**
    * Add a single item in a collection associated with the key
    */
-  add(key: string, value: any, index: number | null = null, dbName: string | null = null): Observable<Object> {
+  add<Type>(key: string, value: Type, index: number | null = null, dbName: string | null = null): Observable<Type> {
     const url = this.getHostApiUrl(dbName);
     if (!url) {
       throw "mike-db is not initialized";
@@ -133,7 +133,7 @@ export class MikeDbService {
       params = params.set('index', index);
     }
 
-    return this.http.post<Object>(url + key, value, {
+    return this.http.post<Type>(url + key, value, {
       headers: this.prepareHeaders(value),
       params: params
     });
@@ -145,7 +145,7 @@ export class MikeDbService {
   /**
    * Modify a single item in a collection associated with the key
    */
-  update(key: string, value: any, index: number | null = null, dbName: string | null = null): Observable<Object> {
+  update<Type>(key: string, value: Type, index: number | null = null, dbName: string | null = null): Observable<Type> {
     const url = this.getHostApiUrl(dbName);
     if (!url) {
       throw "mike-db is not initialized";
@@ -156,7 +156,7 @@ export class MikeDbService {
       params = params.set('index', index);
     }
 
-    return this.http.patch<Object>(url + key, value, {
+    return this.http.patch<Type>(url + key, value, {
       headers: this.prepareHeaders(value),
       params: params
     });
@@ -168,7 +168,7 @@ export class MikeDbService {
   /**
    * Delete a single item in a collection associated with the key
    */
-  delete(key: string, value: any, id: number | null = null, index: number | null = null, dbName: string | null = null): Observable<Object> {
+  delete<Type>(key: string, value: Type, id: number | null = null, index: number | null = null, dbName: string | null = null): Observable<Type> {
     const url = this.getHostApiUrl(dbName);
     if (!url) {
       throw "mike-db is not initialized";
@@ -180,11 +180,11 @@ export class MikeDbService {
     }
     if (id != null) {
       params = params.set('id', id);
-    } else if (value != null) {
-      params = params.set('id', value.id);
+    } else if (value && (<any>value)['id']) {
+      params = params.set('id', (<any>value)['id']);
     }
 
-    return this.http.delete<Object>(url + key, {
+    return this.http.delete<Type>(url + key, {
       headers: this.prepareHeaders(value),
       params: params,
       body: value

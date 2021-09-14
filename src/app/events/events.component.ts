@@ -24,7 +24,7 @@ export class EventsComponent implements OnInit {
 
   getAllEvents(): void {
     this.eventsService.getEvents()
-      .subscribe((data: any) => {
+      .subscribe((data: Event[]) => {
         this.events = data;
         this.displayEvents = this.events;
       }, err => {

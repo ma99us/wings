@@ -1,5 +1,16 @@
-<li [class.selected]="isSelected" (click)="onSelect(event)">
+<li [class.selected]="isSelected" [class.today]="note.isToday" (click)="onSelect(event)">
   <div style="margin-top: auto; margin-bottom: auto; height: 100%; vertical-align: middle">
-    <span class="title">{{event.date | date : 'longDate'}} <span *ngIf="event.title"> @ {{event.title}}</span></span>
+    <div class="row">
+      <div class="col">
+      <span class="title">{{event.date | date : 'longDate'}}
+        <span *ngIf="event.title"
+              [class.unplaced]="!event.place_id">
+        @ {{event.title}}</span>
+      </span>
+      </div>
+      <div class="col-auto">
+        <span class="note" [class.today]="note.isToday" [class.comingup]="note.isComingup">{{note.text}}</span>
+      </div>
+    </div>
   </div>
 </li>
