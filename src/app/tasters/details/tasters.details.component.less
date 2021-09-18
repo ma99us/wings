@@ -1,0 +1,66 @@
+.tasters-details-container {
+  padding: 0.5em;
+  background-color: #EEE;
+
+  label {
+    font-weight: bolder;
+    margin-top: .5rem;
+  }
+
+  .row{
+    margin: 0.3em 0.3em;
+
+    label {
+      display: inline-block;
+      width: 6em;
+    }
+
+    input {
+      width: 100%;
+
+      &.medium-input {
+        width: 12em;
+      }
+    }
+
+    .row-label{
+      text-align: right;
+      margin-left: 1em;
+      margin-right: 0.2em;
+    }
+
+    span {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+
+      &#passwords-mismatch {
+        height: unset;
+        margin-left: 1em;
+      }
+    }
+
+    .span-label {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      font-weight: bolder;
+      white-space: nowrap;
+      width: 7em;
+    }
+  }
+
+  .col-auto {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .col{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .btn-danger {
+    margin-left: 1em;
+  }
+}

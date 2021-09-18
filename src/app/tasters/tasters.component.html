@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h2>Wings Tasters</h2>
+
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary" (click)="newTaster()">Add new Taster</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <ul *ngIf="tasters" class="tasters">
+        <taster-li *ngFor="let taster of tasters; trackBy: trackByFn"
+                  [taster]="taster"
+                  [selectedTaster]="undefined"
+                  [onSelect]="onSelect">
+        </taster-li>
+      </ul>
+      <loading *ngIf="tasters === undefined"></loading>
+      <not-found *ngIf="tasters && tasters.length === 0"></not-found>
+    </div>
+  </div>
+</div>

@@ -37,16 +37,3 @@ export class Dish {
   price?: number;
   rating?: number;
 }
-
-// aka User
-export class Taster {
-  id: number | null = null;
-  name?: string;
-  photo?: string;
-
-  constructor(data: any | null = null) {
-    for (let key in data) {
-      (<any>this)[key] = data[key];
-    }
-  }
-}

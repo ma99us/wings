@@ -6,13 +6,13 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {HomeComponent} from './home/home.component';
 // app common components
 import {NotFoundComponent} from "./components/not-found/not-found-component";
 import {LoadingComponent} from "./components/loading-buffering/loading-component";
 import {ListSorterComponent} from "./components/list-sorter/list-sorter-component";
 // app views components
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
 import {PlacesComponent} from './places/places.component';
 import {PlaceComponent} from "./places/place/place.component";
 import {PlacesSearchComponent} from "./places/search/places.search.component";
@@ -24,8 +24,10 @@ import {EventsDetailsComponent} from "./events/details/events.details.component"
 import {EventPlacePickerComponent} from "./events/place-picker/event.place-picker.component";
 import {ReviewComponent} from "./events/review/review.component";
 import {ReviewDetailsComponent} from "./reviews/review.details.component";
-import {NgxCurrencyModule} from "ngx-currency";
 import {InputRatingFormComponent} from "./reviews/rating/input-rating";
+import {TastersComponent} from "./tasters/tasters.component";
+import {TasterComponent} from "./tasters/taster/taster.component";
+import {TastersDetailsComponent} from "./tasters/details/tasters.details.component";
 
 @NgModule({
   declarations: [
@@ -45,7 +47,10 @@ import {InputRatingFormComponent} from "./reviews/rating/input-rating";
     ListSorterComponent,
     ReviewComponent,
     ReviewDetailsComponent,
-    InputRatingFormComponent
+    InputRatingFormComponent,
+    TastersComponent,
+    TasterComponent,
+    TastersDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -53,8 +58,7 @@ import {InputRatingFormComponent} from "./reviews/rating/input-rating";
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgbModule,
-    NgxCurrencyModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

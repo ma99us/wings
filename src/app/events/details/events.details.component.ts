@@ -114,11 +114,17 @@ export class EventsDetailsComponent implements OnInit {
         if (result && this.selectedEvent && this.selectedEvent.id) {
           this.eventsService.deleteEvent(this.selectedEvent)
             .subscribe((data: Event) => {
-              this.submitted = true;
-              this.goBack();
+              this.deleteEventReviews();
             });
         }
       });
+  }
+
+  deleteEventReviews() {
+    //TODO: delete all reviews with event_id of deleted event
+
+    this.submitted = true;
+    this.goBack();
   }
 
   pickPlacePopup() {

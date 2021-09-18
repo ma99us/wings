@@ -1,0 +1,72 @@
+<div class="container">
+  <h2>Wings Taster</h2>
+  <form (ngSubmit)="onSubmit()" #tasterForm="ngForm">
+    <div *ngIf="selectedTaster" class="tasters-details-container">
+      <div class="row">
+        <div class="col">
+          <h2>{{selectedTaster.name ? (selectedTaster.name | uppercase) : 'Anonymous'}}</h2>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-secondary" (click)="goBack()">Close</button>
+        </div>
+      </div>
+      <h6 [style.visibility]="selectedTaster.id ? 'visible' : 'hidden'"><span>id: </span>{{selectedTaster.id}}</h6>
+      <div>
+        <div class="row">
+          <div class="col-auto">
+            <label for="thumbnail">Thumbnail: </label>
+          </div>
+          <div class="col">
+            <img
+              id="thumbnail-img" name="thumbnail-img"
+              height="120"
+              alt="Taster Logo"
+              src="{{selectedTaster.photo || './assets/tasters_logo_200.png'}}"
+            />
+            <input id="thumbnail" name="thumbnail" [(ngModel)]="selectedTaster.photo" placeholder="thumbnail"
+                   #title="ngModel" readonly disabled>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
+            <label for="title">Name: </label>
+          </div>
+          <div class="col">
+            <input id="title" name="title" [(ngModel)]="selectedTaster.name" placeholder="title" #title="ngModel"
+                   required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
+            <label for="password_new">Change Password: </label>
+          </div>
+          <div class="col">
+            <input type="password" class="medium-input" id="password_new" name="password_new" [(ngModel)]="passwordNew"
+                   placeholder="new password" #password_new="ngModel" (ngModelChange)="checkPasswords()">
+            <label class="row-label" for="password_copy">Repeat: </label>
+            <input type="password" class="medium-input" id="password_copy" name="password_copy"
+                   [(ngModel)]="passwordCopy" placeholder="new password again" #password_copy="ngModel"
+                   (ngModelChange)="checkPasswords()">
+            <span id="passwords-mismatch" [hidden]="password_copy.valid || password_copy.pristine" class="alert-danger">
+              Passwords do not match
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-success" [disabled]="!tasterForm.form.valid">Submit</button>
+          <button type="button" class="btn btn-danger" (click)="deleteTaster()">Delete</button>
+        </div>
+        <div class="col-auto">
+        </div>
+      </div>
+
+      <div [hidden]="!submitted">
+        <h6>Record updated</h6>
+      </div>
+    </div>
+  </form>
+  <loading *ngIf="selectedTaster === undefined"></loading>
+  <not-found *ngIf="selectedTaster === null"></not-found>
+</div>

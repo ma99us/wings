@@ -1,0 +1,14 @@
+<li [class.selected]="isSelected">
+  <div class="row" (click)="onSelect(taster)">
+    <div class="col-auto thumbnail">
+      <img
+        height="60"
+        alt="Taster Logo"
+        src="{{taster.photo || './assets/tasters_logo_200.png'}}"
+      />
+    </div>
+    <div class="col title">
+      <span>{{taster.name}}</span>
+    </div>
+  </div>
+</li>

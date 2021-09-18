@@ -1,7 +1,7 @@
 <li (click)="onSelect(review)">
   <div class="row">
     <div class="col-auto author">
-      <span [class.anonimus]="!review.author_id">{{review.author_id || 'Anonimus'}}: </span>
+      <span [class.anonymous]="!review.author_id">{{review.author_id || 'Anonimus'}}: </span>
     </div>
     <div class="col comment">
       <span>"{{review.comment}}"</span>
