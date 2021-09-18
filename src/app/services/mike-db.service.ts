@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from "rxjs/internal/Observable";
 import {HOST_API_KEY, HOST_DB_NAME, HOST_LOCATION} from "../app-config";
+import {DbType} from "./db-type";
 
 @Injectable({
   providedIn: 'root'
@@ -168,7 +169,7 @@ export class MikeDbService {
   /**
    * Delete a single item in a collection associated with the key
    */
-  delete<Type>(key: string, value: Type, id: number | null = null, index: number | null = null, dbName: string | null = null): Observable<Type> {
+  delete<Type extends DbType>(key: string, value: Type, id: number | null = null, index: number | null = null, dbName: string | null = null): Observable<Type> {
     const url = this.getHostApiUrl(dbName);
     if (!url) {
       throw "mike-db is not initialized";
@@ -180,8 +181,8 @@ export class MikeDbService {
     }
     if (id != null) {
       params = params.set('id', id);
-    } else if (value && (<any>value)['id']) {
-      params = params.set('id', (<any>value)['id']);
+    } else if (value && value.id) {
+      params = params.set('id', value.id);
     }
 
     return this.http.delete<Type>(url + key, {

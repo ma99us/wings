@@ -125,6 +125,10 @@ export class PlacesComponent implements OnInit {
     const url: string = "/events/" + event.id;
     this.router.navigateByUrl(url);
   };
+
+  trackByFn(index: number, item: Place) {
+    return item.id  // or index
+  }
 }
 
 export const PlacesSortBy = {

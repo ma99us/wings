@@ -1,6 +1,6 @@
 {
   "name": "wings",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -22,14 +22,10 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
-    "bootstrap": "^4.5.3",
-    "ngx-bootstrap": "^7.0.0",
     "rxjs": "~6.6.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.2.2",
     "@angular/cli": "~12.2.2",
     "@angular/compiler-cli": "~12.2.0",
     "@types/jasmine": "~3.8.0",

@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col-12">
       <ul *ngIf="displayEvents" class="events">
-        <event-li *ngFor="let event of displayEvents"
+        <event-li *ngFor="let event of displayEvents; trackBy: trackByFn"
                   [event]="event"
                   [selectedEvent]="undefined"
                   [onSelect]="onSelect">

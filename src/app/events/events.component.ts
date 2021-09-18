@@ -42,4 +42,8 @@ export class EventsComponent implements OnInit {
     const url: string = "/events/0";
     this.router.navigateByUrl(url);
   }
+
+  trackByFn(index: number, item: Event) {
+    return item.id  // or index
+  }
 }

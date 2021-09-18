@@ -1,9 +1,12 @@
 <div class="container">
+
+  <h2>Wings Event</h2>
+
   <div *ngIf="selectedEvent" class="events-details-container">
     <form (ngSubmit)="onSubmit()" #eventForm="ngForm">
       <div class="row">
         <div class="col">
-          <h2> @ {{selectedEvent.title | uppercase}}</h2>
+          <h2>On: {{(selectedEvent.date | date : 'longDate' | uppercase) || '-NEVER-'}} @ {{(selectedEvent.title | uppercase) || '-NOWHERE-'}}</h2>
         </div>
         <div class="col-auto">
           <button type="button" class="btn btn-secondary" (click)="goBack()">Close</button>
@@ -57,6 +60,30 @@
       <h6>Record updated</h6>
     </div>
   </div>
+  <loading *ngIf="selectedEvent === undefined"></loading>
   <not-found *ngIf="selectedEvent === null"></not-found>
+
+  <div *ngIf="eventReviews" class="event-reviews">
+    <div class="row">
+      <div class="col-auto">
+        <h3 *ngIf="eventReviews && eventReviews.length > 0">Reviews</h3>
+        <h3 *ngIf="!eventReviews || eventReviews.length === 0">No Reviews yet :-(</h3>
+      </div>
+      <div class="col" style="text-align: right">
+        <button type="button" class="btn btn-primary" (click)="newReview()">Leave a Review</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <ul *ngIf="eventReviews" class="reviews">
+          <review-li *ngFor="let review of eventReviews"
+                    [review]="review"
+                    [onSelect]="onSelectReview">
+          </review-li>
+        </ul>
+        <!--<loading *ngIf="placeEvents === undefined"></loading>-->
+      </div>
+    </div>
+  </div>
 </div>
 

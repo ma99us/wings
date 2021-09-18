@@ -22,7 +22,7 @@
   <div class="row">
     <div class="col-12">
       <ul *ngIf="displayPlaces" class="places">
-        <place-li *ngFor="let place of displayPlaces"
+        <place-li *ngFor="let place of displayPlaces; trackBy: trackByFn"
                   [place]="place"
                   [selectedPlace]="undefined"
                   [onSelect]="onSelect"

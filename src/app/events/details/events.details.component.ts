@@ -7,6 +7,8 @@ import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {EventPlacePickerComponent} from "../place-picker/event.place-picker.component";
 import {Place} from "../../places/place";
 import {PlacesService} from "../../places/places.service";
+import {Review} from "../../reviews/review";
+import {ReviewsService} from "../../reviews/reviews.service";
 
 @Component({
   selector: 'events-details',
@@ -17,9 +19,12 @@ export class EventsDetailsComponent implements OnInit {
 
   selectedEvent!: Event | null;
   submitted: boolean = false;
-  eventPlace?: Place;
+  eventPlace?: Place | null;
+  eventReviews?: Review[] | null;
 
-  constructor(private route: ActivatedRoute, private router: Router, private eventsService: EventsService, private placesService: PlacesService, private confirmation: ConfirmDialogService, private modalService: NgbModal) {
+  constructor(private route: ActivatedRoute, private router: Router, private eventsService: EventsService,
+              private placesService: PlacesService, private reviewsService: ReviewsService,
+              private confirmation: ConfirmDialogService, private modalService: NgbModal) {
   }
 
   ngOnInit(): void {
@@ -35,8 +40,11 @@ export class EventsDetailsComponent implements OnInit {
         this.eventsService.getEventById(id).subscribe((data: Event) => {
           this.selectedEvent = data;
           this.getEventPlace();
+          this.getEventReviews();
         }, err => {
           this.selectedEvent = null;
+          this.eventPlace = null;
+          this.eventReviews = null;
         });
       }
     });
@@ -49,7 +57,7 @@ export class EventsDetailsComponent implements OnInit {
 
   makeNewEvent() {
     this.selectedEvent = new Event();
-    this.selectedEvent.title = "New Event";
+    // this.selectedEvent.title = "New Event";
     // this.selectedEvent.date = new Date();
   }
 
@@ -61,21 +69,27 @@ export class EventsDetailsComponent implements OnInit {
           this.selectedEvent.title = this.eventPlace.title;
         }
       }, err => {
-        this.eventPlace = undefined;
-        // if (this.selectedEvent) {
-        //   this.selectedEvent.title = undefined;
-        // }
+        this.eventPlace = null;
       });
     } else {
-      this.eventPlace = undefined;
-      if (this.selectedEvent) {
-        this.selectedEvent.title = "-no place-";
-      }
+      this.eventPlace = null;
+      // if (this.selectedEvent) {
+      //   this.selectedEvent.title = "-nowhere-";
+      // }
     }
   }
 
   get eventPlaceName() {
-    return this.eventPlace ? this.eventPlace.title : (this.selectedEvent && this.selectedEvent.place_id ? ('Place id: ' + this.selectedEvent.place_id) : 'select a Place');
+    return this.eventPlace ? this.eventPlace.title : (this.selectedEvent && this.selectedEvent.place_id ? ('Place id: ' + this.selectedEvent.place_id) : 'Select a Place');
+  }
+
+  getEventReviews() {
+    this.reviewsService.getReviews(0, -1, "event_id,author_id,comment,review_rating")
+      .subscribe((data: Review[]) => {
+        this.eventReviews = data.filter(review => this.selectedEvent && review.event_id === this.selectedEvent.id);
+      }, err => {
+        this.eventReviews = null;
+      });
   }
 
   onSubmit(): void {
@@ -117,11 +131,24 @@ export class EventsDetailsComponent implements OnInit {
     });
   }
 
-  onEventPlaceClick(){
-    if(!this.selectedEvent || !this.selectedEvent.place_id){
+  onEventPlaceClick() {
+    if (!this.selectedEvent || !this.selectedEvent.place_id) {
       return;
     }
     const url: string = "/places/" + this.selectedEvent.place_id;
     this.router.navigateByUrl(url);
   }
+
+  newReview() {
+    if (!this.selectedEvent || !this.selectedEvent.id) {
+      return;
+    }
+    const url: string = "/reviews/0?event_id=" + this.selectedEvent.id;
+    this.router.navigateByUrl(url);
+  }
+
+  onSelectReview = (review: Review): void => {
+    const url: string = "/reviews/" + review.id;
+    this.router.navigateByUrl(url);
+  };
 }

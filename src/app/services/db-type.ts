@@ -1,3 +1,3 @@
 export interface DbType {
-  id: number
+  id: string | number | null
 }

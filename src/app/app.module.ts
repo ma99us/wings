@@ -8,12 +8,10 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
-
 // app common components
 import {NotFoundComponent} from "./components/not-found/not-found-component";
 import {LoadingComponent} from "./components/loading-buffering/loading-component";
 import {ListSorterComponent} from "./components/list-sorter/list-sorter-component";
-
 // app views components
 import {PlacesComponent} from './places/places.component';
 import {PlaceComponent} from "./places/place/place.component";
@@ -24,6 +22,10 @@ import {EventsComponent} from './events/events.component';
 import {EventComponent} from "./events/event/event.component";
 import {EventsDetailsComponent} from "./events/details/events.details.component";
 import {EventPlacePickerComponent} from "./events/place-picker/event.place-picker.component";
+import {ReviewComponent} from "./events/review/review.component";
+import {ReviewDetailsComponent} from "./reviews/review.details.component";
+import {NgxCurrencyModule} from "ngx-currency";
+import {InputRatingFormComponent} from "./reviews/rating/input-rating";
 
 @NgModule({
   declarations: [
@@ -40,7 +42,10 @@ import {EventPlacePickerComponent} from "./events/place-picker/event.place-picke
     EventPlacePickerComponent,
     NotFoundComponent,
     LoadingComponent,
-    ListSorterComponent
+    ListSorterComponent,
+    ReviewComponent,
+    ReviewDetailsComponent,
+    InputRatingFormComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,8 @@ import {EventPlacePickerComponent} from "./events/place-picker/event.place-picke
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    NgxCurrencyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,6 +26,9 @@ import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core'
                src="./assets/tri-arrow-down.png"
           />
         </span>
+        <span>
+           | 
+        </span>
       </span>
     </div>
   `,
@@ -50,12 +53,12 @@ import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core'
     }    
     .fields-container {
       display: inline-block;
-      width: 3.1em;
+      width: 3.2em;
     }
     
     .arrows-container {
       display: inline-block;
-      width: 30px;
+      width: 24px;
     }
 
     .selected {

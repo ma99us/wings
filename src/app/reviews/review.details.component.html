@@ -1,0 +1,255 @@
+<div class="container">
+  <h2>Event Review</h2>
+  <form (ngSubmit)="onSubmit()" #reviewForm="ngForm">
+    <div *ngIf="review && reviewEvent" class="review-details-container">
+      <div class="row">
+        <div class="col">
+          <h2 *ngIf="reviewEvent">For: <span>{{reviewEvent.date | date : 'longDate' | uppercase}}</span> @
+            {{reviewEvent.title | uppercase}}</h2>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-secondary" (click)="goBack()">Close</button>
+        </div>
+      </div>
+      <h6 [style.visibility]="review.id ? 'visible' : 'hidden'"><span>id: </span>{{review.id}}</h6>
+      <div class="row form-group">
+        <div class="col-auto">
+          <label for="comment">Comment: </label>
+        </div>
+        <div class="col">
+          <textarea id="comment" name="comment" [(ngModel)]="review.comment" placeholder="Leave a personal comment"
+                    #comment="ngModel" required>
+          </textarea>
+        </div>
+      </div>
+
+      <!--general info-->
+      <div class="card bg-secondary text-light form-group">
+        <div class="row ">
+          <div class="col-auto">
+            <span class="span-label">General info:</span>
+          </div>
+          <div class="col-auto">
+            <label for="type">Cuisine type: </label>
+          </div>
+          <div class="col">
+            <input id="type" name="type" [(ngModel)]="reviewEvent.type" placeholder="Cuisine style" #type="ngModel">
+          </div>
+          <div class="col-auto">
+            <label class="row-label" for="portion">Portion (pcs): </label>
+          </div>
+          <div class="col-auto">
+            <input class="small-input" id="portion" name="portion" type="number" [(ngModel)]="reviewEvent.portion"
+                   min=0 max=99
+                   placeholder="number of pieces" #portion="ngModel">
+          </div>
+          <div class="col-auto">
+            <label class="row-label" for="price">Price ($): </label>
+          </div>
+          <div class="col-auto">
+            <input class="medium-input" id="price" name="price" type="number" [(ngModel)]="reviewEvent.price"
+                   min=0 max=99
+                   placeholder="$ price" #price="ngModel">
+          </div>
+          <div class="col-auto">
+            <span class="row-label">Value: <span class="small-value">{{portionValue ? ((portionValue | number : '1.2-2') + ' /pc') : 'n/a'}}</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!--place review-->
+      <div class="form-group">
+        <div class="row" *ngIf="review.place">
+          <div class="col">
+            <span class="span-label">Venue/Service: </span>
+          </div>
+          <div class="col-auto">
+            <label class="row-label" >Parking: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'parking'" [(rating)]="review.place.parking"></input-rating>
+          </div>
+          <div class="col-auto">
+            <label class="row-label">Ambiance: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'ambiance'" [(rating)]="review.place.ambiance"></input-rating>
+          </div>
+          <div class="col-auto">
+            <label class="row-label" >Service: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'service'" [(rating)]="review.place.service"></input-rating>
+          </div>
+          <div class="col-auto">
+            <label class="row-label" >Wait time: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'wait_time'" [(rating)]="review.place.wait_time"></input-rating>
+          </div>
+          <div class="col-auto">
+            <label class="row-label">Cleanliness: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'cleanliness'" [(rating)]="review.place.cleanliness"></input-rating>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+
+      <!--wings review-->
+      <div class="card bg-primary text-white form-group">
+        <div class="row" *ngIf="review.wings">
+          <div class="col">
+            <span class="span-label">Wings: </span>
+          </div>
+          <div class="col-auto">
+            <label class="row-label">Moistness: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'moistness'" [(rating)]="review.wings.moistness"></input-rating>
+          </div>
+          <div class="col-auto">
+            <label class="row-label">Sauce: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'sauce'" [(rating)]="review.wings.sauce"></input-rating>
+          </div>
+          <div class="col-auto">
+            <label class="row-label">Taste: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'taste'" [(rating)]="review.wings.taste"></input-rating>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+
+      <!--sides.appetizer review-->
+      <div class="form-group">
+        <div class="row" *ngIf="review.sides && review.sides.appetizer">
+          <div class="col-auto">
+            <span class="span-label">Appetizer: </span>
+          </div>
+          <div class="col-auto">
+            <label class="row-label" for="appetizer-name">Name: </label>
+          </div>
+          <div class="col">
+            <input id="appetizer-name" name="appetizer-name" [(ngModel)]="review.sides.appetizer.name"
+                   placeholder="appetizer name" #appetizer.name="ngModel">
+          </div>
+          <div class="col-auto">
+            <label class="row-label" for="appetizer-price">Price ($): </label>
+          </div>
+          <div class="col-auto">
+            <input class="medium-input" id="appetizer-price" name="appetizer-price" type="number"
+                   [(ngModel)]="review.sides.appetizer.price" placeholder="$ price" #appetizer.price="ngModel"
+                   min=0 max=99>
+          </div>
+          <div class="col-auto">
+            <label class="row-label">Rating: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'appetizer-rating'" [(rating)]="review.sides.appetizer.rating"></input-rating>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+
+        <!--sides.side review-->
+        <div class="row" *ngIf="review.sides && review.sides.side">
+          <div class="col-auto">
+            <span class="span-label">Side dish: </span>
+          </div>
+          <div class="col-auto">
+            <label class="row-label" for="side-name">Name: </label>
+          </div>
+          <div class="col">
+            <input id="side-name" name="side-name" [(ngModel)]="review.sides.side.name" placeholder="side dish name"
+                   #side.name="ngModel">
+          </div>
+          <div class="col-auto">
+            <label class="row-label" for="side-price">Price ($): </label>
+          </div>
+          <div class="col-auto">
+            <input class="medium-input" id="side-price" name="side-price" type="number"
+                   [(ngModel)]="review.sides.side.price" placeholder="$ price" #side.price="ngModel"
+                   min=0 max=99>
+          </div>
+          <div class="col-auto">
+            <label class="row-label">Rating: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'side-rating'" [(rating)]="review.sides.side.rating"></input-rating>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+
+        <!--sides.drink review-->
+        <div class="row" *ngIf="review.sides && review.sides.drink">
+          <div class="col-auto">
+            <span class="span-label">Drink pairing: </span>
+          </div>
+          <div class="col-auto">
+            <label class="row-label" for="drink-name">Name: </label>
+          </div>
+          <div class="col">
+            <input id="drink-name" name="drink-name" [(ngModel)]="review.sides.drink.name" placeholder="drink name"
+                   #drink.name="ngModel">
+          </div>
+          <div class="col-auto">
+            <label class="row-label" for="drink-price">Price ($): </label>
+          </div>
+          <div class="col-auto">
+            <input class="medium-input" id="drink-price" name="drink-price" type="number"
+                   [(ngModel)]="review.sides.drink.price" placeholder="$ price" #drink.price="ngModel"
+                   min=0 max=99>
+          </div>
+          <div class="col-auto">
+            <label class="row-label">Rating: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'drink-rating'" [(rating)]="review.sides.drink.rating"></input-rating>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-auto">
+          <div id="review-rating" class="card bg-info text-warning">
+            <div id="review-rating-value">{{review.review_rating !== undefined ? (review.review_rating | number :
+              '1.2-2') : 'n/a'}}
+            </div>
+          </div>
+        </div>
+        <div class="col">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-success" [disabled]="!reviewForm.form.valid">Submit</button>
+          <button type="button" class="btn btn-danger" (click)="deleteReview()">Delete</button>
+        </div>
+        <div class="col-auto">
+
+        </div>
+      </div>
+
+      <div [hidden]="!submitted">
+        <h6>Record updated</h6>
+      </div>
+    </div>
+  </form>
+
+  <loading *ngIf="review === undefined && reviewEvent === undefined"></loading>
+  <not-found *ngIf="review === null || reviewEvent === null"></not-found>
+</div>
+

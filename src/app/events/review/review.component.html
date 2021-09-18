@@ -1,0 +1,18 @@
+<li (click)="onSelect(review)">
+  <div class="row">
+    <div class="col-auto author">
+      <span [class.anonimus]="!review.author_id">{{review.author_id || 'Anonimus'}}: </span>
+    </div>
+    <div class="col comment">
+      <span>"{{review.comment}}"</span>
+    </div>
+    <div class="col-auto rating">
+      <div *ngIf="review.review_rating !== undefined" id="review-rating" class="card bg-info text-warning">
+        <div id="review-rating-value">{{review.review_rating !== undefined ? (review.review_rating | number :
+          '1.2-2') : 'n/a'}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</li>

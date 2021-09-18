@@ -1,4 +1,5 @@
 <div class="container">
+  <h2>Wings Place</h2>
   <div *ngIf="selectedPlace" class="places-details-container">
     <form (ngSubmit)="onSubmit()" #placeForm="ngForm">
       <div class="row">
@@ -99,9 +100,10 @@
       <h6>Record updated</h6>
     </div>
   </div>
+  <loading *ngIf="selectedPlace === undefined"></loading>
   <not-found *ngIf="selectedPlace === null"></not-found>
 
-  <div class="place-events">
+  <div *ngIf="selectedPlace" class="place-events">
     <div class="row">
       <div class="col-auto">
         <h3 *ngIf="placeEvents && placeEvents.length > 0">Events</h3>
