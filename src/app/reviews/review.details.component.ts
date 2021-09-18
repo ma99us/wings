@@ -86,15 +86,27 @@ export class ReviewDetailsComponent implements OnInit, OnDestroy {
       .subscribe((data: Review) => {
         this.review = data;
         if (this.reviewEvent) {
+          this.updateReviewEvent();
+        } else {
+          this.submitted = true;
+        }
+        // this.goBack();
+      });
+  }
+
+  updateReviewEvent() {
+    this.reviewsService.getReviews(0, -1, "event_id,author_id,comment,review_rating")
+      .subscribe((data: Review[]) => {
+        const eventReviews = data.filter(review => this.reviewEvent && review.event_id === this.reviewEvent.id && review.review_rating !== undefined);
+        let sum = eventReviews.reduce((sum, review) => review.review_rating !== undefined ? (sum + review.review_rating) : sum, 0);
+        if (this.reviewEvent) {
+          this.reviewEvent.event_rating = eventReviews.length > 0 ? sum / eventReviews.length : undefined;
           this.eventsService.addUpdateEvent(this.reviewEvent)
             .subscribe((data: Event) => {
               this.reviewEvent = data;
               this.submitted = true;
             });
-        } else {
-          this.submitted = true;
         }
-        // this.goBack();
       });
   }
 
@@ -158,9 +170,9 @@ export class ReviewDetailsComponent implements OnInit, OnDestroy {
     addRating(resolve('place.wait_time', this.review));
     addRating(resolve('place.cleanliness', this.review));
     // wings
-    addRating(resolve('wings.moistness', this.review), 3);  // everything about wings is more important
-    addRating(resolve('wings.sauce', this.review), 3);      // everything about wings is more important
-    addRating(resolve('wings.taste', this.review), 10);     // after all, wings taste is the most important!
+    addRating(resolve('wings.moistness', this.review), 1);  //TODO: everything about wings is more important. (*3?)
+    addRating(resolve('wings.sauce', this.review), 1);      //TODO: everything about wings is more important.  (*3?)
+    addRating(resolve('wings.taste', this.review), 1);      //TODO: after all, wings taste is the most important! (*10?)
     //sides
     addRating(resolve('sides.appetizer.rating', this.review));
     addRating(resolve('sides.side.rating', this.review));

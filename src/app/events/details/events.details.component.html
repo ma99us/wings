@@ -51,7 +51,13 @@
           <button type="button" class="btn btn-danger" (click)="deleteEvent()">Delete</button>
         </div>
         <div class="col-auto">
-
+          <div id="event-rating" class="card bg-info text-warning">
+            <div id="event-rating-value">{{selectedEvent.event_rating !== undefined ? (selectedEvent.event_rating | number :
+              '1.2-2') : 'n/a'}}
+            </div>
+          </div>
+        </div>
+        <div class="col">
         </div>
       </div>
     </form>

@@ -8,5 +8,12 @@
     <div class="col-auto note">
       <span [class.today]="note.isToday" [class.comingup]="note.isComingup">{{note.text}}</span>
     </div>
+    <div class="col-auto rating">
+      <div *ngIf="event.event_rating !== undefined" id="event-rating" class="card bg-info text-warning">
+        <div id="event-rating-value">{{event.event_rating !== undefined ? (event.event_rating | number :
+          '1.2-2') : 'n/a'}}
+        </div>
+      </div>
+    </div>
   </div>
 </li>
