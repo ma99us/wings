@@ -60,8 +60,12 @@ export class DaysDiff {
     this.text = text;
   }
 
+  get isInFuture(): boolean {
+    return this.days != null && this.days > 7;
+  }
+
   get isComingup(): boolean {
-    return this.days != null && this.days > 0 && this.days < 7;
+    return this.days != null && this.days > 0 && this.days <= 7;
   }
 
   get isToday(): boolean {

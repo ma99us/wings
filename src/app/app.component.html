@@ -1,24 +1,44 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Wings Logo"
-    src="./assets/wings_logo_40.png"
-  />
-  <span>Wings Commission</span>
-  <div class="spacer"></div>
-  <nav>
-    <a routerLink="/">Home | </a>
-    <a routerLink="/places"> Places | </a>
-    <a routerLink="/events"> Events | </a>
-    <a routerLink="/tasters"> Tasters (admin)</a>
-  </nav>
+  <div class="row">
+    <div class="col-auto logo">
+      <img
+        width="40"
+        alt="Wings Logo"
+        src="./assets/wings_logo_40.png"
+      />
+      <span>Wings Commission</span>
+    </div>
 
+    <div class="col-1">
+    </div>
+    <div class="col-auto nav">
+      <nav>
+        <a routerLink="/">Home</a> |
+        <a routerLink="/places"> Places</a> |
+        <a routerLink="/events"> Events</a> |
+        <a routerLink="/tasters"> Tasters</a>
+      </nav>
+    </div>
+    <div class="col">
+    </div>
+    <div class="col-auto nav">
+      <span *ngIf="!currentTaster"><a [routerLink]="" (click)="login()">Login</a></span>
+      <span *ngIf="currentTaster">
+        Welcome {{currentTaster.name}}
+        <img
+          height="40"
+          alt="Taster Logo"
+          src="{{currentTaster.photo || './assets/tasters_logo_200.png'}}"
+        />
+        <a [routerLink]="" (click)="logout()">Logout</a></span>
+    </div>
+  </div>
 </div>
 
 <div class="content" role="main">
 
-<!--TODO: some common header which goes above every page-->
+  <!--TODO: some common header which goes above every page-->
 
 </div>
 

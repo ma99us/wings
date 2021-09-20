@@ -1,12 +1,19 @@
 <li [class.selected]="isSelected" [class.today]="note.isToday" (click)="onSelect(event)">
   <div class="row">
+    <div class="col-auto thumbnail">
+      <img
+        height="40"
+        alt="Event Logo"
+        src="./assets/event.png"
+      />
+    </div>
     <div class="col title">
       <span>{{event.date | date : 'longDate'}}</span>
       <span [class.unplaced]="!event.place_id">
           @ {{event.title || '-NOWHERE-'}}</span>
     </div>
     <div class="col-auto note">
-      <span [class.today]="note.isToday" [class.comingup]="note.isComingup">{{note.text}}</span>
+      <span [class.today]="note.isToday" [class.comingup]="note.isComingup" [class.future]="note.isInFuture">{{note.text}}</span>
     </div>
     <div class="col-auto rating">
       <div *ngIf="event.event_rating !== undefined" id="event-rating" class="card bg-info text-warning">

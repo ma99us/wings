@@ -18,7 +18,10 @@
         </div>
         <div class="col">
           <textarea id="comment" name="comment" [(ngModel)]="review.comment" placeholder="Leave a personal comment"
-                    #comment="ngModel" required>
+                    #comment="ngModel" required
+                    [readonly]="!isLoggedIn"
+                    [disabled]="!isLoggedIn"
+          >
           </textarea>
         </div>
       </div>
@@ -33,7 +36,10 @@
             <label for="type">Cuisine type: </label>
           </div>
           <div class="col">
-            <input id="type" name="type" [(ngModel)]="reviewEvent.type" placeholder="Cuisine style" #type="ngModel">
+            <input id="type" name="type" [(ngModel)]="reviewEvent.type" placeholder="Cuisine style" #type="ngModel"
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
           <div class="col-auto">
             <label class="row-label" for="portion">Portion (pcs): </label>
@@ -41,7 +47,10 @@
           <div class="col-auto">
             <input class="small-input" id="portion" name="portion" type="number" [(ngModel)]="reviewEvent.portion"
                    min=0 max=99
-                   placeholder="number of pieces" #portion="ngModel">
+                   placeholder="number of pieces" #portion="ngModel"
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
           <div class="col-auto">
             <label class="row-label" for="price">Price ($): </label>
@@ -49,7 +58,10 @@
           <div class="col-auto">
             <input class="medium-input" id="price" name="price" type="number" [(ngModel)]="reviewEvent.price"
                    min=0 max=99
-                   placeholder="$ price" #price="ngModel">
+                   placeholder="$ price" #price="ngModel"
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
           <div class="col-auto">
             <span class="row-label">Value: <span class="small-value">{{portionValue ? ((portionValue | number : '1.2-2') + ' /pc') : 'n/a'}}</span></span>
@@ -67,31 +79,31 @@
             <label class="row-label" >Parking: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'parking'" [(rating)]="review.place.parking"></input-rating>
+            <input-rating [name]="'parking'" [(rating)]="review.place.parking" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col-auto">
             <label class="row-label">Ambiance: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'ambiance'" [(rating)]="review.place.ambiance"></input-rating>
+            <input-rating [name]="'ambiance'" [(rating)]="review.place.ambiance" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col-auto">
             <label class="row-label" >Service: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'service'" [(rating)]="review.place.service"></input-rating>
+            <input-rating [name]="'service'" [(rating)]="review.place.service" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col-auto">
             <label class="row-label" >Wait time: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'wait_time'" [(rating)]="review.place.wait_time"></input-rating>
+            <input-rating [name]="'wait_time'" [(rating)]="review.place.wait_time" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col-auto">
             <label class="row-label">Cleanliness: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'cleanliness'" [(rating)]="review.place.cleanliness"></input-rating>
+            <input-rating [name]="'cleanliness'" [(rating)]="review.place.cleanliness" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col">
           </div>
@@ -108,19 +120,19 @@
             <label class="row-label">Moistness: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'moistness'" [(rating)]="review.wings.moistness"></input-rating>
+            <input-rating [name]="'moistness'" [(rating)]="review.wings.moistness" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col-auto">
             <label class="row-label">Sauce: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'sauce'" [(rating)]="review.wings.sauce"></input-rating>
+            <input-rating [name]="'sauce'" [(rating)]="review.wings.sauce" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col-auto">
             <label class="row-label">Taste: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'taste'" [(rating)]="review.wings.taste"></input-rating>
+            <input-rating [name]="'taste'" [(rating)]="review.wings.taste" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col">
           </div>
@@ -138,7 +150,10 @@
           </div>
           <div class="col">
             <input id="appetizer-name" name="appetizer-name" [(ngModel)]="review.sides.appetizer.name"
-                   placeholder="appetizer name" #appetizer.name="ngModel">
+                   placeholder="appetizer name" #appetizer.name="ngModel"
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
           <div class="col-auto">
             <label class="row-label" for="appetizer-price">Price ($): </label>
@@ -146,13 +161,16 @@
           <div class="col-auto">
             <input class="medium-input" id="appetizer-price" name="appetizer-price" type="number"
                    [(ngModel)]="review.sides.appetizer.price" placeholder="$ price" #appetizer.price="ngModel"
-                   min=0 max=99>
+                   min=0 max=99
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
           <div class="col-auto">
             <label class="row-label">Rating: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'appetizer-rating'" [(rating)]="review.sides.appetizer.rating"></input-rating>
+            <input-rating [name]="'appetizer-rating'" [(rating)]="review.sides.appetizer.rating" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col">
           </div>
@@ -168,7 +186,10 @@
           </div>
           <div class="col">
             <input id="side-name" name="side-name" [(ngModel)]="review.sides.side.name" placeholder="side dish name"
-                   #side.name="ngModel">
+                   #side.name="ngModel"
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
           <div class="col-auto">
             <label class="row-label" for="side-price">Price ($): </label>
@@ -176,13 +197,16 @@
           <div class="col-auto">
             <input class="medium-input" id="side-price" name="side-price" type="number"
                    [(ngModel)]="review.sides.side.price" placeholder="$ price" #side.price="ngModel"
-                   min=0 max=99>
+                   min=0 max=99
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
           <div class="col-auto">
             <label class="row-label">Rating: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'side-rating'" [(rating)]="review.sides.side.rating"></input-rating>
+            <input-rating [name]="'side-rating'" [(rating)]="review.sides.side.rating" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col">
           </div>
@@ -198,7 +222,10 @@
           </div>
           <div class="col">
             <input id="drink-name" name="drink-name" [(ngModel)]="review.sides.drink.name" placeholder="drink name"
-                   #drink.name="ngModel">
+                   #drink.name="ngModel"
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
           <div class="col-auto">
             <label class="row-label" for="drink-price">Price ($): </label>
@@ -206,13 +233,16 @@
           <div class="col-auto">
             <input class="medium-input" id="drink-price" name="drink-price" type="number"
                    [(ngModel)]="review.sides.drink.price" placeholder="$ price" #drink.price="ngModel"
-                   min=0 max=99>
+                   min=0 max=99
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
           <div class="col-auto">
             <label class="row-label">Rating: </label>
           </div>
           <div class="col-auto">
-            <input-rating [name]="'drink-rating'" [(rating)]="review.sides.drink.rating"></input-rating>
+            <input-rating [name]="'drink-rating'" [(rating)]="review.sides.drink.rating" [readonly]="!isLoggedIn"></input-rating>
           </div>
           <div class="col">
           </div>
@@ -233,7 +263,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" *ngIf="isLoggedIn">
         <div class="col">
           <button type="submit" class="btn btn-success" [disabled]="!reviewForm.form.valid">Submit</button>
           <button type="button" class="btn btn-danger" (click)="deleteReview()">Delete</button>

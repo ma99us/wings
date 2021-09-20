@@ -21,7 +21,10 @@
           <div class="col datepicker">
             <input type="date" id="date" name="date" [(ngModel)]="selectedEvent.date" value="YYYY-MM-DD"
                    placeholder="date" #title="ngModel"
-                   required>
+                   required
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
         </div>
         <!--<div class="row">-->
@@ -38,14 +41,17 @@
             <label for="place">Place: </label>
           </div>
           <div class="col">
-            <input id="place" name="place" [ngModel]="eventPlaceName" placeholder="place" readonly (click)="pickPlacePopup()">
+            <input id="place" name="place" [ngModel]="eventPlaceName" placeholder="place" readonly (click)="pickPlacePopup()"
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
           <div class="col-auto">
             <button *ngIf="selectedEvent.place_id" type="button" class="btn btn-primary" (click)="onEventPlaceClick()">Details...</button>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" *ngIf="isLoggedIn">
         <div class="col">
           <button type="submit" class="btn btn-success" [disabled]="!eventForm.form.valid">Submit</button>
           <button type="button" class="btn btn-danger" (click)="deleteEvent()">Delete</button>
@@ -69,14 +75,14 @@
   <loading *ngIf="selectedEvent === undefined"></loading>
   <not-found *ngIf="selectedEvent === null"></not-found>
 
-  <div *ngIf="eventReviews" class="event-reviews">
+  <div *ngIf="selectedEvent && selectedEvent.id" class="event-reviews">
     <div class="row">
       <div class="col-auto">
         <h3 *ngIf="eventReviews && eventReviews.length > 0">Reviews</h3>
         <h3 *ngIf="!eventReviews || eventReviews.length === 0">No Reviews yet :-(</h3>
       </div>
       <div class="col" style="text-align: right">
-        <button type="button" class="btn btn-primary" (click)="newReview()">Leave a Review</button>
+        <button *ngIf="isLoggedIn" type="button" class="btn btn-primary" (click)="newReview()">Leave a Review</button>
       </div>
     </div>
     <div class="row">

@@ -3,17 +3,19 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Taster} from "./taster";
 import {ConfirmDialogService} from "../components/confirmation-dialog/confirmation-dialog.service";
 import {TastersService} from "./tasters.service";
+import {AbstractTasterComponent} from "../components/abstract-components/abstract.taster.component";
 
 @Component({
   selector: 'app-tasters',
   templateUrl: './tasters.component.html',
   styleUrls: ['./tasters.component.less']
 })
-export class TastersComponent implements OnInit {
+export class TastersComponent extends AbstractTasterComponent implements OnInit {
 
   tasters!: Taster[] | null;
 
-  constructor(private route: ActivatedRoute, private router: Router, private tastersService: TastersService, private confirmation: ConfirmDialogService) {
+  constructor(private route: ActivatedRoute, private router: Router, tastersService: TastersService, private confirmation: ConfirmDialogService) {
+    super(tastersService);
   }
 
   ngOnInit() {

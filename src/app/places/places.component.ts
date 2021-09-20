@@ -5,15 +5,15 @@ import {Event} from "../events/event"
 import {PlacesService} from "./places.service";
 import {ConfirmDialogService} from "../components/confirmation-dialog/confirmation-dialog.service";
 import {EventsService} from "../events/events.service";
-import {finalize} from "rxjs/operators";
-import {Subscription} from "rxjs/internal/Subscription";
+import {TastersService} from "../tasters/tasters.service";
+import {AbstractTasterComponent} from "../components/abstract-components/abstract.taster.component";
 
 @Component({
   selector: 'app-places',
   templateUrl: './places.component.html',
   styleUrls: ['./places.component.less']
 })
-export class PlacesComponent implements OnInit {
+export class PlacesComponent extends AbstractTasterComponent implements OnInit {
 
   places!: Place[] | null;
   eventsPlaces!: Event[] | null;
@@ -21,7 +21,10 @@ export class PlacesComponent implements OnInit {
   searchText: string = '';
   sortBy: number = PlacesSortBy.Unsorted;
 
-  constructor(private route: ActivatedRoute, private router: Router, private placesService: PlacesService, private eventsService: EventsService, private confirmation: ConfirmDialogService) {
+  constructor(private route: ActivatedRoute, private router: Router, private placesService: PlacesService,
+              private eventsService: EventsService, private confirmation: ConfirmDialogService,
+              tasterService: TastersService) {
+    super(tasterService);
   }
 
   async ngOnInit(): Promise<any> {

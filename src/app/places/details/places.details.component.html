@@ -70,6 +70,8 @@
           </div>
           <div class="col">
             <input id="title" name="title" [(ngModel)]="selectedPlace.title" placeholder="title" #title="ngModel"
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
                    required>
           </div>
         </div>
@@ -78,15 +80,17 @@
             <label for="address">Address: </label>
           </div>
           <div class="col">
-            <input id="address" name="address" [(ngModel)]="selectedPlace.address" placeholder="address"
-                   #address="ngModel">
+            <input id="address" name="address" [(ngModel)]="selectedPlace.address" placeholder="address" #address="ngModel"
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+                   >
           </div>
           <div class="col-auto">
             <map-address-link [address]="selectedPlace.address"></map-address-link>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" *ngIf="isLoggedIn">
         <div class="col">
           <button type="submit" class="btn btn-success" [disabled]="!placeForm.form.valid">Submit</button>
           <button type="button" class="btn btn-danger" (click)="deletePlace()">Delete</button>
@@ -103,14 +107,14 @@
   <loading *ngIf="selectedPlace === undefined"></loading>
   <not-found *ngIf="selectedPlace === null"></not-found>
 
-  <div *ngIf="selectedPlace" class="place-events">
+  <div *ngIf="selectedPlace && selectedPlace.id" class="place-events">
     <div class="row">
       <div class="col-auto">
         <h3 *ngIf="placeEvents && placeEvents.length > 0">Events</h3>
         <h3 *ngIf="!placeEvents || placeEvents.length === 0">No Events yet :-(</h3>
       </div>
       <div class="col" style="text-align: right">
-        <button type="button" class="btn btn-primary" (click)="newEvent()">Create New Event</button>
+        <button *ngIf="isLoggedIn" type="button" class="btn btn-primary" (click)="newEvent()">Create New Event</button>
       </div>
     </div>
     <div class="row">

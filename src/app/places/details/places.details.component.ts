@@ -5,19 +5,23 @@ import {ConfirmDialogService} from "../../components/confirmation-dialog/confirm
 import {PlacesService} from "../places.service";
 import {Event} from"../../events/event"
 import {EventsService} from "../../events/events.service";
+import {TastersService} from "../../tasters/tasters.service";
+import {AbstractTasterComponent} from "../../components/abstract-components/abstract.taster.component";
 
 @Component({
   selector: 'places-details',
   templateUrl: './places.details.component.html',
   styleUrls: ['./places.details.component.less']
 })
-export class PlacesDetailsComponent implements OnInit {
+export class PlacesDetailsComponent extends AbstractTasterComponent implements OnInit {
 
   selectedPlace!: Place | null;
   submitted = false;
   placeEvents?: Event[] | null;
 
-  constructor(private route: ActivatedRoute, private router: Router, private placesService: PlacesService, private eventsService: EventsService, private confirmation: ConfirmDialogService) {
+  constructor(private route: ActivatedRoute, private router: Router, private placesService: PlacesService,
+              private eventsService: EventsService, private confirmation: ConfirmDialogService, tasterService: TastersService) {
+    super(tasterService);
   }
 
   ngOnInit(): void {
@@ -25,6 +29,7 @@ export class PlacesDetailsComponent implements OnInit {
       const id = params['id'];
       if (id == 0) {
         this.selectedPlace = new Place();
+        this.getPlaceEvents();
       } else if (id) {
         this.placesService.getPlaceById(id).subscribe((data: Place) => {
           this.selectedPlace = data;
@@ -71,13 +76,17 @@ export class PlacesDetailsComponent implements OnInit {
       });
   }
 
-  getPlaceEvents(): void  {
-    this.eventsService.getEvents(0, -1, "title,place_id,date")
-      .subscribe((data: Event[]) => {
-        this.placeEvents = data.filter(event => this.selectedPlace && event.place_id === this.selectedPlace.id);
-      }, err => {
-        this.placeEvents = null;
-      });
+  getPlaceEvents(): void {
+    if (this.selectedPlace && this.selectedPlace.id) {
+      this.eventsService.getEvents(0, -1, "title,place_id,date")
+        .subscribe((data: Event[]) => {
+          this.placeEvents = data.filter(event => this.selectedPlace && event.place_id === this.selectedPlace.id);
+        }, err => {
+          this.placeEvents = null;
+        });
+    } else {
+      this.placeEvents = null;
+    }
   }
 
   onSelectEvent = (event?: Event): void => {

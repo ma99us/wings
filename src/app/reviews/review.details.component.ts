@@ -8,6 +8,8 @@ import {Review} from "./review";
 import {ReviewsService} from "./reviews.service";
 import {Form, NgForm} from "@angular/forms";
 import {animate, keyframes, style, transition, trigger} from "@angular/animations";
+import {AbstractTasterComponent} from "../components/abstract-components/abstract.taster.component";
+import {TastersService} from "../tasters/tasters.service";
 
 export const glow = trigger('fadeInOut', [
   transition('* => *', [
@@ -23,7 +25,7 @@ export const glow = trigger('fadeInOut', [
   styleUrls: ['./review.details.component.less'],
   animations: [glow]
 })
-export class ReviewDetailsComponent implements OnInit, OnDestroy {
+export class ReviewDetailsComponent extends AbstractTasterComponent implements OnInit, OnDestroy {
 
   @ViewChild('reviewForm', {static: true}) form!: NgForm;
   formChangesSubscription: any;
@@ -31,7 +33,10 @@ export class ReviewDetailsComponent implements OnInit, OnDestroy {
   submitted: boolean = false;
   reviewEvent!: Event | null;
 
-  constructor(private route: ActivatedRoute, private router: Router, private reviewsService: ReviewsService, private eventsService: EventsService, private confirmation: ConfirmDialogService, private modalService: NgbModal) {
+  constructor(private route: ActivatedRoute, private router: Router, private reviewsService: ReviewsService,
+              private eventsService: EventsService, private confirmation: ConfirmDialogService, private modalService: NgbModal,
+              tasterService: TastersService) {
+    super(tasterService);
     // console.log('Form ', this.form);
     // this.form.valueChanges.subscribe((data: any) => {
     //   console.log('Form changes', data);

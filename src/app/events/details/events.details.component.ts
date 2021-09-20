@@ -9,13 +9,15 @@ import {Place} from "../../places/place";
 import {PlacesService} from "../../places/places.service";
 import {Review} from "../../reviews/review";
 import {ReviewsService} from "../../reviews/reviews.service";
+import {AbstractTasterComponent} from "../../components/abstract-components/abstract.taster.component";
+import {TastersService} from "../../tasters/tasters.service";
 
 @Component({
   selector: 'events-details',
   templateUrl: './events.details.component.html',
   styleUrls: ['./events.details.component.less']
 })
-export class EventsDetailsComponent implements OnInit {
+export class EventsDetailsComponent extends AbstractTasterComponent implements OnInit {
 
   selectedEvent!: Event | null;
   submitted: boolean = false;
@@ -24,7 +26,9 @@ export class EventsDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router, private eventsService: EventsService,
               private placesService: PlacesService, private reviewsService: ReviewsService,
-              private confirmation: ConfirmDialogService, private modalService: NgbModal) {
+              private confirmation: ConfirmDialogService, private modalService: NgbModal,
+              tasterService: TastersService) {
+    super(tasterService);
   }
 
   ngOnInit(): void {
@@ -36,6 +40,7 @@ export class EventsDetailsComponent implements OnInit {
           this.selectedEvent.place_id = this.route.snapshot.queryParamMap.get('place_id');
         }
         this.getEventPlace();
+        this.getEventReviews();
       } else if (id) {
         this.eventsService.getEventById(id).subscribe((data: Event) => {
           this.selectedEvent = data;
@@ -84,12 +89,16 @@ export class EventsDetailsComponent implements OnInit {
   }
 
   getEventReviews() {
-    this.reviewsService.getReviews(0, -1, "event_id,author_id,comment,review_rating")
-      .subscribe((data: Review[]) => {
-        this.eventReviews = data.filter(review => this.selectedEvent && review.event_id === this.selectedEvent.id);
-      }, err => {
-        this.eventReviews = null;
-      });
+    if (this.selectedEvent && this.selectedEvent.place_id) {
+      this.reviewsService.getReviews(0, -1, "event_id,author_id,comment,review_rating")
+        .subscribe((data: Review[]) => {
+          this.eventReviews = data.filter(review => this.selectedEvent && review.event_id === this.selectedEvent.id);
+        }, err => {
+          this.eventReviews = null;
+        });
+    } else {
+      this.eventReviews = null;
+    }
   }
 
   onSubmit(): void {

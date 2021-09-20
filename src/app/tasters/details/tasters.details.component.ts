@@ -3,15 +3,15 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Taster} from "../taster";
 import {ConfirmDialogService} from "../../components/confirmation-dialog/confirmation-dialog.service";
 import {TastersService} from "../tasters.service";
-import {NgForm, NgModel} from "@angular/forms";
-import {MikeSecurityService} from "../../services/mike-security.service";
+import {NgForm} from "@angular/forms";
+import {AbstractTasterComponent} from "../../components/abstract-components/abstract.taster.component";
 
 @Component({
   selector: 'tasters-details',
   templateUrl: './tasters.details.component.html',
   styleUrls: ['./tasters.details.component.less']
 })
-export class TastersDetailsComponent implements OnInit {
+export class TastersDetailsComponent extends AbstractTasterComponent implements OnInit {
 
   @ViewChild('tasterForm', {static: true}) form!: NgForm;
   selectedTaster!: Taster | null;
@@ -19,8 +19,9 @@ export class TastersDetailsComponent implements OnInit {
   passwordNew?: string;
   passwordCopy?: string;
 
-  constructor(private route: ActivatedRoute, private router: Router, private tastersService: TastersService,
-              private mikeSecurityService: MikeSecurityService, private confirmation: ConfirmDialogService) {
+  constructor(private route: ActivatedRoute, private router: Router, tastersService: TastersService,
+              private confirmation: ConfirmDialogService) {
+    super(tastersService);
   }
 
   ngOnInit(): void {
@@ -87,7 +88,7 @@ export class TastersDetailsComponent implements OnInit {
 
   hashNewPassword() {
     if (this.selectedTaster && this.passwordNew && this.passwordCopy && this.passwordNew === this.passwordCopy) {
-      const passDigest = this.mikeSecurityService.dummyDigest(this.passwordNew);
+      const passDigest = this.tastersService.digestPassword(this.passwordNew);
       // console.log('new passwords digest: "' + passDigest + '"');
       this.selectedTaster.password = passDigest;
     }

@@ -33,10 +33,13 @@
           </div>
           <div class="col">
             <input id="title" name="title" [(ngModel)]="selectedTaster.name" placeholder="title" #title="ngModel"
-                   required>
+                   required
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
           </div>
         </div>
-        <div class="row">
+        <div class="row" *ngIf="isTasterLoggedIn(selectedTaster)">
           <div class="col-auto">
             <label for="password_new">Change Password: </label>
           </div>
@@ -53,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" *ngIf="isLoggedIn">
         <div class="col">
           <button type="submit" class="btn btn-success" [disabled]="!tasterForm.form.valid">Submit</button>
           <button type="button" class="btn btn-danger" (click)="deleteTaster()">Delete</button>

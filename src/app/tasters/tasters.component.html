@@ -4,7 +4,7 @@
 
   <div class="row">
     <div class="col">
-      <button class="btn btn-primary" (click)="newTaster()">Add new Taster</button>
+      <button *ngIf="isLoggedIn" class="btn btn-primary" (click)="newTaster()">Add new Taster</button>
     </div>
   </div>
   <div class="row">

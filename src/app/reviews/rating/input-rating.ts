@@ -6,7 +6,9 @@ import {ControlContainer, NgForm} from '@angular/forms';
   template: `
     <select class="form-control" [id]="vName" [name]="vName"
             [(ngModel)]="rating"
-            #{{vName}}="ngModel">
+            #{{vName}}="ngModel"
+            [disabled]="readonly"
+    >
       <option *ngFor="let rating of ratings" [value]="rating">{{rating}}</option>
     </select>
   `,
@@ -23,6 +25,7 @@ export class InputRatingFormComponent {
   ratings = [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
 
   @Input('name') vName!: string;
+  @Input() readonly: boolean = false;
 
   set rating(val: number | undefined) {
     this.value = val !== undefined ? Number(val) : val;

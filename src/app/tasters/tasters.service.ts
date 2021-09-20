@@ -1,15 +1,95 @@
 import {Injectable} from '@angular/core';
 import {MikeDbService} from "../services/mike-db.service";
 import {Observable} from "rxjs/internal/Observable";
+import {noop} from 'rxjs';
 import {map} from "rxjs/operators";
 import {Taster} from "./taster";
+import {BehaviorSubject} from "rxjs/internal/BehaviorSubject";
+import {Router} from "@angular/router";
+import {MikeSecurityService} from "../services/mike-security.service";
+import {LoginDialog} from "./login/login-dialog.component";
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TastersService {
+  private tasterSubject: BehaviorSubject<Taster | undefined>;
+  public taster: Observable<Taster | undefined>;
 
-  constructor(private mikeDb: MikeDbService) {
+  constructor(private mikeDb: MikeDbService, private router: Router, private mikeSecurityService: MikeSecurityService,
+              private modalService: NgbModal) {
+    let item = localStorage.getItem('taster');
+    this.tasterSubject = new BehaviorSubject<Taster | undefined>(item ? JSON.parse(item) : undefined);
+    this.taster = this.tasterSubject.asObservable();
+  }
+
+  public get currentTaster(): Taster | undefined {
+    return this.tasterSubject.value;
+  }
+
+  /**
+   * Checks if given Taster is currently logged in.
+   * @param {Taster} taster
+   * @returns {boolean}
+   */
+  public isCurrentTaster(taster: Taster): boolean {
+    return this.currentTaster !== undefined && taster.id === this.currentTaster.id;
+  }
+
+  /**
+   * Tries to login if needed. Returns promise.
+   * @param {Taster} requiredTaster
+   * @returns {any}
+   */
+  public validateTaster(requiredTaster?: Taster) {
+    if (requiredTaster && this.currentTaster) {
+      if (requiredTaster.id === this.currentTaster.id) {
+        return Promise.resolve(this.currentTaster);
+      } else {
+        return Promise.reject('wrong user');
+      }
+    } else if (requiredTaster && !this.currentTaster) {
+      const modalRef = this.modalService.open(LoginDialog);
+      modalRef.componentInstance.usernameStr = requiredTaster.name;
+      return modalRef.result;
+    } else if (!requiredTaster && this.currentTaster) {
+      return Promise.resolve(this.currentTaster);
+    } else {
+      const modalRef = this.modalService.open(LoginDialog);
+      return modalRef.result
+    }
+  }
+
+  public digestPassword(password: string) {
+    return this.mikeSecurityService.dummyDigest(password, 'wings');
+  }
+
+  private loginTaster(taster: Taster) {
+    // store user details in local storage to keep user logged in between page refreshes
+    localStorage.setItem('taster', JSON.stringify(taster));
+    this.tasterSubject.next(taster);
+  }
+
+  login(name: string, password: string): Observable<Taster | undefined> {
+    let digestPass = this.digestPassword(password);
+
+    return this.getTasters()
+      .pipe(map(tasters => {
+        // find user by name and password digest
+        const taster = tasters.find(taster => taster.name && taster.name.toLowerCase() === name.toLowerCase() && taster.password === digestPass);
+        if (taster) {
+          this.loginTaster(taster);
+        }
+        return taster;
+      }));
+  }
+
+  logout() {
+    // remove user from local storage and set current user to null
+    localStorage.removeItem('taster');
+    this.tasterSubject.next(undefined);
+    // this.router.navigate(['/']);
   }
 
   getTasterById(id: number): Observable<Taster> {
@@ -37,12 +117,27 @@ export class TastersService {
       // update existing
       return this.mikeDb.update<Taster>("tasters", taster)
         .pipe(
-          map(data => new Taster(data))
+          map(data => {
+            const taster = new Taster(data);
+            // update stored user if the logged in user updated their own record
+            if (this.currentTaster && this.currentTaster.id === taster.id) {
+              const data = {...this.currentTaster, ...taster};
+              this.loginTaster(data);
+            }
+            return taster;
+          })
         );
     }
   }
 
   deleteTaster(taster: Taster): Observable<Taster> {
-    return this.mikeDb.delete<Taster>("tasters", taster);
+    return this.mikeDb.delete<Taster>("tasters", taster)
+      .pipe(map(data => {
+        // auto logout if the logged in user deleted their own record
+        if (this.currentTaster && this.currentTaster.id === taster.id) {
+          this.logout();
+        }
+        return data;
+      }));
   }
 }

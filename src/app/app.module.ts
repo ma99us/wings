@@ -28,6 +28,7 @@ import {InputRatingFormComponent} from "./reviews/rating/input-rating";
 import {TastersComponent} from "./tasters/tasters.component";
 import {TasterComponent} from "./tasters/taster/taster.component";
 import {TastersDetailsComponent} from "./tasters/details/tasters.details.component";
+import {LoginDialog} from "./tasters/login/login-dialog.component";
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {TastersDetailsComponent} from "./tasters/details/tasters.details.compone
     InputRatingFormComponent,
     TastersComponent,
     TasterComponent,
-    TastersDetailsComponent
+    TastersDetailsComponent,
+    LoginDialog
   ],
   imports: [
     BrowserModule,
