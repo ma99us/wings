@@ -10,6 +10,7 @@ import {Form, NgForm} from "@angular/forms";
 import {animate, keyframes, style, transition, trigger} from "@angular/animations";
 import {AbstractTasterComponent} from "../components/abstract-components/abstract.taster.component";
 import {TastersService} from "../tasters/tasters.service";
+import {Taster} from "../tasters/taster";
 
 export const glow = trigger('fadeInOut', [
   transition('* => *', [
@@ -32,6 +33,7 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
   review!: Review | null;
   submitted: boolean = false;
   reviewEvent!: Event | null;
+  reviewTaster!: Taster | null;
 
   constructor(private route: ActivatedRoute, private router: Router, private reviewsService: ReviewsService,
               private eventsService: EventsService, private confirmation: ConfirmDialogService, private modalService: NgbModal,
@@ -51,10 +53,12 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
         if (this.review) {
           this.review.event_id = Number(this.route.snapshot.queryParamMap.get('event_id'));
         }
+        this.getReviewTaster();
         this.getReviewEvent();
       } else if (id) {
         this.reviewsService.getReviewById(id).subscribe((data: Review) => {
           this.review = data;
+          this.getReviewTaster();
           this.getReviewEvent();
         }, err => {
           this.review = null;
@@ -79,7 +83,9 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
 
   makeNewReview() {
     this.review = new Review();
-    //this.review.author_id = myself;
+    if (this.currentTaster) {
+      this.review.author_id = this.currentTaster.id;
+    }
     // this.review.date = new Date();
   }
 
@@ -132,6 +138,22 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
       });
   }
 
+  getReviewTaster() {
+    if (this.review && this.review.author_id) {
+      this.tastersService.getTasterById(this.review.author_id).subscribe((data: Taster) => {
+        this.reviewTaster = data;
+      }, err => {
+        this.reviewTaster = null;
+      });
+    } else {
+      this.reviewTaster = null;
+    }
+  }
+
+  get reviewerName() {
+    return this.reviewTaster ? this.reviewTaster.name : 'Anonymous';
+  }
+
   getReviewEvent() {
     if (this.review && this.review.event_id) {
       this.eventsService.getEventById(this.review.event_id).subscribe((data: Event) => {
@@ -152,6 +174,10 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
     }
   }
 
+
+  get isLoggedIn(): boolean {
+    return this.currentTaster !== undefined && this.review != null && this.review.author_id === this.currentTaster.id;
+  }
 
   private updateReviewRating() {
     const allRatings: number[] = [];

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, ElementRef, Input, OnInit, ViewChild} from "@angular/core";
 import {Event} from "../event";
 import {EventsService} from "../events.service";
 import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
@@ -11,7 +11,7 @@ import {PlacesService} from "../../places/places.service";
   styleUrls: ['./event.place-picker.component.less']
 })
 export class EventPlacePickerComponent implements OnInit {
-
+  @ViewChild('search', {static: true}) searchCtrl!: ElementRef;
   @Input() selectedEvent!: Event;
   submitted: boolean = false;
   places!: Place[] | null;
@@ -22,6 +22,9 @@ export class EventPlacePickerComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllPlaces();
+    if (this.searchCtrl) {
+      this.searchCtrl.nativeElement.focus();
+    }
   }
 
   getAllPlaces(): void {

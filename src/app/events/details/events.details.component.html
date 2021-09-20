@@ -6,7 +6,8 @@
     <form (ngSubmit)="onSubmit()" #eventForm="ngForm">
       <div class="row">
         <div class="col">
-          <h2>On: {{(selectedEvent.date | date : 'longDate' | uppercase) || '-NEVER-'}} @ {{(selectedEvent.title | uppercase) || '-NOWHERE-'}}</h2>
+          <h2>On: {{(selectedEvent.date | date : 'longDate' | uppercase) || '-NEVER-'}} @ {{(selectedEvent.title |
+            uppercase) || '-NOWHERE-'}}</h2>
         </div>
         <div class="col-auto">
           <button type="button" class="btn btn-secondary" (click)="goBack()">Close</button>
@@ -28,37 +29,42 @@
           </div>
         </div>
         <!--<div class="row">-->
-          <!--<div class="col-auto">-->
-            <!--<label for="title">Name: </label>-->
-          <!--</div>-->
-          <!--<div class="col">-->
-            <!--<input id="title" name="title" [(ngModel)]="selectedEvent.title" placeholder="title" #title="ngModel"-->
-                   <!--required>-->
-          <!--</div>-->
+        <!--<div class="col-auto">-->
+        <!--<label for="title">Name: </label>-->
+        <!--</div>-->
+        <!--<div class="col">-->
+        <!--<input id="title" name="title" [(ngModel)]="selectedEvent.title" placeholder="title" #title="ngModel"-->
+        <!--required>-->
+        <!--</div>-->
         <!--</div>-->
         <div class="row">
           <div class="col-auto">
             <label for="place">Place: </label>
           </div>
           <div class="col">
-            <input id="place" name="place" [ngModel]="eventPlaceName" placeholder="place" readonly (click)="pickPlacePopup()"
+            <input id="place" name="place" [ngModel]="eventPlaceName" placeholder="place" readonly
+                   (click)="pickPlacePopup()"
                    [readonly]="!isLoggedIn"
                    [disabled]="!isLoggedIn"
             >
           </div>
           <div class="col-auto">
-            <button *ngIf="selectedEvent.place_id" type="button" class="btn btn-primary" (click)="onEventPlaceClick()">Details...</button>
+            <button *ngIf="selectedEvent.place_id" type="button" class="btn btn-primary" (click)="onEventPlaceClick()">
+              Details...
+            </button>
           </div>
         </div>
       </div>
-      <div class="row" *ngIf="isLoggedIn">
+      <div class="row">
         <div class="col">
-          <button type="submit" class="btn btn-success" [disabled]="!eventForm.form.valid">Submit</button>
-          <button type="button" class="btn btn-danger" (click)="deleteEvent()">Delete</button>
+          <button *ngIf="isLoggedIn" type="submit" class="btn btn-success" [disabled]="!eventForm.form.valid">Submit
+          </button>
+          <button *ngIf="isLoggedIn" type="button" class="btn btn-danger" (click)="deleteEvent()">Delete</button>
         </div>
         <div class="col-auto">
           <div id="event-rating" class="card bg-info text-warning">
-            <div id="event-rating-value">{{selectedEvent.event_rating !== undefined ? (selectedEvent.event_rating | number :
+            <div id="event-rating-value">{{selectedEvent.event_rating !== undefined ? (selectedEvent.event_rating |
+              number :
               '1.2-2') : 'n/a'}}
             </div>
           </div>
@@ -89,8 +95,10 @@
       <div class="col-12">
         <ul *ngIf="eventReviews" class="reviews">
           <review-li *ngFor="let review of eventReviews"
-                    [review]="review"
-                    [onSelect]="onSelectReview">
+                     [review]="review"
+                     [onSelect]="onSelectReview"
+                     [reviewAuthor]="getTasterForReview(review)"
+          >
           </review-li>
         </ul>
         <!--<loading *ngIf="placeEvents === undefined"></loading>-->

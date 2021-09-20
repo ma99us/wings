@@ -1,5 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from "@angular/core";
 import {Review} from "../../reviews/review";
+import {Taster} from "../../tasters/taster";
 
 @Component({
   selector: 'review-li',
@@ -10,6 +11,7 @@ export class ReviewComponent implements OnChanges, OnInit {
 
   @Input() review!: Review;
   @Input() onSelect!: (review: Review) => void;
+  @Input() reviewAuthor?: Taster | null;
 
   constructor() {
   }
@@ -18,5 +20,13 @@ export class ReviewComponent implements OnChanges, OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  get reviewName() {
+    let name = 'Anonymous';
+    if(this.review && this.review.author_id){
+      name = '' + this.review.author_id;
+    }
+    return this.reviewAuthor ? this.reviewAuthor.name : name;
   }
 }

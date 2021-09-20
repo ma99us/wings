@@ -11,6 +11,7 @@ import {Review} from "../../reviews/review";
 import {ReviewsService} from "../../reviews/reviews.service";
 import {AbstractTasterComponent} from "../../components/abstract-components/abstract.taster.component";
 import {TastersService} from "../../tasters/tasters.service";
+import {Taster} from "../../tasters/taster";
 
 @Component({
   selector: 'events-details',
@@ -23,6 +24,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
   submitted: boolean = false;
   eventPlace?: Place | null;
   eventReviews?: Review[] | null;
+  reviewsTasters?: Taster[] | null;
 
   constructor(private route: ActivatedRoute, private router: Router, private eventsService: EventsService,
               private placesService: PlacesService, private reviewsService: ReviewsService,
@@ -41,15 +43,18 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
         }
         this.getEventPlace();
         this.getEventReviews();
+        this.getReviewTasters();
       } else if (id) {
         this.eventsService.getEventById(id).subscribe((data: Event) => {
           this.selectedEvent = data;
           this.getEventPlace();
           this.getEventReviews();
+          this.getReviewTasters();
         }, err => {
           this.selectedEvent = null;
           this.eventPlace = null;
           this.eventReviews = null;
+          this.reviewsTasters = null;
         });
       }
     });
@@ -99,6 +104,15 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     } else {
       this.eventReviews = null;
     }
+  }
+
+  getReviewTasters() {
+    this.tastersService.getTasters(0, -1, "name")
+      .subscribe((tasters: Taster[]) => {
+        this.reviewsTasters = tasters;
+      }, (err) => {
+        this.reviewsTasters = null;
+      });
   }
 
   onSubmit(): void {
@@ -166,4 +180,10 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     const url: string = "/reviews/" + review.id;
     this.router.navigateByUrl(url);
   };
+
+  getTasterForReview = (review: Review) => {
+    return (this.reviewsTasters && review) ? this.reviewsTasters.find(taster => {
+      return review.author_id === taster.id;
+    }) : null;
+  }
 }
