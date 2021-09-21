@@ -5,7 +5,7 @@
   </button>
 </div>
 <div class="modal-body">
-  <places-search [onSearchChange]="onSearchChange" #placesSearch></places-search>
+  <places-search [onSearchChange]="onSearchChange" [autofocus]="true"></places-search>
 
   <ul *ngIf="displayPlaces" class="places places-container">
     <li *ngFor="let place of displayPlaces" [class.selected]="isSelected(place)" (click)="onSelect(place)">

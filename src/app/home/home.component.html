@@ -1,13 +1,29 @@
 <div class="container">
 
   <h2>Welcome to Wings Commission</h2>
-  <p>Take a look around:</p>
+
+  <h5>Take a look around:</h5>
   <ul>
     <li><a routerLink="null" (click)="onLoginClick()">Login</a> - If you are an official Taster of the Wing Commission (top-right corner).</li>
     <li><a routerLink="/">Home</a> - News and upcoming events, and "hot takes" from the latest reviews (this page).</li>
     <li><a routerLink="/places">Places</a> - The best Wings venues around. Search and Add new venues (have to be logged in).</li>
     <li><a routerLink="/events">Events</a> - New and passed Wings meetings we held. Schedule new meeting, add reviews to attended meetings (have to be logged in).</li>
     <li><a routerLink="/tasters">Tasters</a> - Esteemed members of the Wings Commission. Modify details and add new members (have to be logged in).</li>
+  </ul>
+
+  <ul *ngIf="nextEvent" class="events">
+    <p>Next Event:</p>
+    <event-li [event]="nextEvent"
+              [selectedEvent]="undefined"
+              [onSelect]="onSelect">
+    </event-li>
+  </ul>
+  <ul *ngIf="prevEvent" class="events">
+    <h5>Recent Event:</h5>
+    <event-li [event]="prevEvent"
+              [selectedEvent]="undefined"
+              [onSelect]="onSelect">
+    </event-li>
   </ul>
 
 </div>

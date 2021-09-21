@@ -172,8 +172,22 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     if (!this.selectedEvent || !this.selectedEvent.id) {
       return;
     }
-    const url: string = "/reviews/0?event_id=" + this.selectedEvent.id;
-    this.router.navigateByUrl(url);
+    let existingReview: Review | undefined = undefined;
+    if (this.currentTaster && this.eventReviews) {
+      existingReview = this.eventReviews.find(review => this.currentTaster && review.author_id === this.currentTaster.id);
+    }
+    if(existingReview){
+      this.confirmation.openConfirmation("You already reviewed this event", "Do you want to edit your review?")
+        .then(result => {
+          if(result && existingReview){
+            const url: string = "/reviews/" + existingReview.id;
+            this.router.navigateByUrl(url);
+          }
+        });
+    } else {
+      const url: string = "/reviews/0?event_id=" + this.selectedEvent.id;
+      this.router.navigateByUrl(url);
+    }
   }
 
   onSelectReview = (review: Review): void => {

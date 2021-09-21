@@ -16,6 +16,6 @@ export class AbstractTasterComponent {
   }
 
   isTasterLoggedIn(taster: Taster): boolean {
-    return this.tastersService.isCurrentTaster(taster);
+    return !taster.id || this.tastersService.isCurrentTaster(taster);
   }
 }
