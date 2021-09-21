@@ -134,6 +134,12 @@
           <div class="col-auto">
             <input-rating [name]="'taste'" [(rating)]="review.wings.taste" [readonly]="!isLoggedIn"></input-rating>
           </div>
+          <div class="col-auto">
+            <label class="row-label">Satiety: </label>
+          </div>
+          <div class="col-auto">
+            <input-rating [name]="'satiety'" [(rating)]="review.wings.satiety" [readonly]="!isLoggedIn"></input-rating>
+          </div>
           <div class="col">
           </div>
         </div>

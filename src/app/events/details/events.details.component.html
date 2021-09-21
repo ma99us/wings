@@ -20,23 +20,19 @@
             <label for="date">Date: </label>
           </div>
           <div class="col datepicker">
-            <input type="date" id="date" name="date" [(ngModel)]="selectedEvent.date" value="YYYY-MM-DD"
+            <input type="date" id="date" name="date" [(ngModel)]="selectedEvent.date"
                    placeholder="date" #title="ngModel"
                    required
                    [readonly]="!isLoggedIn"
                    [disabled]="!isLoggedIn"
             >
           </div>
+          <div class="col-auto">
+            <button *ngIf="!selectedEvent.date" type="button" class="btn btn-primary" (click)="suggestEventDate()">
+              Recommend a Thursday?
+            </button>
+          </div>
         </div>
-        <!--<div class="row">-->
-        <!--<div class="col-auto">-->
-        <!--<label for="title">Name: </label>-->
-        <!--</div>-->
-        <!--<div class="col">-->
-        <!--<input id="title" name="title" [(ngModel)]="selectedEvent.title" placeholder="title" #title="ngModel"-->
-        <!--required>-->
-        <!--</div>-->
-        <!--</div>-->
         <div class="row">
           <div class="col-auto">
             <label for="place">Place: </label>
@@ -50,7 +46,10 @@
           </div>
           <div class="col-auto">
             <button *ngIf="selectedEvent.place_id" type="button" class="btn btn-primary" (click)="onEventPlaceClick()">
-              Details...
+              See details...
+            </button>
+            <button *ngIf="!selectedEvent.place_id" type="button" class="btn btn-primary" (click)="suggestEventPlace()">
+              Recommend a Place?
             </button>
           </div>
         </div>

@@ -15,6 +15,7 @@ export class Review {
     moistness?: number;
     sauce?: number;
     taste?: number;
+    satiety?: number;
   };
   sides!: {
     appetizer?: Dish;

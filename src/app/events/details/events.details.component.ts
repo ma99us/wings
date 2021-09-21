@@ -1,4 +1,5 @@
 import {Component, OnInit} from "@angular/core";
+import * as moment from 'moment';
 import {Event} from "../event";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ConfirmDialogService} from "../../components/confirmation-dialog/confirmation-dialog.service";
@@ -25,6 +26,8 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
   eventPlace?: Place | null;
   eventReviews?: Review[] | null;
   reviewsTasters?: Taster[] | null;
+  private eventsPlaces?: Event[] | null;
+  private placesNames?: Place[] | null;
 
   constructor(private route: ActivatedRoute, private router: Router, private eventsService: EventsService,
               private placesService: PlacesService, private reviewsService: ReviewsService,
@@ -44,17 +47,23 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
         this.getEventPlace();
         this.getEventReviews();
         this.getReviewTasters();
+        this.getAllEventsPlaces();
+        this.getAllPlacesNames();
       } else if (id) {
         this.eventsService.getEventById(id).subscribe((data: Event) => {
           this.selectedEvent = data;
           this.getEventPlace();
           this.getEventReviews();
           this.getReviewTasters();
+          this.getAllEventsPlaces();
+          this.getAllPlacesNames();
         }, err => {
           this.selectedEvent = null;
           this.eventPlace = null;
           this.eventReviews = null;
           this.reviewsTasters = null;
+          this.eventsPlaces = null;
+          this.placesNames = null;
         });
       }
     });
@@ -112,6 +121,24 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
         this.reviewsTasters = tasters;
       }, (err) => {
         this.reviewsTasters = null;
+      });
+  }
+
+  getAllEventsPlaces() {
+    this.eventsService.getEventsPlaces()
+      .subscribe((events: Event[]) => {
+        this.eventsPlaces = events;
+      }, err => {
+        this.eventsPlaces = null;
+      });
+  }
+
+  getAllPlacesNames() {
+    this.placesService.getPlacesNames()
+      .subscribe((places: Place[]) => {
+        this.placesNames = places;
+      }, err => {
+        this.placesNames = null;
       });
   }
 
@@ -176,10 +203,10 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     if (this.currentTaster && this.eventReviews) {
       existingReview = this.eventReviews.find(review => this.currentTaster && review.author_id === this.currentTaster.id);
     }
-    if(existingReview){
+    if (existingReview) {
       this.confirmation.openConfirmation("You already reviewed this event", "Do you want to edit your review?")
         .then(result => {
-          if(result && existingReview){
+          if (result && existingReview) {
             const url: string = "/reviews/" + existingReview.id;
             this.router.navigateByUrl(url);
           }
@@ -199,5 +226,70 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     return (this.reviewsTasters && review) ? this.reviewsTasters.find(taster => {
       return review.author_id === taster.id;
     }) : null;
+  };
+
+  suggestEventDate(): string | null {
+    if (!this.eventsPlaces) {
+      return null;  // can not suggest anything atm.
+    }
+
+    // find a event for each month in the future starting from this month
+    let maxMonth = 0;
+    let t = undefined;
+    let oldEvent = undefined;
+    do {
+      if (!t) {
+        t = moment();
+      } else {
+        t.add(1, 'months');
+        maxMonth++;
+      }
+      let month = t.month();
+      oldEvent = this.findEventForMonth(month);
+    } while (oldEvent && maxMonth < 6);
+
+    if (oldEvent || !t) {
+      return null;  // can not suggest anything fro the next 6 month
+    }
+
+    // if we found a month without an events, find a first Thursday in it
+    t.startOf('month');
+    const isoThursday = 4;
+    if (t.isoWeekday() > isoThursday) {
+      t.isoWeekday(7 + isoThursday);
+    } else {
+      t.isoWeekday(isoThursday);
+    }
+    const thursday = t.format('YYYY-MM-DD');
+    if (this.selectedEvent) {
+      this.selectedEvent.date = thursday;
+    }
+    return thursday;
   }
+
+  private findEventForMonth(month: number): Event | undefined {
+    if (!this.eventsPlaces) {
+      return undefined;
+    }
+    return this.eventsPlaces.find((event: Event) => {
+      const eventDate = event.getEventDate();
+      return eventDate && eventDate.getMonth() === month;
+    });
+  }
+
+  suggestEventPlace(): Place | undefined {
+    if(!this.placesNames){
+      return undefined;
+    }
+    // find first Place in natural order, which does nto have an event yet
+    const place = this.placesNames.find((place) => {
+      return !(this.eventsPlaces ? this.eventsPlaces.find((evt) => evt.place_id === place.id) : undefined);
+    });
+    if (place && this.selectedEvent) {
+      this.selectedEvent.place_id = place.id;
+      this.getEventPlace();
+    }
+    return place;
+  }
+
 }
