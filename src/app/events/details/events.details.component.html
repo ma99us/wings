@@ -13,7 +13,8 @@
           <button type="button" class="btn btn-secondary" (click)="goBack()">Close</button>
         </div>
       </div>
-      <h6 [style.visibility]="selectedEvent.id ? 'visible' : 'hidden'"><span>id: </span>{{selectedEvent.id}}</h6>
+      <!--<h6 [style.visibility]="selectedEvent.id ? 'visible' : 'hidden'"><span>id: </span>{{selectedEvent.id}}</h6>-->
+      <h6 [style.visibility]="!selectedEvent.id ? 'visible' : 'hidden'" class="text-info">*NEW*</h6>
       <div>
         <div class="row">
           <div class="col-auto">

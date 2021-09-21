@@ -11,7 +11,8 @@
           <button type="button" class="btn btn-secondary" (click)="goBack()">Close</button>
         </div>
       </div>
-      <h6 [style.visibility]="review.id ? 'visible' : 'hidden'"><span>id: </span>{{review.id}}</h6>
+      <!--<h6 [style.visibility]="review.id ? 'visible' : 'hidden'"><span>id: </span>{{review.id}}</h6>-->
+      <h6 [style.visibility]="!review.id ? 'visible' : 'hidden'" class="text-info">*NEW*</h6>
       <div class="row form-group">
         <div class="col-auto">
           <label for="comment">Comment: </label>
