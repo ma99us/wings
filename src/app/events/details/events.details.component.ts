@@ -104,7 +104,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
 
   getEventReviews() {
     if (this.selectedEvent && this.selectedEvent.place_id) {
-      this.reviewsService.getReviews(0, -1, "event_id,author_id,comment,review_rating")
+      this.reviewsService.getReviews(0, -1, "event_id,author_id,comment,review_rating,images")
         .subscribe((data: Review[]) => {
           this.eventReviews = data.filter(review => this.selectedEvent && review.event_id === this.selectedEvent.id);
         }, err => {

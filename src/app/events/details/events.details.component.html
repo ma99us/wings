@@ -105,5 +105,28 @@
       </div>
     </div>
   </div>
+
+  <div *ngIf="selectedEvent && selectedEvent.id" class="event-reviews">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-auto">
+        <ul *ngIf="eventReviews" class="reviews">
+          <li *ngFor="let review of eventReviews">
+            <ul *ngIf="review.images" class="reviews">
+              <li *ngFor="let image of review.images;">
+                <img
+                  width="800"
+                  alt="Review Photo"
+                  src="{{image}}"
+                />
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!--<loading *ngIf="placeEvents === undefined"></loading>-->
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
 </div>
 

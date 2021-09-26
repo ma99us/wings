@@ -5,6 +5,7 @@ import {ConfirmDialogService} from "../../components/confirmation-dialog/confirm
 import {TastersService} from "../tasters.service";
 import {NgForm} from "@angular/forms";
 import {AbstractTasterComponent} from "../../components/abstract-components/abstract.taster.component";
+import {Observable} from "rxjs/internal/Observable";
 
 @Component({
   selector: 'tasters-details',
@@ -92,5 +93,25 @@ export class TastersDetailsComponent extends AbstractTasterComponent implements 
       // console.log('new passwords digest: "' + passDigest + '"');
       this.selectedTaster.password = passDigest;
     }
+  }
+
+  onPhotoUpload = (formData: FormData, httpParams: any): Observable<any> => {
+    if (!this.selectedTaster) {
+      throw 'this.selectedTaster must exist first!';
+    }
+    return this.tastersService.uploadTasterPhoto(this.selectedTaster, formData);
+  };
+
+  deletePhoto(){
+    if (!this.selectedTaster) {
+      throw 'this.selectedTaster must exist first!';
+    }
+
+    this.confirmation.openConfirmation("Are you sure?", "Do you want to delete " + this.selectedTaster.name + "\'s Photo?")
+      .then(result => {
+        if (result && this.selectedTaster) {
+          this.tastersService.deleteTasterPhoto(this.selectedTaster);
+        }
+      });
   }
 }

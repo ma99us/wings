@@ -11,6 +11,7 @@ import {animate, keyframes, style, transition, trigger} from "@angular/animation
 import {AbstractTasterComponent} from "../components/abstract-components/abstract.taster.component";
 import {TastersService} from "../tasters/tasters.service";
 import {Taster} from "../tasters/taster";
+import {Observable} from "rxjs/internal/Observable";
 
 export const glow = trigger('fadeInOut', [
   transition('* => *', [
@@ -215,5 +216,25 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
       this.review.review_rating = reviewRating;
     }
     return reviewRating;
+  }
+
+  onPhotoUpload = (formData: FormData, httpParams: any): Observable<any> => {
+    if (!this.review) {
+      throw 'this.review must exist first!';
+    }
+    return this.reviewsService.uploadReviewPhoto(this.review, formData);
+  };
+
+  deleteImage(image: string) {
+    if (!this.review) {
+      throw 'this.review must exist first!';
+    }
+
+    this.confirmation.openConfirmation("Are you sure?", "Do you want to delete \"" + image + "\" Image?")
+      .then(result => {
+        if (result && this.review) {
+          this.reviewsService.deleteReviewPhoto(this.review, image);
+        }
+      });
   }
 }

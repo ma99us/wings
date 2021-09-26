@@ -29,6 +29,11 @@ import {TastersComponent} from "./tasters/tasters.component";
 import {TasterComponent} from "./tasters/taster/taster.component";
 import {TastersDetailsComponent} from "./tasters/details/tasters.details.component";
 import {LoginDialog} from "./tasters/login/login-dialog.component";
+import {FileUploadComponent} from "./components/file-upload/file-upload.component";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -52,7 +57,8 @@ import {LoginDialog} from "./tasters/login/login-dialog.component";
     TastersComponent,
     TasterComponent,
     TastersDetailsComponent,
-    LoginDialog
+    LoginDialog,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +66,10 @@ import {LoginDialog} from "./tasters/login/login-dialog.component";
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    MatButtonModule,
+    MatIconModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

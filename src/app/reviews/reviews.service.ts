@@ -3,6 +3,8 @@ import {MikeDbService} from "../services/mike-db.service";
 import {Observable} from "rxjs/internal/Observable";
 import {map} from "rxjs/operators";
 import {Review} from "./review";
+import {HttpEvent, HttpEventType} from "@angular/common/http";
+import {Taster} from "../tasters/taster";
 
 @Injectable({
   providedIn: 'root'
@@ -46,7 +48,51 @@ export class ReviewsService {
     }
   }
 
-  deleteReview(event: Review): Observable<Review> {
-    return this.mikeDb.delete<Review>("reviews", event);
+  deleteReview(review: Review): Observable<Review> {
+    return this.mikeDb.delete<Review>("reviews", review);
+  }
+
+  uploadReviewPhoto(review: Review, value: FormData): Observable<HttpEvent<FormData>> {
+    const id = MikeDbService.getRandomRange(1000);
+    const key = 'review-' + id + '-photo';
+    let observable = this.mikeDb.uploadFile(key, value);
+    observable.subscribe(event => {
+      if (event.type == HttpEventType.Response) {
+        if(!review.images){
+          review.images = [];
+        }
+        review.images.push(this.mikeDb.getHostApiUrl() + key);
+        this.addUpdateReview(review);
+      }
+    });
+
+    return observable;
+  }
+
+  deleteReviewPhoto(review: Review, image: string) {
+    // extract key from url
+    let prefix = this.mikeDb.getHostApiUrl();
+    if (!image.startsWith(prefix)) {
+      throw 'Can not delete what we do not own: ' + image;
+    }
+    let key = image.substr(prefix.length);
+    const indexOf = key.indexOf('?');
+    if (indexOf > 0) {
+      key = key.substr(0, indexOf);
+    }
+
+    const imgIndex =  review.images ? review.images.findIndex(img => img === image) : -1;
+    if (imgIndex < 0) {
+      throw 'This review does not have this image: ' + image;
+    }
+
+    const observable = this.mikeDb.delete(key, null);
+    observable.subscribe(data => {
+      if(review.images){
+        review.images.splice(imgIndex, 1);
+        this.addUpdateReview(review);
+      }
+    });
+    return observable;
   }
 }

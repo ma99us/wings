@@ -270,6 +270,30 @@
         </div>
       </div>
 
+      <div class="row" *ngIf="review.images">
+        <div class="col"></div>
+        <div class="col-auto">
+          <ul  class="images">
+            <li *ngFor="let image of review.images;">
+              <img
+                width="800"
+                alt="Review Photo"
+                src="{{image}}"
+              />
+              <button type="button" class="btn btn-danger" (click)="deleteImage(image)">X</button>
+            </li>
+          </ul>
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-3">
+          <file-upload [requiredFileType]="'image/*'" [allowMultiple]="true" [onFileUpload]="onPhotoUpload">Upload an image</file-upload>
+        </div>
+      </div>
+
       <div class="row" *ngIf="isLoggedIn">
         <div class="col">
           <button type="submit" class="btn btn-success" [disabled]="!reviewForm.form.valid">Submit</button>

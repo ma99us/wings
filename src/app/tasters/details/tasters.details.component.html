@@ -14,18 +14,33 @@
       <h6 [style.visibility]="!selectedTaster.id ? 'visible' : 'hidden'" class="text-info">*NEW*</h6>
       <div>
         <div class="row">
+          <div class="col-1"></div>
+          <div class="col-auto">
+            <img
+              id="thumbnail-img" name="thumbnail-img"
+              height="180"
+              alt="Taster Logo"
+              src="{{selectedTaster.photo || './assets/tasters_logo_200.png'}}"
+            />
+          </div>
+          <div class="col-auto align-self-center">
+            <button *ngIf="selectedTaster.photo" type="button" class="btn btn-danger" (click)="deletePhoto()">X</button>
+          </div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
           <div class="col-auto">
             <label for="thumbnail">Thumbnail: </label>
           </div>
           <div class="col">
-            <img
-              id="thumbnail-img" name="thumbnail-img"
-              height="120"
-              alt="Taster Logo"
-              src="{{selectedTaster.photo || './assets/tasters_logo_200.png'}}"
-            />
             <input id="thumbnail" name="thumbnail" [(ngModel)]="selectedTaster.photo" placeholder="thumbnail"
-                   #title="ngModel" readonly disabled>
+                   #title="ngModel"
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
+          </div>
+          <div class="col-3 align-self-end">
+            <file-upload [requiredFileType]="'image/*'" [onFileUpload]="onPhotoUpload">Upload a new image</file-upload>
           </div>
         </div>
         <div class="row">

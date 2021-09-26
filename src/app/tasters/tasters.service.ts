@@ -2,13 +2,14 @@ import {Injectable} from '@angular/core';
 import {MikeDbService} from "../services/mike-db.service";
 import {Observable} from "rxjs/internal/Observable";
 import {noop} from 'rxjs';
-import {map} from "rxjs/operators";
+import {finalize, map} from "rxjs/operators";
 import {Taster} from "./taster";
 import {BehaviorSubject} from "rxjs/internal/BehaviorSubject";
 import {Router} from "@angular/router";
 import {MikeSecurityService} from "../services/mike-security.service";
 import {LoginDialog} from "./login/login-dialog.component";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {HttpEvent, HttpEventType} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -139,5 +140,46 @@ export class TastersService {
         }
         return data;
       }));
+  }
+
+  uploadTasterPhoto(taster: Taster, value: FormData): Observable<HttpEvent<FormData>> {
+    if (!taster.name) {
+      throw 'Taster must have a Name!';
+    }
+    const key = taster.name.toLowerCase() + '-photo'; // http://gerdov.com/mike-db/api/wingsDB/mike-photo
+    let observable = this.mikeDb.uploadFile(key, value);
+    observable.subscribe(event => {
+      if (event.type == HttpEventType.Response) {
+        taster.photo = this.mikeDb.getHostApiUrl() + key + '?' + new Date().getTime();
+        this.addUpdateTaster(taster);
+      }
+    });
+
+    return observable;
+  }
+
+  deleteTasterPhoto(taster: Taster) {
+    if (!taster.photo) {
+      throw 'Taster must have a Photo!';
+    }
+    // extract key from url
+    let prefix = this.mikeDb.getHostApiUrl();
+    if (!taster.photo.startsWith(prefix)) {
+      throw 'Can not delete what we do not own: ' + taster.photo;
+    }
+    let key = taster.photo.substr(prefix.length);
+    const indexOf = key.indexOf('?');
+    if (indexOf > 0) {
+      key = key.substr(0, indexOf);
+    }
+
+    const observable = this.mikeDb.delete(key, null);
+    observable.subscribe(data => {
+      if (taster.photo) {
+        taster.photo = undefined;
+        this.addUpdateTaster(taster);
+      }
+    });
+    return observable;
   }
 }

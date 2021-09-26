@@ -3,6 +3,7 @@ export class Review {
   event_id: number | null = null;
   author_id: number | null = null;
   comment?: string;
+  images?: string[];
   review_rating?: number;    // readonly property, calculated average rating of all the categories of the Review. Updates on every category review update.
   place!: {
     parking?: number;

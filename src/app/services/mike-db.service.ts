@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpEvent, HttpParams} from '@angular/common/http';
 import {Observable} from "rxjs/internal/Observable";
 import {HOST_API_KEY, HOST_DB_NAME, HOST_LOCATION} from "../app-config";
 import {DbType} from "./db-type";
@@ -25,7 +25,7 @@ export class MikeDbService {
     this.hostWebsocketUrl = this.getHostWebsocketUrl(this.dbName);
   };
 
-  private getHostApiUrl(dbName: string | null): string {
+  public getHostApiUrl(dbName: string | null = null): string {
     if (dbName === null) {
       return this.hostApiUrl;
     }
@@ -47,12 +47,14 @@ export class MikeDbService {
    * @returns {any}
    */
   private prepareHeaders<Type>(value: Type): any {
-    const headers = {
-      'API_KEY': HOST_API_KEY,    // always send api key with every request header
-      'Content-Type': 'application/json;charset=utf-8'
+    const headers: any = {
+      'API_KEY': HOST_API_KEY    // always send api key with every request header
     };
     if (typeof value === 'string' && value !== null) {
       headers['Content-Type'] = 'text/plain;charset=utf-8';
+    } else if (!(value instanceof FormData)) {
+      //headers['Content-Type'] = 'multipart/form-data';
+      headers['Content-Type'] = 'application/json;charset=utf-8';
     }
     return headers;
   }
@@ -120,6 +122,26 @@ export class MikeDbService {
     // }
   }
 
+  uploadFile(key: string, value: FormData, dbName: string | null = null): Observable<HttpEvent<FormData>> {
+    const url = this.getHostApiUrl(dbName);
+    if (!url) {
+      throw "mike-db is not initialized";
+    }
+
+    if (value && !value.get('file')) {
+      throw "'file' must be set in FormData";
+    }
+
+    return this.http.post<FormData>(url + key, value, {
+      headers: this.prepareHeaders(value),
+      reportProgress: true,
+      observe: 'events'
+    });
+    // .then(response => {
+    //   return validateResponse(response);
+    // }
+  }
+
   /**
    * Add a single item in a collection associated with the key
    */
@@ -169,7 +191,7 @@ export class MikeDbService {
   /**
    * Delete a single item in a collection associated with the key
    */
-  delete<Type extends DbType>(key: string, value: Type, id: number | null = null, index: number | null = null, dbName: string | null = null): Observable<Type> {
+  delete<Type extends DbType>(key: string, value: Type | null, id: number | null = null, index: number | null = null, dbName: string | null = null): Observable<Type> {
     const url = this.getHostApiUrl(dbName);
     if (!url) {
       throw "mike-db is not initialized";
@@ -193,5 +215,12 @@ export class MikeDbService {
     // .then(response => {
     //   return validateResponse(response);
     // }
+  }
+
+  /**
+   * Generates a random number in the range from "to" to "from" inclusive.
+   */
+  public static getRandomRange(from = 1, to = 999999) {
+    return Math.floor(Math.random() * (to + 1 - from) + from);
   }
 }
