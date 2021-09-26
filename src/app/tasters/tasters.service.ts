@@ -151,7 +151,10 @@ export class TastersService {
     observable.subscribe(event => {
       if (event.type == HttpEventType.Response) {
         taster.photo = this.mikeDb.getHostApiUrl() + key + '?' + new Date().getTime();
-        this.addUpdateTaster(taster);
+        this.addUpdateTaster(taster)
+          .subscribe(taster => {
+            return taster;
+          });
       }
     });
 
@@ -177,7 +180,10 @@ export class TastersService {
     observable.subscribe(data => {
       if (taster.photo) {
         taster.photo = undefined;
-        this.addUpdateTaster(taster);
+        this.addUpdateTaster(taster)
+          .subscribe(taster => {
+            return taster;
+          });
       }
     });
     return observable;

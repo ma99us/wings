@@ -233,7 +233,10 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
     this.confirmation.openConfirmation("Are you sure?", "Do you want to delete \"" + image + "\" Image?")
       .then(result => {
         if (result && this.review) {
-          this.reviewsService.deleteReviewPhoto(this.review, image);
+          this.reviewsService.deleteReviewPhoto(this.review, image)
+            .subscribe(review => {
+              return review;
+            });
         }
       });
   }

@@ -6,6 +6,7 @@ import {TastersService} from "../tasters.service";
 import {NgForm} from "@angular/forms";
 import {AbstractTasterComponent} from "../../components/abstract-components/abstract.taster.component";
 import {Observable} from "rxjs/internal/Observable";
+import {Review} from "../../reviews/review";
 
 @Component({
   selector: 'tasters-details',
@@ -110,7 +111,10 @@ export class TastersDetailsComponent extends AbstractTasterComponent implements 
     this.confirmation.openConfirmation("Are you sure?", "Do you want to delete " + this.selectedTaster.name + "\'s Photo?")
       .then(result => {
         if (result && this.selectedTaster) {
-          this.tastersService.deleteTasterPhoto(this.selectedTaster);
+          this.tastersService.deleteTasterPhoto(this.selectedTaster)
+            .subscribe(taster => {
+              return taster;
+            });
         }
       });
   }

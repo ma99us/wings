@@ -62,7 +62,10 @@ export class ReviewsService {
           review.images = [];
         }
         review.images.push(this.mikeDb.getHostApiUrl() + key);
-        this.addUpdateReview(review);
+        this.addUpdateReview(review)
+          .subscribe(review => {
+            return review;
+          });
       }
     });
 
@@ -90,7 +93,10 @@ export class ReviewsService {
     observable.subscribe(data => {
       if(review.images){
         review.images.splice(imgIndex, 1);
-        this.addUpdateReview(review);
+        this.addUpdateReview(review)
+          .subscribe(review => {
+            return review;
+          });
       }
     });
     return observable;
