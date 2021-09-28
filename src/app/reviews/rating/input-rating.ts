@@ -22,13 +22,13 @@ import {ControlContainer, NgForm} from '@angular/forms';
 })
 export class InputRatingFormComponent {
 
-  ratings = [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
+  ratings = [undefined, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
 
   @Input('name') vName!: string;
   @Input() readonly: boolean = false;
 
   set rating(val: number | undefined) {
-    this.value = val !== undefined ? Number(val) : val;
+    this.value = (val != undefined && !isNaN(val)) ? Number(val) : undefined;
     this.ratingChange.emit(this.value);
   }
 
@@ -37,7 +37,7 @@ export class InputRatingFormComponent {
     return this.value;
   }
 
-  @Output() ratingChange = new EventEmitter<number>();
+  @Output() ratingChange = new EventEmitter<number | undefined>();
 
   value?: number;
 

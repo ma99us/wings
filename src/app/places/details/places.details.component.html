@@ -25,7 +25,9 @@
               src="{{selectedPlace.thumbnail || './assets/wings_logo_40.png'}}"
             />
             <input id="thumbnail" name="thumbnail" [(ngModel)]="selectedPlace.thumbnail" placeholder="thumbnail"
-                   #title="ngModel" readonly disabled>
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+                   #title="ngModel">
           </div>
         </div>
         <div class="row" *ngIf="selectedPlace.type">

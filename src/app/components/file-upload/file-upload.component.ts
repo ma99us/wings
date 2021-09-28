@@ -8,9 +8,10 @@ import {HttpEventType} from "@angular/common/http";
   selector: 'file-upload',
   template: `
     <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload
-           [accept]="requiredFileType ? requiredFileType : null"
-           [multiple]="allowMultiple ? '': null"
+           [attr.accept]="requiredFileType ? requiredFileType : null"
+           [attr.multiple]="allowMultiple ? '': null"
     >
+    <!--FIXME: multi-file upload does not work right-->
     <div class="file-upload">
       <span *ngIf="fileName" class="text-info">{{fileName || "No file(s) selected."}} </span>
       <ng-content *ngIf="!fileName"></ng-content>

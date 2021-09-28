@@ -2,8 +2,16 @@
   <div class="row"  (click)="onSelect(place)">
     <div class="col-auto thumbnail">
       <img
+        *ngIf="!loaded"
         height="60"
         alt="Place Logo"
+        src="./assets/wings_logo_40.png"
+      />
+      <img
+        height="60"
+        alt="Place Logo"
+        [hidden]="!loaded"
+        (load)="loaded = true"
         src="{{place.thumbnail || './assets/wings_logo_40.png'}}"
       />
     </div>

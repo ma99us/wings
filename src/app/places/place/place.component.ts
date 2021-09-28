@@ -15,6 +15,8 @@ export class PlaceComponent {
   @Input() placeEvents?: Event[] | null;
   @Input() onPlaceEventClick!: (event: Event) => void;
 
+  loaded = false;
+
   constructor() {
   }
 

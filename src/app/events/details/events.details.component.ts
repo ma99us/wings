@@ -13,6 +13,7 @@ import {ReviewsService} from "../../reviews/reviews.service";
 import {AbstractTasterComponent} from "../../components/abstract-components/abstract.taster.component";
 import {TastersService} from "../../tasters/tasters.service";
 import {Taster} from "../../tasters/taster";
+import {ImageViewerService} from "../../components/image-viewer/image-viewer-dialog";
 
 @Component({
   selector: 'events-details',
@@ -291,5 +292,4 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     }
     return place;
   }
-
 }

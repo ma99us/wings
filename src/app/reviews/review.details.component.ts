@@ -40,10 +40,6 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
               private eventsService: EventsService, private confirmation: ConfirmDialogService, private modalService: NgbModal,
               tasterService: TastersService) {
     super(tasterService);
-    // console.log('Form ', this.form);
-    // this.form.valueChanges.subscribe((data: any) => {
-    //   console.log('Form changes', data);
-    // })
   }
 
   ngOnInit(): void {
@@ -205,6 +201,7 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
     addRating(resolve('wings.moistness', this.review), 1);  //TODO: everything about wings is more important. (*3?)
     addRating(resolve('wings.sauce', this.review), 1);      //TODO: everything about wings is more important.  (*3?)
     addRating(resolve('wings.taste', this.review), 1);      //TODO: after all, wings taste is the most important! (*10?)
+    addRating(resolve('wings.satiety', this.review), 1);
     //sides
     addRating(resolve('sides.appetizer.rating', this.review));
     addRating(resolve('sides.side.rating', this.review));
