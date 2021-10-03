@@ -6,7 +6,7 @@ import {TastersService} from "../tasters.service";
 import {NgForm} from "@angular/forms";
 import {AbstractTasterComponent} from "../../components/abstract-components/abstract.taster.component";
 import {Observable} from "rxjs/internal/Observable";
-import {Review} from "../../reviews/review";
+import {MessengerDialogService} from "../messanger/messanger-dialog";
 
 @Component({
   selector: 'tasters-details',
@@ -22,7 +22,7 @@ export class TastersDetailsComponent extends AbstractTasterComponent implements 
   passwordCopy?: string;
 
   constructor(private route: ActivatedRoute, private router: Router, tastersService: TastersService,
-              private confirmation: ConfirmDialogService) {
+              private confirmation: ConfirmDialogService, private messenger: MessengerDialogService) {
     super(tastersService);
   }
 
@@ -117,5 +117,13 @@ export class TastersDetailsComponent extends AbstractTasterComponent implements 
             });
         }
       });
+  }
+
+  openMessengerDialog(){
+    if (!this.selectedTaster || !this.selectedTaster.email) {
+      return;
+    }
+
+    this.messenger.openMessengerDialog(this.selectedTaster, this.currentTaster);
   }
 }

@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
       <img
         width="60"
         height="60"
-        alt="404"
+        alt="Loading..."
         src="./assets/loading-buffering.gif"
       />
     </div>

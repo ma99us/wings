@@ -4,6 +4,7 @@ export class Taster {
   name?: string;
   password?: string;
   photo?: string;
+  email?: string;
 
   constructor(data: any | null = null) {
     for (let key in data) {

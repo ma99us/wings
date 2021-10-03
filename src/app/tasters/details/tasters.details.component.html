@@ -55,6 +55,23 @@
             >
           </div>
         </div>
+        <div class="row">
+          <div class="col-auto">
+            <label for="email">E-Mail: </label>
+          </div>
+          <div class="col">
+            <input id="email" name="email" [(ngModel)]="selectedTaster.email" placeholder="email" #email="ngModel"
+                   required
+                   [readonly]="!isLoggedIn"
+                   [disabled]="!isLoggedIn"
+            >
+          </div>
+          <div class="col-auto">
+            <button type="button" [attr.disabled]="!selectedTaster.email? '' : null" class="btn btn-primary" (click)="openMessengerDialog()">
+              Send {{selectedTaster.name}} an e-mail
+            </button>
+          </div>
+        </div>
         <div class="row" *ngIf="isTasterLoggedIn(selectedTaster)">
           <div class="col-auto">
             <label for="password_new">Change Password: </label>
