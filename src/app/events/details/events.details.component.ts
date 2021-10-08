@@ -13,7 +13,8 @@ import {ReviewsService} from "../../reviews/reviews.service";
 import {AbstractTasterComponent} from "../../components/abstract-components/abstract.taster.component";
 import {TastersService} from "../../tasters/tasters.service";
 import {Taster} from "../../tasters/taster";
-import {ImageViewerService} from "../../components/image-viewer/image-viewer-dialog";
+import {CalendarItem, EmbeddedFile, MailItem, MikeMailerService, Recipient} from "../../services/mike-mailer.service";
+import {ImageLoaderService} from "../../services/image-loader.service";
 
 @Component({
   selector: 'events-details',
@@ -29,11 +30,13 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
   reviewsTasters?: Taster[] | null;
   private eventsPlaces?: Event[] | null;
   private placesNames?: Place[] | null;
+  mailSent: boolean = false;
+  mailErr?: string | null = null;
 
   constructor(private route: ActivatedRoute, private router: Router, private eventsService: EventsService,
               private placesService: PlacesService, private reviewsService: ReviewsService,
               private confirmation: ConfirmDialogService, private modalService: NgbModal,
-              tasterService: TastersService) {
+              tasterService: TastersService, private mailerService: MikeMailerService, private imageLoader: ImageLoaderService) {
     super(tasterService);
   }
 
@@ -117,7 +120,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
   }
 
   getReviewTasters() {
-    this.tastersService.getTasters(0, -1, "name")
+    this.tastersService.getTasters(0, -1, "name,email,notifyEvents")
       .subscribe((tasters: Taster[]) => {
         this.reviewsTasters = tasters;
       }, (err) => {
@@ -147,11 +150,13 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     if (!this.selectedEvent) {
       return;
     }
+
     this.eventsService.addUpdateEvent(this.selectedEvent)
       .subscribe((data: Event) => {
         this.selectedEvent = data;
         this.submitted = true;
         // this.goBack();
+        this.notify();
       });
   }
 
@@ -273,7 +278,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
       return undefined;
     }
     return this.eventsPlaces.find((event: Event) => {
-      const eventDate = event.getEventDate();
+      const eventDate = event.eventDate;
       return eventDate && eventDate.getMonth() === month;
     });
   }
@@ -291,5 +296,102 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
       this.getEventPlace();
     }
     return place;
+  }
+
+  private notify() {
+    if (!this.selectedEvent?.notifications) {
+      this.sendNewEventMessage();
+    } else {
+      this.confirmation.openConfirmation("Notifications?", "Do you also want to re-send this Event notifications?")
+        .then(result => {
+          if (result) {
+            this.sendNewEventMessage();
+          }
+        });
+    }
+  }
+
+  /**
+   * Send out email schedule notifications
+   */
+  private sendNewEventMessage() {
+    if (!this.selectedEvent || !this.reviewsTasters || !this.selectedEvent.eventDate || !this.selectedEvent.place_id) {
+      //throw 'Event has to be defined, have the Date and Location set';
+      return;
+    }
+
+    this.mailSent = false;
+    this.mailErr = undefined;
+
+    const mailItem = new MailItem();
+    mailItem.from = new Recipient(this.currentTasterName, this.currentTaster?.email);
+
+    this.reviewsTasters.forEach(taster => {
+      if (taster.notifyEvents) {
+        mailItem.addTo(new Recipient(taster?.name, taster?.email));
+      }
+    });
+//    mailItem.addTo(new Recipient(this.currentTaster?.name, this.currentTaster?.email)); //// #TEST
+
+    mailItem.subject='New Wings Event';
+    mailItem.plainText = `${this.currentTasterName} scheduled a new Wings Event for ${this.selectedEvent.eventDateTimeStr}, at ${this.eventPlaceName}`;
+    const eventUrl = this.selectedEvent?.id ? (window.location.origin + "/events/" + this.selectedEvent?.id) : null;
+
+    // populate Calendar portion
+    let startDate = this.selectedEvent.startDateTimeJsonString;
+    let endDate = this.selectedEvent.endDateTimeJsonString;
+    mailItem.calendarItem = new CalendarItem(startDate!, endDate!, this.selectedEvent.eventFullTitleStr);
+    mailItem.calendarItem.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    this.reviewsTasters.forEach(taster => {
+      mailItem.calendarItem!.addAttendee(new Recipient(taster?.name, taster?.email));
+    });
+    mailItem.calendarItem.description = "Se you all there!";
+    mailItem.calendarItem.url = eventUrl ? eventUrl : undefined;
+    mailItem.calendarItem.organizer = new Recipient(this.currentTasterName, this.currentTaster?.email);
+    mailItem.calendarItem.location = this.eventPlaceName;
+
+    // populate rich html portion
+    mailItem.htmlText = `<p>
+        <b>${this.currentTasterName}</b> scheduled a new 
+        <a href="${eventUrl}" target="_blank">
+          <img style='vertical-align:middle' height='60px' src='cid:event'>
+          Wings Event
+        </a>
+        for <b><i>${this.selectedEvent.eventDateTimeStr}</i></b>, at <b><i>${this.eventPlaceName}</i></b>
+      </p>`;
+    this.imageLoader.loadImageToDataUrl('./assets/event.png')
+      .then((data) => {
+        const chunks = data.split(/[:;,]/);
+        if (chunks.length != 4 || chunks[0] != 'data' || chunks[2] != 'base64') {
+          throw `Unexpected image data url; parsed length=${chunks.length}, \'data\'==${chunks[0]}, \'base64\'==${chunks[2]}`;
+        }
+        const type = chunks[1]; // "image/png"
+        const b64encoded = chunks[3];
+        mailItem.addEmbeddedImage(new EmbeddedFile("event", b64encoded, type));
+        this.sendMailItem(mailItem);
+      })
+      .catch((err) => {
+        this.mailSent = true;
+        this.mailErr = "Error loading image";
+      });
+  }
+
+  private sendMailItem(mailItem: MailItem){
+    this.mailerService.sendMail(mailItem).subscribe((success) => {
+      this.mailSent = true;
+      this.mailErr = null;
+      if(this.selectedEvent){
+        this.selectedEvent.notifications = !this.selectedEvent.notifications ? 1 : this.selectedEvent.notifications + 1;
+        this.eventsService.addUpdateEvent(this.selectedEvent)
+          .subscribe((data: Event) => {
+            this.selectedEvent = data;
+            this.submitted = true;
+            // this.goBack();
+          });
+      }
+    }, (err) => {
+      this.mailSent = true;
+      this.mailErr = "Error sending e-mail";
+    });
   }
 }

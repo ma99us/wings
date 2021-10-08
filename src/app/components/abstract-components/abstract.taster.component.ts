@@ -15,6 +15,10 @@ export class AbstractTasterComponent {
     return this.currentTaster !== undefined;
   }
 
+  get currentTasterName(): string {
+    return this.currentTaster?.name || 'Anonymous';
+  }
+
   isTasterLoggedIn(taster: Taster): boolean {
     return !taster.id || this.tastersService.isCurrentTaster(taster);
   }

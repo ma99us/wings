@@ -23,6 +23,7 @@ export class Review {
     side?: Dish;
     drink?: Dish;
   };
+  notifications?: number;   // email notifications count have been sent
 
   constructor(data: any | null = null) {
     this.place = {};

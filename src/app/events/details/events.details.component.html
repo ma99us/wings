@@ -6,7 +6,7 @@
     <form (ngSubmit)="onSubmit()" #eventForm="ngForm">
       <div class="row">
         <div class="col">
-          <h2>On: {{(selectedEvent.date | date : 'longDate' | uppercase) || '-NEVER-'}} @ {{(selectedEvent.title |
+          <h2>On: {{(selectedEvent.eventDateStr | uppercase) || '-NEVER-'}} @ {{(selectedEvent.title |
             uppercase) || '-NOWHERE-'}}</h2>
         </div>
         <div class="col-auto">
@@ -75,7 +75,20 @@
     </form>
 
     <div [hidden]="!submitted">
-      <h6>Record updated</h6>
+      <h6 class="alert-success">Record updated</h6>
+      <img
+        *ngIf="!mailSent && mailErr === undefined"
+        width="30"
+        height="30"
+        alt="Loading..."
+        src="./assets/loading-buffering.gif"
+      />
+      <h6 *ngIf="mailSent && !mailErr" class="alert-success">
+        Message sent.
+      </h6>
+      <h6 *ngIf="mailSent && mailErr" class="alert-danger">
+        Error: {{mailErr}}.
+      </h6>
     </div>
   </div>
   <loading *ngIf="selectedEvent === undefined"></loading>

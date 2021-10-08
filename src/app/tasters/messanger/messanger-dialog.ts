@@ -102,6 +102,10 @@ export class MessengerDialog implements OnInit {
     return 'From ' + (this.from ? this.from.name : 'Anonymous') + ": ";
   }
 
+  get fromUrl(): string | null {
+    return this.from?.id ? (window.location.origin + "/tasters/" + this.from?.id) : null;
+  }
+
   get sending(){
     return this.sent === false && this.err === null;
   }
@@ -126,7 +130,12 @@ export class MessengerDialog implements OnInit {
     // this.sendMailItem(mailItem); // #TEST
 
     // populate rich html portion
-    mailItem.htmlText = "<p><img style='vertical-align:middle' height='60px' src='cid:from'> <i> " + this.fromTxt + "</i><b>" + this.msg.text + "</b></p>";
+    mailItem.htmlText = `<p>
+      <a href="${this.fromUrl}" target="_blank">
+        <img style='vertical-align:middle' height='60px' src='cid:from'> 
+        <i> ${this.fromTxt}</i>
+      </a>
+      <b>${this.msg.text}</b></p>`;
     //TODO: maybe try html with some embedded image
     this.imageLoader.loadImageToDataUrl(this.from?.photo || './assets/tasters_logo_200.png')
       .then((data) => {
@@ -141,7 +150,7 @@ export class MessengerDialog implements OnInit {
       })
       .catch((err) => {
         this.sent = true;
-        this.err = err.error ? err.error : err;
+        this.err = "Error uploading image";
       });
   }
 
@@ -152,7 +161,7 @@ export class MessengerDialog implements OnInit {
       // this.activeModal.close(true);
     }, (err) => {
       this.sent = true;
-      this.err = err.error ? err.error : err;
+      this.err = "Error sending e-mail";
     });
   }
 }

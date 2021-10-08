@@ -35,6 +35,8 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {ImageComponent} from "./components/image-viewer/image-viewer-dialog";
 import {MessengerDialog} from "./tasters/messanger/messanger-dialog";
+import {NgxTrimDirectiveModule} from "ngx-trim-directive";
+import {DecimalPipe} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -72,9 +74,10 @@ import {MessengerDialog} from "./tasters/messanger/messanger-dialog";
     NgbModule,
     MatButtonModule,
     MatIconModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    NgxTrimDirectiveModule
   ],
-  providers: [],
+  providers: [DecimalPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -162,11 +162,11 @@ export class CalendarItem {
   organizer?: Attendee;
   location?: string;
   timeZone?: string;
-  startTime: Date;
-  endTime: Date;
+  startTime: string;
+  endTime: string;
   attendees?: Attendee[];
 
-  constructor(startTime: Date, endTime: Date, name: string) {
+  constructor(startTime: string, endTime: string, name: string) {
     this.startTime = startTime;
     this.endTime = endTime;
     this.name = name;

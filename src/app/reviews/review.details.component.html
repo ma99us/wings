@@ -4,7 +4,7 @@
     <div *ngIf="review && reviewEvent" class="review-details-container">
       <div class="row">
         <div class="col">
-          <h2 *ngIf="reviewEvent">For: <span>{{reviewEvent.date | date : 'longDate' | uppercase}}</span> @
+          <h2 *ngIf="reviewEvent">For: <span>{{reviewEvent.eventDateStr | uppercase}}</span> @
             {{reviewEvent.title | uppercase}}</h2>
         </div>
         <div class="col-auto">
@@ -261,8 +261,7 @@
         </div>
         <div class="col-auto">
           <div id="review-rating" class="card bg-info text-warning">
-            <div id="review-rating-value">{{review.review_rating !== undefined ? (review.review_rating | number :
-              '1.2-2') : 'n/a'}}
+            <div id="review-rating-value">{{reviewRatingText}}
             </div>
           </div>
         </div>
@@ -305,7 +304,20 @@
       </div>
 
       <div [hidden]="!submitted">
-        <h6>Record updated</h6>
+        <h6 class="alert-success">Record updated</h6>
+        <img
+          *ngIf="!mailSent && mailErr === undefined"
+          width="30"
+          height="30"
+          alt="Loading..."
+          src="./assets/loading-buffering.gif"
+        />
+        <h6 *ngIf="mailSent && !mailErr" class="alert-success">
+          Message sent.
+        </h6>
+        <h6 *ngIf="mailSent && mailErr" class="alert-danger">
+          Error: {{mailErr}}.
+        </h6>
       </div>
     </div>
   </form>

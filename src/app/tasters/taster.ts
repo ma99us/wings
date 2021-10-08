@@ -5,6 +5,9 @@ export class Taster {
   password?: string;
   photo?: string;
   email?: string;
+  notifyMessages?: boolean = true;
+  notifyEvents?: boolean = true;
+  notifyReviews?: boolean = true;
 
   constructor(data: any | null = null) {
     for (let key in data) {

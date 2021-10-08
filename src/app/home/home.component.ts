@@ -26,9 +26,9 @@ export class HomeComponent implements OnInit {
       .subscribe((data: Event[]) => {
         const now = new Date().getTime();
         data.forEach(event => {
-          const eventDate = event.getEventDate();
-          const nextEventDate = this.nextEvent ? this.nextEvent.getEventDate() : undefined;
-          const prevEventDate = this.prevEvent ? this.prevEvent.getEventDate() : undefined;
+          const eventDate = event.eventDate;
+          const nextEventDate = this.nextEvent ? this.nextEvent.eventDate : undefined;
+          const prevEventDate = this.prevEvent ? this.prevEvent.eventDate : undefined;
           const diff = eventDate ? eventDate.getTime() - now : undefined;
           const nextDiff = (eventDate && nextEventDate) ? nextEventDate.getTime() - eventDate.getTime() : undefined;
           const prevDiff = (eventDate && prevEventDate) ? prevEventDate.getTime() - eventDate.getTime() : undefined;

@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from "@angular/core";
+import {DecimalPipe} from "@angular/common";
 import {Event} from "../events/event";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ConfirmDialogService} from "../components/confirmation-dialog/confirmation-dialog.service";
@@ -12,6 +13,8 @@ import {AbstractTasterComponent} from "../components/abstract-components/abstrac
 import {TastersService} from "../tasters/tasters.service";
 import {Taster} from "../tasters/taster";
 import {Observable} from "rxjs/internal/Observable";
+import {CalendarItem, EmbeddedFile, MailItem, MikeMailerService, Recipient} from "../services/mike-mailer.service";
+import {ImageLoaderService} from "../services/image-loader.service";
 
 export const glow = trigger('fadeInOut', [
   transition('* => *', [
@@ -35,10 +38,14 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
   submitted: boolean = false;
   reviewEvent!: Event | null;
   reviewTaster!: Taster | null;
+  reviewsTasters?: Taster[] | null;
+  mailSent: boolean = false;
+  mailErr?: string | null = null;
 
   constructor(private route: ActivatedRoute, private router: Router, private reviewsService: ReviewsService,
               private eventsService: EventsService, private confirmation: ConfirmDialogService, private modalService: NgbModal,
-              tasterService: TastersService) {
+              tasterService: TastersService, private mailerService: MikeMailerService, private imageLoader: ImageLoaderService,
+              private decimalPipe: DecimalPipe) {
     super(tasterService);
   }
 
@@ -52,11 +59,13 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
         }
         this.getReviewTaster();
         this.getReviewEvent();
+        this.getReviewTasters();
       } else if (id) {
         this.reviewsService.getReviewById(id).subscribe((data: Review) => {
           this.review = data;
           this.getReviewTaster();
           this.getReviewEvent();
+          this.getReviewTasters();
         }, err => {
           this.review = null;
         });
@@ -71,6 +80,13 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
 
   ngOnDestroy() {
     this.formChangesSubscription.unsubscribe();
+  }
+
+  get reviewRatingText() {
+    if (this.review?.review_rating == null || this.review?.review_rating == undefined) {
+      return 'n/a';
+    }
+    return this.decimalPipe.transform(this.review.review_rating, '1.2-2');
   }
 
   goBack() {
@@ -95,6 +111,7 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
         this.review = data;
         if (this.reviewEvent) {
           this.updateReviewEvent();
+          this.notify();
         } else {
           this.submitted = true;
         }
@@ -161,6 +178,15 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
     } else {
       this.reviewEvent = null;
     }
+  }
+
+  getReviewTasters() {
+    this.tastersService.getTasters(0, -1, "name,email,notifyReviews")
+      .subscribe((tasters: Taster[]) => {
+        this.reviewsTasters = tasters;
+      }, (err) => {
+        this.reviewsTasters = null;
+      });
   }
 
   get portionValue(): number {
@@ -236,5 +262,97 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
             });
         }
       });
+  }
+
+  private notify() {
+    if (!this.review?.notifications) {
+      this.sendNewReviewMessage();
+    } else {
+      this.confirmation.openConfirmation("Notifications?", "Do you also want to re-send this Review notifications?")
+        .then(result => {
+          if (result) {
+            this.sendNewReviewMessage();
+          }
+        });
+    }
+  }
+
+  /**
+   * Send out email schedule notifications
+   */
+  private sendNewReviewMessage() {
+    if (!this.review || !this.reviewEvent || !this.reviewsTasters || !this.review.event_id) {
+      //throw 'Event has to be defined, have the Date and Location set';
+      return;
+    }
+
+    this.mailSent = false;
+    this.mailErr = undefined;
+
+    const mailItem = new MailItem();
+    mailItem.from = new Recipient(this.currentTasterName, this.currentTaster?.email);
+
+    this.reviewsTasters.forEach(taster => {
+      if (taster.notifyReviews) {
+        mailItem.addTo(new Recipient(taster?.name, taster?.email));
+      }
+    });
+   // mailItem.addTo(new Recipient(this.currentTaster?.name, this.currentTaster?.email)); //// #TEST
+
+    mailItem.subject='New Wings Review';
+    mailItem.plainText = `${this.currentTasterName} left a new Review for ${this.reviewEvent.eventDateTimeStr}`;
+    const eventUrl = this.reviewEvent.id ? (window.location.origin + "/events/" + this.reviewEvent.id) : null;
+    const reviewUrl = this.review.id ? (window.location.origin + "/reviews/" + this.review.id) : null;
+
+    // populate rich html portion
+    mailItem.htmlText = `<p>
+        <b>${this.currentTasterName}</b> left a new Review for 
+        <a href="${eventUrl}" target="_blank">
+          <img style='vertical-align:middle' height='60px' src='cid:event'>
+          Wings Event
+        </a>
+        at <b><i>${this.reviewEvent.eventDateTimeStr}</i></b>
+      </p>
+      <p>
+      <a href="${reviewUrl}" target="_blank">
+        <b>"${this.review.comment}"</b>
+      </a> 
+       - <b style="font-size: x-large;">${this.reviewRatingText}</b> 
+      </p>
+      `;
+    this.imageLoader.loadImageToDataUrl('./assets/event.png')
+      .then((data) => {
+        const chunks = data.split(/[:;,]/);
+        if (chunks.length != 4 || chunks[0] != 'data' || chunks[2] != 'base64') {
+          throw `Unexpected image data url; parsed length=${chunks.length}, \'data\'==${chunks[0]}, \'base64\'==${chunks[2]}`;
+        }
+        const type = chunks[1]; // "image/png"
+        const b64encoded = chunks[3];
+        mailItem.addEmbeddedImage(new EmbeddedFile("event", b64encoded, type));
+        this.sendMailItem(mailItem);
+      })
+      .catch((err) => {
+        this.mailSent = true;
+        this.mailErr = "Error loading image";
+      });
+  }
+
+  private sendMailItem(mailItem: MailItem){
+    this.mailerService.sendMail(mailItem).subscribe((success) => {
+      this.mailSent = true;
+      this.mailErr = null;
+      if(this.review){
+        this.review.notifications = !this.review.notifications ? 1 : this.review.notifications + 1;
+        this.reviewsService.addUpdateReview(this.review)
+          .subscribe((data: Review) => {
+            this.review = data;
+            this.submitted = true;
+            // this.goBack();
+          });
+      }
+    }, (err) => {
+      this.mailSent = true;
+      this.mailErr = "Error sending e-mail";
+    });
   }
 }

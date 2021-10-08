@@ -37,6 +37,7 @@
                    #title="ngModel"
                    [readonly]="!isLoggedIn"
                    [disabled]="!isLoggedIn"
+                   trim
             >
           </div>
           <div class="col-3 align-self-end">
@@ -52,6 +53,7 @@
                    required
                    [readonly]="!isLoggedIn"
                    [disabled]="!isLoggedIn"
+                   trim
             >
           </div>
         </div>
@@ -64,7 +66,16 @@
                    required
                    [readonly]="!isLoggedIn"
                    [disabled]="!isLoggedIn"
+                   trim
             >
+          </div>
+          <div class="col">
+            <label class="row-label-header">Notify about: </label>
+            <!--<input id="notifyMessages" name="notifyMessages" [(ngModel)]="selectedTaster.notifyMessages" type="checkbox"/>-->
+            <label class="row-label" for="notifyEvents">Events: </label>
+            <input class="small-input" id="notifyEvents" name="notifyEvents" [(ngModel)]="selectedTaster.notifyEvents" type="checkbox"/>
+            <label class="row-label" for="notifyReviews">Reviews: </label>
+            <input class="small-input" id="notifyReviews" name="notifyReviews" [(ngModel)]="selectedTaster.notifyReviews" type="checkbox"/>
           </div>
           <div class="col-auto">
             <button type="button" [attr.disabled]="!selectedTaster.email? '' : null" class="btn btn-primary" (click)="openMessengerDialog()">
@@ -78,11 +89,11 @@
           </div>
           <div class="col">
             <input type="password" class="medium-input" id="password_new" name="password_new" [(ngModel)]="passwordNew"
-                   placeholder="new password" #password_new="ngModel" (ngModelChange)="checkPasswords()">
+                   placeholder="new password" #password_new="ngModel" (ngModelChange)="checkPasswords()" trim>
             <label class="row-label" for="password_copy">Repeat: </label>
             <input type="password" class="medium-input" id="password_copy" name="password_copy"
                    [(ngModel)]="passwordCopy" placeholder="new password again" #password_copy="ngModel"
-                   (ngModelChange)="checkPasswords()">
+                   (ngModelChange)="checkPasswords()" trim>
             <span id="passwords-mismatch" [hidden]="password_copy.valid || password_copy.pristine" class="alert-danger">
               Passwords do not match
             </span>
@@ -99,7 +110,7 @@
       </div>
 
       <div [hidden]="!submitted">
-        <h6>Record updated</h6>
+        <h6 class="alert-success">Record updated</h6>
       </div>
     </div>
   </form>

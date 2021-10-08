@@ -1,4 +1,5 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from "@angular/core";
+import * as moment from 'moment';
 import {Event} from "../event";
 
 @Component({
@@ -43,10 +44,11 @@ export class EventComponent implements OnChanges, OnInit {
   }
 
   ngOnInit(): void {
-    const eventDate = this.event ? this.event.getEventDate() : undefined;
-    if(eventDate){
-      const diff = eventDate.getTime() - new Date().getTime();
-      this.diffDays = Math.ceil(diff / (1000 * 3600 * 24));
+    const eventMoment = this.event ? this.event.eventMoment : undefined;
+    if (eventMoment) {
+      // const diff = eventDate.getTime() - new Date().getTime();
+      // this.diffDays = Math.ceil(diff / (1000 * 3600 * 24));
+      this.diffDays = eventMoment.diff(moment(), 'days')   // =1
     }
   }
 }
@@ -55,7 +57,7 @@ export class DaysDiff {
   days: number | null = null;
   text: string | null = null;
 
-  constructor(days: number | null, text: string | null = null ){
+  constructor(days: number | null, text: string | null = null) {
     this.days = days;
     this.text = text;
   }
