@@ -15,6 +15,7 @@ import {Taster} from "../tasters/taster";
 import {Observable} from "rxjs/internal/Observable";
 import {CalendarItem, EmbeddedFile, MailItem, MikeMailerService, Recipient} from "../services/mike-mailer.service";
 import {ImageLoaderService} from "../services/image-loader.service";
+import {HOST_BASE_URL} from "../app-config";
 
 export const glow = trigger('fadeInOut', [
   transition('* => *', [
@@ -301,12 +302,12 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
 
     mailItem.subject='New Wings Review';
     mailItem.plainText = `${this.currentTasterName} left a new Review for ${this.reviewEvent.eventDateTimeStr}`;
-    const eventUrl = this.reviewEvent.id ? (window.location.origin + "/events/" + this.reviewEvent.id) : null;
-    const reviewUrl = this.review.id ? (window.location.origin + "/reviews/" + this.review.id) : null;
+    const eventUrl = this.reviewEvent.id ? (HOST_BASE_URL + "/events/" + this.reviewEvent.id) : null;
+    const reviewUrl = this.review.id ? (HOST_BASE_URL + "/reviews/" + this.review.id) : null;
 
     // populate rich html portion
     mailItem.htmlText = `<p>
-        <b>${this.currentTasterName}</b> left a new Review for 
+        <b>${this.currentTasterName}</b> left a new Review for
         <a href="${eventUrl}" target="_blank">
           <img style='vertical-align:middle' height='60px' src='cid:event'>
           Wings Event
@@ -316,8 +317,8 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
       <p>
       <a href="${reviewUrl}" target="_blank">
         <b>"${this.review.comment}"</b>
-      </a> 
-       - <b style="font-size: x-large;">${this.reviewRatingText}</b> 
+      </a>
+       - <b style="font-size: x-large;">${this.reviewRatingText}</b>
       </p>
       `;
     this.imageLoader.loadImageToDataUrl('./assets/event.png')

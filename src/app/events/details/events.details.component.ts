@@ -15,6 +15,7 @@ import {TastersService} from "../../tasters/tasters.service";
 import {Taster} from "../../tasters/taster";
 import {CalendarItem, EmbeddedFile, MailItem, MikeMailerService, Recipient} from "../../services/mike-mailer.service";
 import {ImageLoaderService} from "../../services/image-loader.service";
+import {HOST_BASE_URL} from "../../app-config";
 
 @Component({
   selector: 'events-details',
@@ -335,7 +336,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
 
     mailItem.subject='New Wings Event';
     mailItem.plainText = `${this.currentTasterName} scheduled a new Wings Event for ${this.selectedEvent.eventDateTimeStr}, at ${this.eventPlaceName}`;
-    const eventUrl = this.selectedEvent?.id ? (window.location.origin + "/events/" + this.selectedEvent?.id) : null;
+    const eventUrl = this.selectedEvent?.id ? (HOST_BASE_URL + "/events/" + this.selectedEvent?.id) : null;
 
     // populate Calendar portion
     let startDate = this.selectedEvent.startDateTimeJsonString;
@@ -352,7 +353,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
 
     // populate rich html portion
     mailItem.htmlText = `<p>
-        <b>${this.currentTasterName}</b> scheduled a new 
+        <b>${this.currentTasterName}</b> scheduled a new
         <a href="${eventUrl}" target="_blank">
           <img style='vertical-align:middle' height='60px' src='cid:event'>
           Wings Event

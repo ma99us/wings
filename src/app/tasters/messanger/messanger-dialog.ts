@@ -3,6 +3,7 @@ import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {Taster} from "../taster";
 import {EmbeddedFile, MailItem, MikeMailerService, Recipient} from "../../services/mike-mailer.service";
 import {ImageLoaderService} from "../../services/image-loader.service";
+import {HOST_BASE_URL} from "../../app-config";
 
 @Component({
   selector: 'messenger-dialog',
@@ -103,7 +104,7 @@ export class MessengerDialog implements OnInit {
   }
 
   get fromUrl(): string | null {
-    return this.from?.id ? (window.location.origin + "/tasters/" + this.from?.id) : null;
+    return this.from?.id ? (HOST_BASE_URL + "/tasters/" + this.from?.id) : null;
   }
 
   get sending(){
@@ -132,7 +133,7 @@ export class MessengerDialog implements OnInit {
     // populate rich html portion
     mailItem.htmlText = `<p>
       <a href="${this.fromUrl}" target="_blank">
-        <img style='vertical-align:middle' height='60px' src='cid:from'> 
+        <img style='vertical-align:middle' height='60px' src='cid:from'>
         <i> ${this.fromTxt}</i>
       </a>
       <b>${this.msg.text}</b></p>`;

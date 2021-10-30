@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpEvent, HttpParams} from '@angular/common/http';
 import {Observable} from "rxjs/internal/Observable";
-import {HOST_API_KEY, HOST_DB_NAME, HOST_LOCATION} from "../app-config";
+import {HOST_DB_API_KEY, HOST_DB_NAME, HOST_DB_LOCATION} from "../app-config";
 import {DbType} from "./db-type";
 
 @Injectable({
@@ -29,7 +29,7 @@ export class MikeDbService {
     if (dbName === null) {
       return this.hostApiUrl;
     }
-    let apiHost = HOST_LOCATION ? 'http://' + HOST_LOCATION : '';
+    let apiHost = HOST_DB_LOCATION ? 'http://' + HOST_DB_LOCATION : '';
     return apiHost + '/mike-db/api/' + dbName + '/';
   };
 
@@ -37,7 +37,7 @@ export class MikeDbService {
     if (dbName === null) {
       return this.hostWebsocketUrl;
     }
-    let socketHost = HOST_LOCATION ? 'ws://' + HOST_LOCATION : '';
+    let socketHost = HOST_DB_LOCATION ? 'ws://' + HOST_DB_LOCATION : '';
     return socketHost + '/mike-db/subscribe' + '/' + dbName;
   };
 
@@ -48,7 +48,7 @@ export class MikeDbService {
    */
   private prepareHeaders<Type>(value: Type): any {
     const headers: any = {
-      'API_KEY': HOST_API_KEY    // always send api key with every request header
+      'API_KEY': HOST_DB_API_KEY    // always send api key with every request header
     };
     if (typeof value === 'string' && value !== null) {
       headers['Content-Type'] = 'text/plain;charset=utf-8';
