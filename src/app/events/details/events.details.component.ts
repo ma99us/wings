@@ -259,19 +259,19 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
       return null;  // can not suggest anything fro the next 6 month
     }
 
-    // if we found a month without an events, find a first Thursday in it
+    // if we found a month without an events, find a first Friday in it
     t.startOf('month');
-    const isoThursday = 4;
-    if (t.isoWeekday() > isoThursday) {
-      t.isoWeekday(7 + isoThursday);
+    const isoFriday = 5;
+    if (t.isoWeekday() > isoFriday) {
+      t.isoWeekday(7 + isoFriday);
     } else {
-      t.isoWeekday(isoThursday);
+      t.isoWeekday(isoFriday);
     }
-    const thursday = t.format('YYYY-MM-DD');
+    const friday = t.format('YYYY-MM-DD');
     if (this.selectedEvent) {
-      this.selectedEvent.date = thursday;
+      this.selectedEvent.date = friday;
     }
-    return thursday;
+    return friday;
   }
 
   private findEventForMonth(month: number): Event | undefined {

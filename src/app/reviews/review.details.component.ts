@@ -305,6 +305,13 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
     const eventUrl = this.reviewEvent.id ? (HOST_BASE_URL + "/events/" + this.reviewEvent.id) : null;
     const reviewUrl = this.review.id ? (HOST_BASE_URL + "/reviews/" + this.review.id) : null;
 
+    const formatReviewRatingText = () => {
+      if (this.review?.review_rating == null || this.review?.review_rating == undefined) {
+        return '';
+      }
+      return `- <b style="font-size: x-large;">${this.reviewRatingText}</b>`;
+    };
+
     // populate rich html portion
     mailItem.htmlText = `<p>
         <b>${this.currentTasterName}</b> left a new Review for
@@ -315,10 +322,10 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
         at <b><i>${this.reviewEvent.eventDateTimeStr}</i></b>
       </p>
       <p>
-      <a href="${reviewUrl}" target="_blank">
+       <a href="${reviewUrl}" target="_blank">
         <b>"${this.review.comment}"</b>
-      </a>
-       - <b style="font-size: x-large;">${this.reviewRatingText}</b>
+       </a>
+        ${formatReviewRatingText()}
       </p>
       `;
     this.imageLoader.loadImageToDataUrl('./assets/event.png')

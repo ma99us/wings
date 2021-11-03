@@ -46,9 +46,8 @@ export class EventComponent implements OnChanges, OnInit {
   ngOnInit(): void {
     const eventMoment = this.event ? this.event.eventMoment : undefined;
     if (eventMoment) {
-      // const diff = eventDate.getTime() - new Date().getTime();
-      // this.diffDays = Math.ceil(diff / (1000 * 3600 * 24));
-      this.diffDays = eventMoment.diff(moment(), 'days')   // =1
+      const today = moment().startOf('day');
+      this.diffDays = eventMoment.diff(today, 'days')
     }
   }
 }
