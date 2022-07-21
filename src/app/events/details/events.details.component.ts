@@ -251,8 +251,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
         t.add(1, 'months');
         maxMonth++;
       }
-      let month = t.month();
-      oldEvent = this.findEventForMonth(month);
+      oldEvent = this.findEventForMonth(t);
     } while (oldEvent && maxMonth < 6);
 
     if (oldEvent || !t) {
@@ -274,13 +273,13 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     return friday;
   }
 
-  private findEventForMonth(month: number): Event | undefined {
+  private findEventForMonth(t: moment.Moment): Event | undefined {
     if (!this.eventsPlaces) {
       return undefined;
     }
     return this.eventsPlaces.find((event: Event) => {
       const eventDate = event.eventDate;
-      return eventDate && eventDate.getMonth() === month;
+      return eventDate?.getFullYear() === t.year() && eventDate?.getMonth() === t.month();
     });
   }
 
