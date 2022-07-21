@@ -291,11 +291,11 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
     this.mailErr = undefined;
 
     const mailItem = new MailItem();
-    mailItem.from = new Recipient(this.currentTasterName, this.currentTaster?.email);
+    mailItem.replyTo = new Recipient(this.currentTasterName, this.currentTaster?.email);
 
     this.reviewsTasters.forEach(taster => {
       if (taster.notifyReviews) {
-        mailItem.addTo(new Recipient(taster?.name, taster?.email));
+        mailItem.addCc(new Recipient(taster?.name, taster?.email));
       }
     });
    // mailItem.addTo(new Recipient(this.currentTaster?.name, this.currentTaster?.email)); //// #TEST

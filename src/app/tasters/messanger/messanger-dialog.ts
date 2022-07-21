@@ -124,7 +124,7 @@ export class MessengerDialog implements OnInit {
     this.err = null;
 
     const mailItem = new MailItem();
-    mailItem.from = new Recipient(this.from?.name, this.from?.email);
+    mailItem.replyTo = new Recipient(this.from?.name, this.from?.email);
     mailItem.addTo(new Recipient(this.to?.name, this.to?.email));
     mailItem.subject='Wings Taster Message';
     mailItem.plainText = this.fromTxt + this.msg.text;
@@ -178,7 +178,7 @@ export class MessengerDialogService {
   openMessengerDialog(to: Taster, from?: Taster, title: string = 'Send a message', message?: string): Promise<any> {
     const modalRef = this.modalService.open(MessengerDialog);
     modalRef.componentInstance.to = to;
-    modalRef.componentInstance.from = from;
+    modalRef.componentInstance.replyTo = from;
     modalRef.componentInstance.title = title;
     modalRef.componentInstance.message = message;
 
