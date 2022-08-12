@@ -15,6 +15,13 @@
     <div class="col-auto note">
       <span [class.today]="note.isToday" [class.comingup]="note.isComingup" [class.future]="note.isInFuture">{{note.text}}</span>
     </div>
+    <div *ngIf="getTrophyImgName()" class="col-auto trophy">
+      <img
+        height="60"
+        alt="Trophy {{top}}"
+        src="./assets/{{getTrophyImgName()}}"
+      />
+    </div>
     <div class="col-auto rating">
       <div *ngIf="event.event_rating !== undefined" id="event-rating" class="card bg-info text-warning">
         <div id="event-rating-value">{{event.event_rating !== undefined ? (event.event_rating | number :

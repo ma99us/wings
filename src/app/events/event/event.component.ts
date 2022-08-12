@@ -10,6 +10,7 @@ import {Event} from "../event";
 export class EventComponent implements OnChanges, OnInit {
 
   @Input() event!: Event;
+  @Input() top!: number;
   @Input() selectedEvent?: Event;
   @Input() onSelect!: (event?: Event) => void;
   diffDays?: number;
@@ -37,6 +38,18 @@ export class EventComponent implements OnChanges, OnInit {
       return new DaysDiff(this.diffDays, "Yesterday");
     } else {
       return new DaysDiff(null);
+    }
+  }
+
+  getTrophyImgName() {
+    if (this.top === 1) {
+      return 'cup_gold.png'
+    } else if (this.top === 2) {
+      return 'cup_silver.png'
+    } else if (this.top === 3) {
+      return 'cup_bronze.png'
+    } else {
+      return null;
     }
   }
 

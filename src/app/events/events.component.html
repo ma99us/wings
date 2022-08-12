@@ -16,6 +16,7 @@
       <ul *ngIf="displayEvents" class="events">
         <event-li *ngFor="let event of displayEvents; trackBy: trackByFn"
                   [event]="event"
+                  [top]="findEventTop(event)"
                   [selectedEvent]="undefined"
                   [onSelect]="onSelect">
         </event-li>
