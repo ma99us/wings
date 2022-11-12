@@ -80,7 +80,7 @@ export class PlacesDetailsComponent extends AbstractTasterComponent implements O
     if (this.selectedPlace && this.selectedPlace.id) {
       this.eventsService.getEvents(0, -1, "title,place_id,date")
         .subscribe((data: Event[]) => {
-          this.placeEvents = data.filter(event => this.selectedPlace && event.place_id === this.selectedPlace.id);
+          this.placeEvents = data.filter(event => this.selectedPlace && event.place_id == this.selectedPlace.id); // '==' is intentional!
         }, err => {
           this.placeEvents = null;
         });

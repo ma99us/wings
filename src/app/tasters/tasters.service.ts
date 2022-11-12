@@ -35,7 +35,7 @@ export class TastersService {
    * @returns {boolean}
    */
   public isCurrentTaster(taster: Taster): boolean {
-    return this.currentTaster !== undefined && taster.id === this.currentTaster.id;
+    return this.currentTaster !== undefined && taster.id == this.currentTaster.id;  // FIXME: '==' is intentional!
   }
 
   /**
@@ -45,7 +45,7 @@ export class TastersService {
    */
   public validateTaster(requiredTaster?: Taster) {
     if (requiredTaster && this.currentTaster) {
-      if (requiredTaster.id === this.currentTaster.id) {
+      if (requiredTaster.id == this.currentTaster.id) { // FIXME: '==' is intentional!
         return Promise.resolve(this.currentTaster);
       } else {
         return Promise.reject('wrong user');
@@ -121,7 +121,7 @@ export class TastersService {
           map(data => {
             const taster = new Taster(data);
             // update stored user if the logged in user updated their own record
-            if (this.currentTaster && this.currentTaster.id === taster.id) {
+            if (this.currentTaster && this.currentTaster.id == taster.id) { // FIXME: '==' is intentional!
               const data = {...this.currentTaster, ...taster};
               this.loginTaster(data);
             }
@@ -135,7 +135,7 @@ export class TastersService {
     return this.mikeDb.delete<Taster>("tasters", taster)
       .pipe(map(data => {
         // auto logout if the logged in user deleted their own record
-        if (this.currentTaster && this.currentTaster.id === taster.id) {
+        if (this.currentTaster && this.currentTaster.id == taster.id) { // FIXME: '==' is intentional!
           this.logout();
         }
         return data;

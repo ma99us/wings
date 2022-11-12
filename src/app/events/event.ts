@@ -1,12 +1,13 @@
 import * as moment from 'moment';
 
-export const EVENT_START_TIME = 18; // 6pm
+export const EVENT_START_TIME = "18:00";    // 6pm by default
 
 export class Event {
   id: number | null = null;
   title?: string;           // readonly property, calculated based on event's Place and Date
   place_id: number | string | null = null;
   date?: string;
+  time?: string;
   type?: string;
   portion?: number;
   price?: number;
@@ -39,7 +40,10 @@ export class Event {
     if (!momDate) {
       return momDate
     }
-    momDate.set('hours', EVENT_START_TIME);   // event start time
+    const eventTime = moment(this.time || EVENT_START_TIME, 'HH:mm');
+    // event start time
+    momDate.set('hours', eventTime.get('hours'));
+    momDate.set('minutes', eventTime.get('minutes'));
     // return momDate.toISOString();
     return momDate.utc().format('YYYY-MM-DDTHH:mm:ss');
   }
@@ -49,7 +53,11 @@ export class Event {
     if (!momDate) {
       return momDate
     }
-    momDate.set('hours', EVENT_START_TIME + 2);   // event end time. Assume 2 hour event duration.
+    const eventTime = moment(this.time || EVENT_START_TIME, 'HH:mm');
+    // event end time. Assume 2 hour event duration.
+    eventTime.add(2, 'hours');
+    momDate.set('hours', eventTime.get('hours'));
+    momDate.set('minutes', eventTime.get('minutes'));
     // return momDate.toISOString();
     return momDate.utc().format('YYYY-MM-DDTHH:mm:ss');
   }
@@ -64,7 +72,10 @@ export class Event {
     if (!momDate) {
       return momDate
     }
-    momDate.set('hours', EVENT_START_TIME);   // event start time
+    const eventTime = moment(this.time || EVENT_START_TIME, 'HH:mm');
+    // event start time
+    momDate.set('hours', eventTime.get('hours'));
+    momDate.set('minutes', eventTime.get('minutes'));
     return momDate.format('MMMM Do, YYYY, HH:mm');
   }
 

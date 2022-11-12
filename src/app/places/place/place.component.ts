@@ -21,6 +21,6 @@ export class PlaceComponent {
   }
 
   get isSelected(): boolean {
-    return this.place != undefined && this.selectedPlace != undefined && (this.place === this.selectedPlace || this.place.id === this.selectedPlace.id);
+    return this.place != undefined && this.selectedPlace != undefined && (this.place === this.selectedPlace || this.place.id == this.selectedPlace.id); // FIXME: '==' is intentional!
   }
 }

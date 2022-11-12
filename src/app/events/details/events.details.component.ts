@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import * as moment from 'moment';
-import {Event} from "../event";
+import {Event, EVENT_START_TIME} from "../event";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ConfirmDialogService} from "../../components/confirmation-dialog/confirmation-dialog.service";
 import {EventsService} from "../events.service";
@@ -81,6 +81,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
 
   makeNewEvent() {
     this.selectedEvent = new Event();
+    this.selectedEvent.time = EVENT_START_TIME;   // by default
     // this.selectedEvent.title = "New Event";
     // this.selectedEvent.date = new Date();
   }
@@ -111,7 +112,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     if (this.selectedEvent && this.selectedEvent.place_id) {
       this.reviewsService.getReviews(0, -1, "event_id,author_id,comment,review_rating,images")
         .subscribe((data: Review[]) => {
-          this.eventReviews = data.filter(review => this.selectedEvent && review.event_id === this.selectedEvent.id);
+          this.eventReviews = data.filter(review => this.selectedEvent && review.event_id == this.selectedEvent.id);  // FIXME: '==' is intentional!
         }, err => {
           this.eventReviews = null;
         });
@@ -208,7 +209,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     }
     let existingReview: Review | undefined = undefined;
     if (this.currentTaster && this.eventReviews) {
-      existingReview = this.eventReviews.find(review => this.currentTaster && review.author_id === this.currentTaster.id);
+      existingReview = this.eventReviews.find(review => this.currentTaster && review.author_id == this.currentTaster.id); // FIXME: '==' is intentional!
     }
     if (existingReview) {
       this.confirmation.openConfirmation("You already reviewed this event", "Do you want to edit your review?")
@@ -231,7 +232,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
 
   getTasterForReview = (review: Review) => {
     return (this.reviewsTasters && review) ? this.reviewsTasters.find(taster => {
-      return review.author_id === taster.id;
+      return review.author_id == taster.id;   // FIXME: '==' is intentional!
     }) : null;
   };
 
@@ -289,7 +290,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     }
     // find first Place in natural order, which does nto have an event yet
     const place = this.placesNames.find((place) => {
-      return !(this.eventsPlaces ? this.eventsPlaces.find((evt) => evt.place_id === place.id) : undefined);
+      return !(this.eventsPlaces ? this.eventsPlaces.find((evt) => evt.place_id == place.id) : undefined);  // FIXME: '==' is intentional!
     });
     if (place && this.selectedEvent) {
       this.selectedEvent.place_id = place.id;

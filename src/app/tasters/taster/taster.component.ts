@@ -16,6 +16,6 @@ export class TasterComponent {
   }
 
   get isSelected(): boolean {
-    return this.taster != undefined && this.selectedTaster != undefined && (this.taster === this.selectedTaster || this.taster.id === this.selectedTaster.id);
+    return this.taster != undefined && this.selectedTaster != undefined && (this.taster === this.selectedTaster || this.taster.id == this.selectedTaster.id);
   }
 }

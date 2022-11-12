@@ -34,7 +34,7 @@ export class EventPlacePickerComponent implements OnInit {
   }
 
   isSelected(place: Place): boolean {
-    return this.selectedEvent && this.selectedEvent.place_id === place.id;
+    return this.selectedEvent && this.selectedEvent.place_id == place.id; // FIXME: '==' is intentional!
   }
 
   onSelect = (place?: Place): void => {

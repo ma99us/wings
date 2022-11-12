@@ -70,7 +70,7 @@ export class EventsComponent extends AbstractTasterComponent implements OnInit {
       return -1;
     }
 
-    let pos = this.topEvents.findIndex(ev => ev.id === event.id && ev.event_rating);
+    let pos = this.topEvents.findIndex(ev => ev.id == event.id && ev.event_rating);   // FIXME: '==' is intentional!
 
     return pos >= 0 ? pos + 1 : -1;
   }

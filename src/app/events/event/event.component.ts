@@ -19,7 +19,7 @@ export class EventComponent implements OnChanges, OnInit {
   }
 
   get isSelected(): boolean {
-    return this.event != undefined && this.selectedEvent != undefined && (this.event === this.selectedEvent || this.event.id === this.selectedEvent.id);
+    return this.event != undefined && this.selectedEvent != undefined && (this.event === this.selectedEvent || this.event.id == this.selectedEvent.id); // FIXME: '==' is intentional!
   }
 
   get note(): DaysDiff {

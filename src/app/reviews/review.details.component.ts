@@ -123,7 +123,7 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
   updateReviewEvent() {
     this.reviewsService.getReviews(0, -1, "event_id,author_id,comment,review_rating")
       .subscribe((data: Review[]) => {
-        const eventReviews = data.filter(review => this.reviewEvent && review.event_id === this.reviewEvent.id && review.review_rating !== undefined);
+        const eventReviews = data.filter(review => this.reviewEvent && review.event_id == this.reviewEvent.id && review.review_rating !== undefined);
         let sum = eventReviews.reduce((sum, review) => review.review_rating !== undefined ? (sum + review.review_rating) : sum, 0);
         if (this.reviewEvent) {
           this.reviewEvent.event_rating = eventReviews.length > 0 ? sum / eventReviews.length : undefined;
@@ -200,7 +200,7 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
 
 
   get isLoggedIn(): boolean {
-    return this.currentTaster !== undefined && this.review != null && this.review.author_id === this.currentTaster.id;
+    return this.currentTaster !== undefined && this.review != null && this.review.author_id == this.currentTaster.id; // FIXME: '==' is intentional!
   }
 
   private updateReviewRating() {

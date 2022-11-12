@@ -61,7 +61,7 @@ export class PlacesComponent extends AbstractTasterComponent implements OnInit {
 
   getEventsForPlace(place: Place): Event[] | null {
     return (this.eventsPlaces && place) ? this.eventsPlaces.filter(event => {
-      return event.place_id === place.id
+      return event.place_id == place.id; // FIXME: '==' is intentional!
     }) : null;
   }
 

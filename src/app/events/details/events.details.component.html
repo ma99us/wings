@@ -28,6 +28,24 @@
                    [disabled]="!isLoggedIn"
             >
           </div>
+          <div class="col-2 datepicker">
+          <input type="time" id="time" name="time" [(ngModel)]="selectedEvent.time"
+                 min="17:00" max="20:00" step="00:30" #title="ngModel"
+                 list="time_list"
+                 required
+                 [readonly]="!isLoggedIn"
+                 [disabled]="!isLoggedIn"
+          >
+            <datalist id="time_list">
+              <option value="17:00">
+              <option value="17:30">
+              <option value="18:00">
+              <option value="18:30">
+              <option value="19:00">
+              <option value="19:30">
+              <option value="20:00">
+            </datalist>
+          </div>
           <div class="col-auto">
             <button *ngIf="!selectedEvent.date" type="button" class="btn btn-primary" (click)="suggestEventDate()">
               Recommend a date?
