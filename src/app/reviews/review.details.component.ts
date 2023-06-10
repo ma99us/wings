@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from "@angular/core";
+import {Component, OnDestroy, OnInit, ViewChild} from "@angular/core";
 import {DecimalPipe} from "@angular/common";
 import {Event} from "../events/event";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -7,15 +7,16 @@ import {EventsService} from "../events/events.service";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {Review} from "./review";
 import {ReviewsService} from "./reviews.service";
-import {Form, NgForm} from "@angular/forms";
-import {animate, keyframes, style, transition, trigger} from "@angular/animations";
+import {NgForm} from "@angular/forms";
+import {animate, style, transition, trigger} from "@angular/animations";
 import {AbstractTasterComponent} from "../components/abstract-components/abstract.taster.component";
 import {TastersService} from "../tasters/tasters.service";
 import {Taster} from "../tasters/taster";
 import {Observable} from "rxjs/internal/Observable";
-import {CalendarItem, EmbeddedFile, MailItem, MikeMailerService, Recipient} from "../services/mike-mailer.service";
+import {EmbeddedFile, MailItem, MikeMailerService, Recipient} from "../services/mike-mailer.service";
 import {ImageLoaderService} from "../services/image-loader.service";
 import {HOST_BASE_URL} from "../app-config";
+import {MikeDiscordService} from "../services/mike-discord.service";
 
 export const glow = trigger('fadeInOut', [
   transition('* => *', [
@@ -46,7 +47,7 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
   constructor(private route: ActivatedRoute, private router: Router, private reviewsService: ReviewsService,
               private eventsService: EventsService, private confirmation: ConfirmDialogService, private modalService: NgbModal,
               tasterService: TastersService, private mailerService: MikeMailerService, private imageLoader: ImageLoaderService,
-              private decimalPipe: DecimalPipe) {
+              private decimalPipe: DecimalPipe, private discordService: MikeDiscordService) {
     super(tasterService);
   }
 
@@ -298,10 +299,10 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
         mailItem.addCc(new Recipient(taster?.name, taster?.email));
       }
     });
-   // mailItem.addTo(new Recipient(this.currentTaster?.name, this.currentTaster?.email)); //// #TEST
+    // mailItem.addTo(new Recipient(this.currentTaster?.name, this.currentTaster?.email)); //// #TEST
 
-    mailItem.subject='New Wings Review';
-    mailItem.plainText = `${this.currentTasterName} left a new Review for ${this.reviewEvent.eventDateTimeStr}`;
+    mailItem.subject = 'New Wings Review';
+    mailItem.plainText = `${this.currentTasterName} left a new Review for ${this.reviewEvent.eventDateTimeStr}:\n${this.review.comment} - ${this.reviewRatingText}`;
     const eventUrl = this.reviewEvent.id ? (HOST_BASE_URL + "/events/" + this.reviewEvent.id) : null;
     const reviewUrl = this.review.id ? (HOST_BASE_URL + "/reviews/" + this.review.id) : null;
 
@@ -345,11 +346,21 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
       });
   }
 
-  private sendMailItem(mailItem: MailItem){
+  private sendMailItem(mailItem: MailItem) {
     this.mailerService.sendMail(mailItem).subscribe((success) => {
+      console.log('Review e-mail sent');
       this.mailSent = true;
       this.mailErr = null;
-      if(this.review){
+
+      if (mailItem.plainText) {
+        this.discordService.postMessage(mailItem.plainText).subscribe(()=>{
+          console.log('Review posted to discord');
+        }, (error)=>{
+          console.log('Discord error:', error);
+        });
+      }
+
+      if (this.review) {
         this.review.notifications = !this.review.notifications ? 1 : this.review.notifications + 1;
         this.reviewsService.addUpdateReview(this.review)
           .subscribe((data: Review) => {
@@ -358,9 +369,10 @@ export class ReviewDetailsComponent extends AbstractTasterComponent implements O
             // this.goBack();
           });
       }
-    }, (err) => {
+    }, (error) => {
       this.mailSent = true;
-      this.mailErr = "Error sending e-mail";
+      this.mailErr = "Error sending e-mail:" + error;
+      console.log('Error sending e-mail:', error);
     });
   }
 }

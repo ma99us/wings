@@ -16,6 +16,7 @@ import {Taster} from "../../tasters/taster";
 import {CalendarItem, EmbeddedFile, MailItem, MikeMailerService, Recipient} from "../../services/mike-mailer.service";
 import {ImageLoaderService} from "../../services/image-loader.service";
 import {HOST_BASE_URL} from "../../app-config";
+import {MikeDiscordService} from "../../services/mike-discord.service";
 
 @Component({
   selector: 'events-details',
@@ -37,7 +38,8 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
   constructor(private route: ActivatedRoute, private router: Router, private eventsService: EventsService,
               private placesService: PlacesService, private reviewsService: ReviewsService,
               private confirmation: ConfirmDialogService, private modalService: NgbModal,
-              tasterService: TastersService, private mailerService: MikeMailerService, private imageLoader: ImageLoaderService) {
+              tasterService: TastersService, private mailerService: MikeMailerService, private imageLoader: ImageLoaderService,
+              private discordService: MikeDiscordService) {
     super(tasterService);
   }
 
@@ -285,7 +287,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
   }
 
   suggestEventPlace(): Place | undefined {
-    if(!this.placesNames){
+    if (!this.placesNames) {
       return undefined;
     }
     // find first Place in natural order, which does nto have an event yet
@@ -334,7 +336,7 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
     });
 //    mailItem.addTo(new Recipient(this.currentTaster?.name, this.currentTaster?.email)); //// #TEST
 
-    mailItem.subject='New Wings Event';
+    mailItem.subject = 'New Wings Event';
     mailItem.plainText = `${this.currentTasterName} scheduled a new Wings Event for ${this.selectedEvent.eventDateTimeStr}, at ${this.eventPlaceName}`;
     const eventUrl = this.selectedEvent?.id ? (HOST_BASE_URL + "/events/" + this.selectedEvent?.id) : null;
 
@@ -377,11 +379,21 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
       });
   }
 
-  private sendMailItem(mailItem: MailItem){
+  private sendMailItem(mailItem: MailItem) {
     this.mailerService.sendMail(mailItem).subscribe((success) => {
+      console.log('Event e-mail sent');
       this.mailSent = true;
       this.mailErr = null;
-      if(this.selectedEvent){
+
+      if (mailItem.plainText) {
+        this.discordService.postMessage(mailItem.plainText).subscribe(()=>{
+          console.log('Event posted to discord');
+        }, (error)=>{
+          console.log('Discord error:', error);
+        });
+      }
+
+      if (this.selectedEvent) {
         this.selectedEvent.notifications = !this.selectedEvent.notifications ? 1 : this.selectedEvent.notifications + 1;
         this.eventsService.addUpdateEvent(this.selectedEvent)
           .subscribe((data: Event) => {
@@ -390,9 +402,10 @@ export class EventsDetailsComponent extends AbstractTasterComponent implements O
             // this.goBack();
           });
       }
-    }, (err) => {
+    }, (error) => {
       this.mailSent = true;
-      this.mailErr = "Error sending e-mail";
+      this.mailErr = "Error sending e-mail: " + error;
+      console.log('Error sending e-mail', error);
     });
   }
 }
