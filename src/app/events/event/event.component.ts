@@ -10,7 +10,7 @@ import {Event} from "../event";
 export class EventComponent implements OnChanges, OnInit {
 
   @Input() event!: Event;
-  @Input() top!: number;
+  @Input() top?: number;
   @Input() selectedEvent?: Event;
   @Input() onSelect!: (event?: Event) => void;
   diffDays?: number;

@@ -65,14 +65,14 @@ export class EventsComponent extends AbstractTasterComponent implements OnInit {
     return topEvents;
   }
 
-  findEventTop(event: Event): number {
+  findEventTop(event: Event): number | undefined {
     if (!this.topEvents) {
-      return -1;
+      return undefined;
     }
 
     let pos = this.topEvents.findIndex(ev => ev.id == event.id && ev.event_rating);   // FIXME: '==' is intentional!
 
-    return pos >= 0 ? pos + 1 : -1;
+    return pos >= 0 ? pos + 1 : undefined;
   }
 
   onSelect = (event?: Event): void => {
