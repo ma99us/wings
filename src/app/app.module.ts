@@ -37,6 +37,7 @@ import {ImageComponent} from "./components/image-viewer/image-viewer-dialog";
 import {MessengerDialog} from "./tasters/messanger/messanger-dialog";
 import {NgxTrimDirectiveModule} from "ngx-trim-directive";
 import {DecimalPipe} from "@angular/common";
+import {SeasonComponent} from './home/season/season.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import {DecimalPipe} from "@angular/common";
     LoginDialog,
     FileUploadComponent,
     ImageComponent,
-    MessengerDialog
+    MessengerDialog,
+    SeasonComponent
   ],
   imports: [
     BrowserModule,

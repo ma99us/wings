@@ -26,10 +26,34 @@
     </event-li>
   </ul>
 
+  <hr>
+
+  <app-season
+    [season]="3"
+    [from]="getDate('07/01/2023')"
+    [to]="getDate('07/01/2024')"
+  ></app-season>
+
+  <hr>
+
+  <app-season
+    [season]="2"
+    [from]="getDate('07/01/2022')"
+    [to]="getDate('07/01/2023')"
+  ></app-season>
+
+  <hr>
+
   <div id="div-news">
     <h2>2021-2022 Season 1 of Wings Commission has concluded!</h2>
     <p>Outside of the fan favorite Irina's home wings, the "silver" goes to <b>Milestones</b>, and "bronze" - to <b>Kelseys</b>. Well deserved!</p>
     <p>Great attendance and sticking-with-it-ness, crew! See you all in Season 2.</p>
     <p>GG</p>
   </div>
+
+  <app-season
+    [season]="1"
+    [from]="getDate('07/01/2021')"
+    [to]="getDate('07/01/2022')"
+  ></app-season>
 </div>

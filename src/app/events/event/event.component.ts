@@ -48,6 +48,8 @@ export class EventComponent implements OnChanges, OnInit {
       return 'cup_silver.png'
     } else if (this.top === 3) {
       return 'cup_bronze.png'
+    } else if (this.top === -1) {
+      return 'cup_last.png'
     } else {
       return null;
     }

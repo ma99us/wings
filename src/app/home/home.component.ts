@@ -54,4 +54,8 @@ export class HomeComponent implements OnInit {
     const url: string = "/events/" + (event ? event.id : '');
     this.router.navigateByUrl(url);
   };
+
+  getDate(dateStr: string): Date {
+    return new Date(dateStr)
+  }
 }

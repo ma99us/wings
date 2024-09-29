@@ -1,0 +1,54 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-4">
+      <h3>Season {{season}}.</h3>
+    </div>
+    <div class="col-4">
+      <h3>August {{from | date: 'yyyy'}} - {{to | date: 'yyyy'}}</h3>
+    </div>
+    <div class="col-4 pull-right">
+      <h3>Total events: {{totalEvents}}</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h4>Season Best:</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <ul *ngIf="bestEvents" class="events">
+        <event-li *ngFor="let event of bestEvents; trackBy: trackByFn; index as i"
+                  [event]="event"
+                  [top]="i + 1"
+                  [onSelect]="onSelect"
+        >
+        </event-li>
+      </ul>
+      <loading *ngIf="isLoading"></loading>
+      <not-found *ngIf="!isLoading && bestEvents.length === 0"></not-found>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h4>Season Worst:</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <ul *ngIf="worstEvent" class="events">
+        <event-li
+          [event]="worstEvent"
+          [top]="-1"
+          [onSelect]="onSelect"
+        >
+        </event-li>
+      </ul>
+      <loading *ngIf="isLoading"></loading>
+      <not-found *ngIf="!isLoading && !worstEvent"></not-found>
+    </div>
+  </div>
+</div>
