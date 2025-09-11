@@ -29,17 +29,25 @@
   <hr>
 
   <app-season
+    [season]="4"
+    [from]="getDate('08/01/2024')"
+    [to]="getDate('08/01/2025')"
+  ></app-season>
+
+  <hr>
+
+  <app-season
     [season]="3"
-    [from]="getDate('07/01/2023')"
-    [to]="getDate('07/01/2024')"
+    [from]="getDate('08/01/2023')"
+    [to]="getDate('08/01/2024')"
   ></app-season>
 
   <hr>
 
   <app-season
     [season]="2"
-    [from]="getDate('07/01/2022')"
-    [to]="getDate('07/01/2023')"
+    [from]="getDate('08/01/2022')"
+    [to]="getDate('08/01/2023')"
   ></app-season>
 
   <hr>
@@ -53,7 +61,7 @@
 
   <app-season
     [season]="1"
-    [from]="getDate('07/01/2021')"
-    [to]="getDate('07/01/2022')"
+    [from]="getDate('08/01/2021')"
+    [to]="getDate('08/01/2022')"
   ></app-season>
 </div>
